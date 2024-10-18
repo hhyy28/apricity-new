@@ -1,0 +1,15 @@
+export const TEXT_CONSTANTS = {
+  logoAlt: "Apricity Logo",
+  logoSubText: "WRITE, SKETCH & ATMOSPHERIZE",
+  favouriteAlt: "Favourite",
+  cartAlt: "Cart",
+  refineOption: "+  REFINE",
+  sortOption: "+  SORT",
+  galleryAlt: "Gallery Image",
+  collectionLabel: "COLLECTION:",
+  collectionName: "DREAMT SEAS BLUE",
+  notebookLabel: "NOTEBOOK NO.1",
+  orderButtonLabel: "Order",
+  paginationAltBlack: "Black Pagination",
+  paginationAltWhite: "White Pagination",
+};
