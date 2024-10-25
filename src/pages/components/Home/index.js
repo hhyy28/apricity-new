@@ -6,6 +6,7 @@ import FavouriteImg from '../../../../public/favourite-button.svg';
 import CartImg from '../../../../public/cart-button.svg';
 import WhitePagination from '../../../../public/WhitePagination.svg';
 import BlackPagination from '../../../../public/BlackPagination.svg';
+import Order from '../../../../public/OrderButton.svg';
 import { TEXT_CONSTANTS } from './constants'; 
 
 import { 
@@ -28,7 +29,7 @@ import {
   PagginationContainer,
   NotebookText,
   OrderButton,
-  Collection,
+  CollectionContainer,
   CollectionDef,
   PaginationButton
 } from './styled';
@@ -79,12 +80,14 @@ export default function HomePage() {
         <GalleryImg>
           <Image src={Gallery} alt={galleryAlt} layout="responsive" />
         </GalleryImg>
-        <CollectionDef>
-          {collectionLabel} 
-        </CollectionDef>
-        <CollectionName>
-          {collectionName}
-        </CollectionName>
+        <CollectionContainer>
+          <CollectionDef>
+            {collectionLabel} 
+          </CollectionDef>
+          <CollectionName>
+            {collectionName}
+          </CollectionName>
+        </CollectionContainer>
       </MenuContainer>
       <FooterContainer>
         <OrderContainer>
@@ -92,7 +95,7 @@ export default function HomePage() {
             {notebookLabel}
           </NotebookText>
           <OrderButton>
-            {orderButtonLabel}
+            <Image src={Order} alt={galleryAlt}/>
           </OrderButton>
         </OrderContainer>
         <PagginationContainer>
