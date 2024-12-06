@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Image from 'next/image';
 import {
   MenuContainer,
@@ -10,29 +10,31 @@ import {
   OptionMenu,
   Option,
   GallerySideImg,
-  FooterContainer,
-  PaginationContainer,
-  PaginationButtonImg,
-  PaginationButtonNumbers,
+  FooterContainer
 } from './styled';
 import { orderButton } from '@svg/index';
 import { gallery } from '@images/index';
 import { PaginationButton } from '@svg/paginationButton';
+import SwiperPagination from '@components/swiper-pagination';
+import SwiperSlider from '@components/swiper-slider';
 
 export default function Home1024({ homeMenu }) {
   const { refineOption, sortOption } = homeMenu;
 
+  const swiperRef = useRef(null);
+
   return (
     <>
       <MenuContainer>
-        <GalleryBackground background={gallery}>
+        {/* <GalleryBackground background={gallery}>
           <OrderContainer>
             <ProductName>COLLECTION : éCLAT. THE VASE</ProductName>
             <OrderButton>
               <Image src={orderButton} alt="order img" />
             </OrderButton>
           </OrderContainer>
-        </GalleryBackground>
+        </GalleryBackground> */}
+        <SwiperSlider swiperRef={swiperRef} />
         <SideMenu>
           <OptionMenu>
             <Option>{refineOption}</Option>
@@ -44,16 +46,7 @@ export default function Home1024({ homeMenu }) {
         </SideMenu>
       </MenuContainer>
       <FooterContainer>
-        <PaginationContainer>
-          <PaginationButtonImg>
-            <PaginationButton fillcolor="#2B2726" />
-          </PaginationButtonImg>
-          <PaginationButtonNumbers>1</PaginationButtonNumbers>
-          <PaginationButtonNumbers>12</PaginationButtonNumbers>
-          <PaginationButtonImg rotate>
-            <PaginationButton fillcolor="#2B2726" />
-          </PaginationButtonImg>
-        </PaginationContainer>
+        <SwiperPagination swiperInstance={swiperRef.current} />
       </FooterContainer>
     </>
   );

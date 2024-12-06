@@ -77,7 +77,6 @@ export const CollectionDef = styled.div`
   font-size: 13px;
   font-weight: 400;
   color: #364251;
-  line-height: 18px;
   letter-spacing: 1px;
 `;
 
@@ -86,12 +85,14 @@ export const CollectionName = styled.p`
   font-size: 13px;
   font-weight: 500;
   color: #364251;
+  margin: 0;
 `;
 
 export const CollectionContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-self: flex-start;
+  align-items: flex-end;
   letter-spacing: 1px;
   line-height: 18px;
   padding-top: 21px;
@@ -114,27 +115,7 @@ export const CollectionContainer = styled.div`
   `}
 `;
 
-export const GalleryContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-  gap: 15px;
 
-  ${media.sm`
-    gap: 17px;
-  `}
-
-  ${media.md`
-    gap: 46px;
-  `}
-
-  ${media.lg`
-    gap: 64px;
-  `}
-`;
 
 export const GalleryImg = styled.div`
   flex-shrink: 0;
@@ -197,22 +178,6 @@ export const OrderButton = styled.button`
   border: none;
 `;
 
-export const PaginationContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 28px;
-`;
-
-export const PaginationButtonNumbers = styled.button`
-  background-color: transparent;
-  border: none;
-  font-size: 14px;
-  color: black;
-  cursor: pointer;
-  background: none;
-  border: none;
-`;
 
 export const NotebookText = styled.div`
   font-family: 'Panel-Sans', sans-serif;
@@ -229,8 +194,4 @@ export const OrderContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
   padding: 14px 29px;
-`;
-
-export const PaginationButtonImg = styled.div`
-  ${({ rotate }) => rotate && 'transform: rotate(180deg);'}
 `;
