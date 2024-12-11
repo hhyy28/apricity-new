@@ -32,7 +32,7 @@ export default function Home1920({ homeMenu }) {
           </OrderButton>
         </OrderContainer>
       </GalleryBackground>
-      <PaginationButtonImg rotate>
+      <PaginationButtonImg rotate="true">
         <PaginationButton fillcolor="#2B2726" />
       </PaginationButtonImg>
       <SideMenu>

@@ -7,10 +7,20 @@ import 'swiper/css/pagination';
 import { SwiperWrapper, SwiperStyled } from './styled';
 import { gallery1, gallery2 } from '@images/index';
 import Image from 'next/image';
+import { useScreen } from '@context/ScreenContext';
 
 const images = [gallery1, gallery2, gallery2, gallery2, gallery2, gallery2, gallery2, gallery2, gallery1];
 
 export default function SwiperSlider({ swiperRef }) {
+  const {  isPhoneM, isPhoneL, isTabletVertical } = useScreen();
+
+  const gapValue = () => {
+    if (isTabletVertical) return 64;
+    if (isPhoneL) return 46;
+    if (isPhoneM) return 17;
+    else return 15
+  };
+
   useEffect(() => {
     if (swiperRef.current) {
       swiperRef.current.update();
@@ -20,11 +30,12 @@ export default function SwiperSlider({ swiperRef }) {
   return (
     <SwiperWrapper>
       <SwiperStyled
-        slidesPerView={1.25}
-        spaceBetween={15}
+        slidesPerView="auto"
+        spaceBetween={gapValue()}
         centeredSlides={true}
+        onSwiper={(swiper) => {swiperRef.current = swiper;}}
+        cssMode= {true}
         loop={true}
-        onSwiper={(swiper) => (swiperRef.current = swiper)}
       >
         {images.map((image, index) => (
           <SwiperSlide key={`slide-${index}`}>
