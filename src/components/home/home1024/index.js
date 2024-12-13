@@ -15,8 +15,8 @@ import {
 import { orderButton } from '@svg/index';
 import { gallery } from '@images/index';
 import { PaginationButton } from '@svg/paginationButton';
-import SwiperPagination from '@components/swiper-pagination';
-import SwiperSlider from '@components/swiper-slider';
+import SwiperPagination from '@components/home/swiper-pagination';
+import SwiperSlider from '@components/home/swiper-slider';
 
 export default function Home1024({ homeMenu }) {
   const { refineOption, sortOption } = homeMenu;

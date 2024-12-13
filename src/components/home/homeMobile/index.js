@@ -13,8 +13,8 @@ import {
 } from './styled';
 import Image from 'next/image';
 import { orderButton } from '@svg/index';
-import SwiperSlider from '@components/swiper-slider';
-import SwiperPagination from '@components/swiper-pagination';
+import SwiperSlider from '@components/home/swiper-slider';
+import SwiperPagination from '@components/home/swiper-pagination';
 import PropTypes from 'prop-types';
 export default function HomeMobile({ homeMenu }) {
 
