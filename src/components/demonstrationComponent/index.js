@@ -1,38 +1,51 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
-  Wrapper,
   FooterContainer,
   OrderButton,
   OrderContainer,
-  PaginationContainer,
-  PaginationButtonNumbers,
-  PaginationButtonImg,
+  SwiperStyled,
 } from './styled';
-import Background1 from '@images/background1.jpg';
 import Image from 'next/image';
 import { orderButton } from '@svg/index';
-import { PaginationButton } from '@svg/paginationButton';
+import SwiperPagination from './swiper-pagination';
+import { SwiperSlide } from 'swiper/react';
+import { background1 } from '@images/index';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+const images = [background1, background1];
 
 export default function DemonstrationComponent() {
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    if (swiperRef.current) {
+      swiperRef.current.update();
+    }
+  }, []);
+
   return (
-    <Wrapper background={Background1}>
-      <FooterContainer>
-        <OrderContainer>
-          <OrderButton>
-            <Image src={orderButton} alt="galleryAlt" />
-          </OrderButton>
-        </OrderContainer>
-        <PaginationContainer>
-          <PaginationButtonImg>
-            <PaginationButton fillcolor="#DFDDD8" alt="Pagination Arrow" />
-          </PaginationButtonImg>
-          <PaginationButtonNumbers>1</PaginationButtonNumbers>
-          <PaginationButtonNumbers>12</PaginationButtonNumbers>
-          <PaginationButtonImg rotate>
-            <PaginationButton fillcolor="#DFDDD8" alt="Pagination Arrow" />
-          </PaginationButtonImg>
-        </PaginationContainer>
-      </FooterContainer>
-    </Wrapper>
+    <SwiperStyled
+      onSwiper={(swiper) => {
+        swiperRef.current = swiper;
+      }}
+      cssMode={true}
+      effect={"fade"}
+    >
+      {images.map((image, index) => (
+        <SwiperSlide key={`slide-${index}`}>
+          <Image src={image} alt={`Slide ${index}`}/>
+        </SwiperSlide>
+      ))}
+        <FooterContainer>
+          <OrderContainer>
+            <OrderButton>
+              <Image src={orderButton} alt="Order Now" />
+            </OrderButton>
+          </OrderContainer>
+          <SwiperPagination swiperInstance={swiperRef.current} />
+        </FooterContainer>
+      </SwiperStyled>
   );
 }
