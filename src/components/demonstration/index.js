@@ -1,13 +1,13 @@
 import { Wrapper } from './styled';
-import ProductCard from '../productCard';
 import DemonstrationComponent from '../demonstrationComponent';
+import ProductCardShort from '../productCardShort';
 
-export default function Demonstrations({ visibleFooter, demonstration }) {
+export default function Demonstrations({ visiblefooter, demonstration }) {
   return (
     <Wrapper>
       <DemonstrationComponent />
-      <ProductCard
-        visibleFooter={visibleFooter}
+      <ProductCardShort
+        visiblefooter={visiblefooter}
         productCard={demonstration.productCard}
       />
     </Wrapper>

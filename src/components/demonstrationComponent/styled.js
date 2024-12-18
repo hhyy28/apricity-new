@@ -12,6 +12,10 @@ export const SwiperStyled = styled(Swiper)`
   flex-direction: column;
   position: relative;
 
+  ${media.xl`
+    width:50%
+  `}
+
   &.swiper-container {
     scroll-behavior: smooth;
   }

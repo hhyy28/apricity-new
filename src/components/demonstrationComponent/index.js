@@ -30,7 +30,7 @@ export default function DemonstrationComponent() {
       onSwiper={(swiper) => {
         swiperRef.current = swiper;
       }}
-      cssMode={true}
+      
       effect={"fade"}
     >
       {images.map((image, index) => (

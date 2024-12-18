@@ -5,31 +5,27 @@ export const Wrapper = styled.div`
   background-color: #d7d7d1;
   display: flex;
   flex-direction: column;
-  padding: 64px 0 ${({ visibleFooter }) => (visibleFooter ? '68px' : '152px')} 0;
+  padding: 64px 0 152px 0;
 
   ${media.sm`
-    padding: 153px 0 ${({ visibleFooter }) => (visibleFooter ? '118px' : '214px')} 0;
+    padding: 153px 0 214px 0;
   `}
 
   ${media.md`
-    padding: 150px 0 ${({ visibleFooter }) => (visibleFooter ? '82px' : '171px')} 0;
+    padding: 150px 0 171px 0;
   `}
 
   ${media.lg`
-    padding: 199px 0 ${({ visibleFooter }) => (visibleFooter ? '130px' : '255px')} 0;
+    padding: 199px 0 255px 0;
   `}
 
   ${media.xl`
-    padding: ${({ visibleFooter }) =>
-      visibleFooter ? '141px' : '251px'} 0 ${({ visibleFooter }) =>
-      visibleFooter ? '221px' : '113px'};
+    padding: 251px 0 113px;
     width: 50%;
   `}
 
   ${media.xxl`
-    padding: ${({ visibleFooter }) =>
-      visibleFooter ? '214px' : '270px'} 0 ${({ visibleFooter }) =>
-      visibleFooter ? '143px' : '390px'} 0;
+    padding: 270px 0 390px 0;
   `}
 `;
 
@@ -252,9 +248,7 @@ export const OrderButton = styled.button`
   `}
 
   ${media.xxl`
-    margin: ${({ visibleFooter }) => (visibleFooter ? '16px' : '24px')} ${({
-      visibleFooter,
-    }) => (visibleFooter ? '13px' : '32px')};
+    margin: 24px 32px
   `}
 
   img {
@@ -285,7 +279,7 @@ export const ImageBackground = styled.div`
   `}
 
   ${media.xl`
-    height: ${({ visibleFooter }) => (visibleFooter ? '265px' : '295px')};
+    height: 295px
   `}
 
   ${media.xxl`
