@@ -16,8 +16,8 @@ import { orderButton } from '@svg/index';
 import SwiperSlider from '@components/home/swiper-slider';
 import SwiperPagination from '@components/home/swiper-pagination';
 import PropTypes from 'prop-types';
-export default function HomeMobile({ homeMenu }) {
 
+export default function HomeMobile({ homeMenu }) {
   const swiperRef = useRef(null);
 
   const {

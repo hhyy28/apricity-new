@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 import { Swiper } from 'swiper/react';
-import { media } from 'src/components/bootstrap-grid';
+import { media } from '@components/bootstrap-grid';
 
 export const SwiperWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   overflow: hidden;
   width: 100%;
-  position: relative; 
+  position: relative;
 `;
 
 export const SwiperStyled = styled(Swiper)`
@@ -30,11 +30,11 @@ export const SwiperStyled = styled(Swiper)`
   }
 
   .swiper-slide {
-    height: 204px; 
+    height: 204px;
     padding: 63px 0 18px 0;
-    flex-shrink: 0; 
-    scroll-snap-align: center; 
-    
+    flex-shrink: 0;
+    scroll-snap-align: center;
+
     ${media.sm`
       padding: 70px 0 41px 0;
     `}
@@ -48,8 +48,8 @@ export const SwiperStyled = styled(Swiper)`
     `}
 
     &.swiper-slide-active {
-      height: 285px; 
-      width: 253px; 
+      height: 285px;
+      width: 253px;
       padding: 0;
 
       ${media.sm`
@@ -65,7 +65,7 @@ export const SwiperStyled = styled(Swiper)`
         height: 593px;
       `}
     }
-    
+
     img {
       width: 100%;
       height: 100%;

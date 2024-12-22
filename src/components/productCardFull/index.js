@@ -48,7 +48,7 @@ export default function ProductCardFull({ productCard }) {
   return (
     <>
       <Wrapper>
-        {(isPhoneS || isPhoneM) ? (
+        {isPhoneS || isPhoneM ? (
           <>
             <CollectionText>
               <CollectionDef>{collection_prefix}</CollectionDef>

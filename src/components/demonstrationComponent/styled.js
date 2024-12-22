@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media } from 'src/components/bootstrap-grid';
+import { media } from '@components/bootstrap-grid';
 import { Swiper } from 'swiper/react';
 
 export const SwiperStyled = styled(Swiper)`
@@ -62,7 +62,6 @@ export const OrderButton = styled.button`
   border: none;
 `;
 
-
 export const OrderContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -86,22 +85,20 @@ export const OrderContainer = styled.div`
 export const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding-bottom: 18px;
+  padding: 0 0 18px 0;
   z-index: 10;
   position: absolute;
   bottom: 0;
   width: 100%;
   ${media.sm`
-    padding-bottom: 54px;
+    padding: 0  0 54px 0;
   `}
 
   ${media.md`
-    padding-bottom: 86px;
+    padding: 0  0 86px 0;
   `}
 
   ${media.lg`
-    padding-bottom: 18px;
+    padding: 0  0 18px 0;
   `}
 `;
-
-

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media } from 'src/components/bootstrap-grid';
+import { media } from '@components/bootstrap-grid';
 
 export const Wrapper = styled.div`
   background-color: #f2f3ef;
@@ -157,22 +157,22 @@ export const TitleText = styled.span`
   color: #191919;
   font-family: 'Panel-Sans';
   font-size: 13px;
-  padding-left: 11px;
+  padding: 0 0 0 11px;
 
   ${media.sm`
-    padding-left: 12px;
+    padding: 0 0 0 12px;
   `}
   ${media.md`
     font-size: 23px;
-    padding-left: 20px;
+    padding: 0 0 0 20px;
   `}
   ${media.xl`
     margin-top: 6px;
     font-size: 14px;
-    padding-left: 22px;
+    padding: 0 0 0 22px;
   `}
   ${media.xxl`
-    padding-left: 14px;
+    padding: 0 0 0 14px;
   `}
 `;
 

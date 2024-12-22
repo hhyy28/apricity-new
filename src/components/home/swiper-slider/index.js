@@ -9,16 +9,26 @@ import { gallery1, gallery2 } from '@images/index';
 import Image from 'next/image';
 import { useScreen } from '@context/ScreenContext';
 
-const images = [gallery1, gallery2, gallery2, gallery2, gallery2, gallery2, gallery2, gallery2, gallery1];
+const images = [
+  gallery1,
+  gallery2,
+  gallery2,
+  gallery2,
+  gallery2,
+  gallery2,
+  gallery2,
+  gallery2,
+  gallery1,
+];
 
 export default function SwiperSlider({ swiperRef }) {
-  const {  isPhoneM, isPhoneL, isTabletVertical } = useScreen();
+  const { isPhoneM, isPhoneL, isTabletVertical } = useScreen();
 
   const gapValue = () => {
     if (isTabletVertical) return 64;
     if (isPhoneL) return 46;
     if (isPhoneM) return 17;
-    else return 15
+    else return 15;
   };
 
   useEffect(() => {
@@ -33,8 +43,10 @@ export default function SwiperSlider({ swiperRef }) {
         slidesPerView="auto"
         spaceBetween={gapValue()}
         centeredSlides={true}
-        onSwiper={(swiper) => {swiperRef.current = swiper;}}
-        cssMode= {true}
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
+        cssMode={true}
         loop={true}
       >
         {images.map((image, index) => (

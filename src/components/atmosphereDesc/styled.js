@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { media } from 'styled-bootstrap-grid';
+import { media } from '@components/bootstrap-grid';
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #D7D7D1;
+  background-color: #d7d7d1;
   padding: 134px 0;
 
   ${media.sm`
@@ -40,7 +40,7 @@ export const TextWrapper = styled.div`
   color: #0e0d0c;
   font-size: 13px;
   line-height: 20px;
-  background-color: #D0D0CA;
+  background-color: #d0d0ca;
   padding: 23px 38px;
   letter-spacing: 0.65px;
   ${media.sm`
@@ -58,4 +58,4 @@ export const TextWrapper = styled.div`
   ${media.xl`
     display: none;
   `}
-`
+`;

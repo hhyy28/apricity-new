@@ -13,7 +13,7 @@ export const TopBar = styled.div`
   letter-spacing: 0.65px;
 `;
 export const TopBarTitle = styled.div`
-  padding-left: 30px;
+  padding: 0 0 0 30px;
   color: #888f6a;
   font-size: 13px;
   font-weight: 700;

@@ -10,9 +10,6 @@ import { orderButton } from '@svg/index';
 import SwiperPagination from './swiper-pagination';
 import { SwiperSlide } from 'swiper/react';
 import { background1 } from '@images/index';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 const images = [background1, background1];
 
@@ -30,22 +27,21 @@ export default function DemonstrationComponent() {
       onSwiper={(swiper) => {
         swiperRef.current = swiper;
       }}
-      
-      effect={"fade"}
+      effect={'fade'}
     >
       {images.map((image, index) => (
         <SwiperSlide key={`slide-${index}`}>
-          <Image src={image} alt={`Slide ${index}`}/>
+          <Image src={image} alt={`Slide ${index}`} />
         </SwiperSlide>
       ))}
-        <FooterContainer>
-          <OrderContainer>
-            <OrderButton>
-              <Image src={orderButton} alt="Order Now" />
-            </OrderButton>
-          </OrderContainer>
-          <SwiperPagination swiperInstance={swiperRef.current} />
-        </FooterContainer>
-      </SwiperStyled>
+      <FooterContainer>
+        <OrderContainer>
+          <OrderButton>
+            <Image src={orderButton} alt="Order Now" />
+          </OrderButton>
+        </OrderContainer>
+        <SwiperPagination swiperInstance={swiperRef.current} />
+      </FooterContainer>
+    </SwiperStyled>
   );
 }

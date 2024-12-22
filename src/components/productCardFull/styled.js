@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media } from 'src/components/bootstrap-grid';
+import { media } from '@components/bootstrap-grid';
 
 export const Wrapper = styled.div`
   background-color: #d7d7d1;
@@ -115,26 +115,26 @@ export const ProductImageWrapper = styled.div`
 `;
 
 export const Footer = styled.div`
-  padding-top: 22px;
+  padding: 22px 0 0;
 
   ${media.sm`
-    padding-top: 33px;
+    padding: 33px 0 0;
   `}
 
   ${media.md`
-    padding-top: 28px;
+    padding: 28px 0 0;
   `}
 
   ${media.lg`
-    padding-top: 63px;
+    padding: 63px 0 0;
   `}
 
   ${media.xl`
-    padding-top: 14px;
+    paddingp: 14px 0 0;
   `}
 
   ${media.xxl`
-    padding-top: 2px;
+    padding: 2px 0 0;
   `}
 `;
 

@@ -5,10 +5,10 @@ import {
   Wrapper,
   CollectionText,
   ProductImageWrapper,
-  CollectionName,//
+  CollectionName,
   CollectionDef,
-  AtmoDescContainer,//
-  ImageBackground,//
+  AtmoDescContainer,
+  ImageBackground,
   OrderButton,
 } from './styled';
 import { useScreen } from '@context/ScreenContext';
@@ -21,7 +21,7 @@ export default function ProductCardShort({ productCard }) {
 
   return (
     <Wrapper>
-      {(isPhoneS || isPhoneM) ? (
+      {isPhoneS || isPhoneM ? (
         <>
           <CollectionText>
             <CollectionDef>{collection_prefix}</CollectionDef>
@@ -42,7 +42,7 @@ export default function ProductCardShort({ productCard }) {
             <CollectionName>{collection_name}</CollectionName>
           </CollectionText>
           <AtmoDescContainer>
-            <ImageBackground $background={productImage}>
+            <ImageBackground background={productImage}>
               <OrderButton>
                 <Image src={orderButton} alt="Order Button" />
               </OrderButton>
