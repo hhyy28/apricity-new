@@ -1,5 +1,7 @@
+import React from 'react';
 import Head from 'next/head';
 import HomePage from './home';
+import PropTypes from 'prop-types';
 
 export default function Main({ textConstants }) {
   return (
@@ -13,3 +15,9 @@ export default function Main({ textConstants }) {
     </>
   );
 }
+
+Main.propTypes = {
+  textConstants: PropTypes.shape({
+    homePage: PropTypes.object.isRequired,
+  }).isRequired,
+};

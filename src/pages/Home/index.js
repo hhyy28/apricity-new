@@ -1,17 +1,29 @@
-import Home from '@components/home';
+import React from 'react';
 import CollectionComponent from '@components/studio';
+import DemonstrationExpanded from '@components/demonstrationExpandedComponent';
 import Demonstrations from '@components/demonstration';
-import CSSGrid, { gridTheme } from 'src/components/bootstrap-grid';
+import Home from '@components/home';
+import CSSGrid, { gridTheme } from '@components/bootstrap-grid';
+import PropTypes from 'prop-types';
 
 export default function HomePage({ homePage }) {
-  const { home, demonstration } = homePage;
+  const { home, demonstration, collectionText } = homePage;
   return (
     <>
       <CSSGrid gridTheme={gridTheme}>
         <Home home={home} />
         <Demonstrations demonstration={demonstration} />
-        <CollectionComponent />
+        <CollectionComponent collectionText={collectionText} />
+        <DemonstrationExpanded demonstration={demonstration} />
       </CSSGrid>
     </>
   );
 }
+
+HomePage.propTypes = {
+  homePage: PropTypes.shape({
+    home: PropTypes.object.isRequired,
+    demonstration: PropTypes.object.isRequired,
+    collectionText: PropTypes.object.isRequired,
+  }).isRequired,
+};

@@ -1,18 +1,11 @@
 import styled from 'styled-components';
-import { media } from 'styled-bootstrap-grid';
+import { media } from '@components/bootstrap-grid';
 
-export const TextWrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #d0d0ca;
-  font-family: 'Panel-Sans';
-  color: #0e0d0c;
-  font-size: 13px;
-  line-height: 20px;
-
-  ${media.xs`
-    padding: 23px 38px;
-  `}
+  background-color: #d7d7d1;
+  padding: 134px 0;
 
   ${media.sm`
     padding: 159px 0 273px;
@@ -40,4 +33,29 @@ export const TextTitle = styled.div`
 export const Text = styled.div`
   font-weight: 360;
   letter-spacing: 0.65px;
+`;
+
+export const TextWrapper = styled.div`
+  font-family: 'Panel-Sans';
+  color: #0e0d0c;
+  font-size: 13px;
+  line-height: 20px;
+  background-color: #d0d0ca;
+  padding: 23px 38px;
+  letter-spacing: 0.65px;
+  ${media.sm`
+    padding: 64px 64px 25px;
+  `}
+
+  ${media.md`
+    padding: 102px 120px;
+  `}
+
+  ${media.lg`
+    padding: 130px 230px;
+  `}
+
+  ${media.xl`
+    display: none;
+  `}
 `;

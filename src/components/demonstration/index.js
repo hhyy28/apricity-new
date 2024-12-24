@@ -1,15 +1,21 @@
+import React from 'react';
+import DemonstrationComponent from '@components/demonstrationComponent';
+import ProductCardShort from '@components/productCardShort';
 import { Wrapper } from './styled';
-import ProductCard from '../productCard';
-import DemonstrationComponent from '../demonstrationComponent';
+import PropTypes from 'prop-types';
 
-export default function Demonstrations({ visibleFooter, demonstration }) {
+export default function Demonstrations({ demonstration }) {
   return (
     <Wrapper>
       <DemonstrationComponent />
-      <ProductCard
-        visibleFooter={visibleFooter}
-        productCard={demonstration.productCard}
-      />
+      <ProductCardShort productCard={demonstration.productCard} />
     </Wrapper>
   );
 }
+
+Demonstrations.propTypes = {
+  visiblefooter: PropTypes.bool.isRequired,
+  demonstration: PropTypes.shape({
+    productCard: PropTypes.object.isRequired,
+  }).isRequired,
+};

@@ -1,36 +1,57 @@
 import styled from 'styled-components';
-import { media } from 'src/components/bootstrap-grid';
+import { media } from '@components/bootstrap-grid';
+import { Swiper } from 'swiper/react';
 
-export const Wrapper = styled.div`
-  background-image: url(${({ background }) => background.src});
+export const SwiperStyled = styled(Swiper)`
   display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  width: 100%;
   flex-direction: column;
-  justify-content: flex-end;
-  background-size: cover;
-  background-position: center;
-  height: 568px;
-  align-items: space-between;
-
-  ${media.sm`
-    height: 780px;
-  `}
-
-  ${media.md`
-    height: 767px;
-  `}
-
-  ${media.lg`
-    height: 1024px;
-  `}
+  position: relative;
 
   ${media.xl`
-    height: 768px;
-    width: 50%;
+    width:50%
   `}
 
-  ${media.xxl`
-    height: 1080px;
-  `}
+  &.swiper-container {
+    scroll-behavior: smooth;
+  }
+
+  & .swiper-wrapper {
+    display: flex;
+  }
+
+  .swiper-slide {
+    height: 568px;
+    ${media.sm`
+      height: 780px;
+    `}
+
+    ${media.md`
+      height: 767px;
+    `}
+
+    ${media.lg`
+      height: 1024px;
+    `}
+
+    ${media.xl`
+      height: 768px;
+      width: 50%;
+    `}
+
+    ${media.xxl`
+      height: 1080px;
+    `}
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const OrderButton = styled.button`
@@ -39,53 +60,6 @@ export const OrderButton = styled.button`
   height: 16px;
   background: none;
   border: none;
-`;
-
-export const PaginationContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-
-  ${media.sm`
-    padding: 0 47px 0px 55px;
-  `}
-
-  ${media.md`
-    padding: 0 47px 0px 84px;
-  `}
-
-  ${media.lg`
-    display: none;
-  `}
-
-  ${media.xl`
-    padding: 0 9px 47px 148px;
-    display: flex;
-  `}
-
-  ${media.xxl`
-    padding: 0px 48px 98px 204px;
-  `}
-`;
-
-export const PaginationButtonNumbers = styled.button`
-  background-color: transparent;
-  border: none;
-  color: #f2f3ef;
-  text-align: right;
-  font-family: 'Panel-Sans';
-  font-size: 10px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 14px;
-  letter-spacing: 0.5px;
-  background: none;
-  border: none;
-
-  ${media.xxl`
-    display: none;
-  `}
 `;
 
 export const OrderContainer = styled.div`
@@ -111,35 +85,20 @@ export const OrderContainer = styled.div`
 export const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding-bottom: 18px;
-
+  padding: 0 0 18px 0;
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   ${media.sm`
-    padding-bottom: 54px;
+    padding: 0  0 54px 0;
   `}
 
   ${media.md`
-    padding-bottom: 86px;
+    padding: 0  0 86px 0;
   `}
 
   ${media.lg`
-    padding-bottom: 18px;
+    padding: 0  0 18px 0;
   `}
-`;
-
-export const PaginationButtonImg = styled.div`
-  flex-shrink: 0;
-  ${({ rotate }) => rotate && 'transform: rotate(180deg);'}
-  width: 55px;
-  height: 20px;
-
-  ${media.lg`
-    width: 115px;
-    height: 33px;
-  `}
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 `;

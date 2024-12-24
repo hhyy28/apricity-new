@@ -1,9 +1,11 @@
+import React from 'react';
 import { createGlobalStyle } from 'styled-components';
-import ScreenProvider from '../context/ScreenContext';
-import textConstants from '../constants/constants';
+import ScreenProvider from '@context/ScreenContext';
+import textConstants from '@constants/constants';
+import PropTypes from 'prop-types';
 
 const GlobalStyle = createGlobalStyle`
-  body{
+  body {
     padding: 0;
     margin: 0;
   }
@@ -19,3 +21,8 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
+
+App.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.object.isRequired,
+};

@@ -6,7 +6,9 @@
       "@images/*": ["./public/image/*"],
       "@context/*": ["./src/context/*"],
       "@styles/*": ["./src/styles/*"],
-      "@components/*": ["./src/components/*"]
+      "@components/*": ["./src/components/*"],
+      "@context/*": ["./src/context/*"],
+      "@constants/*": ["./src/constants/*"]
     }
   }
 }

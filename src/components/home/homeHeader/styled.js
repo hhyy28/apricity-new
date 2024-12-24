@@ -1,43 +1,31 @@
 import styled from 'styled-components';
-import { media } from 'src/components/bootstrap-grid';
+import { media } from '@components/bootstrap-grid';
 
 export const HeaderBar = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  padding-right: 16px;
-  padding-top: 26px;
-  padding-left: 25px;
+  padding: 26px 16px 0 25px;
 
   ${media.sm`
-    padding-right: 18px;
-    padding-top: 40px;
-    padding-left: 28px;
+    padding: 40px 18px 0 28px;
   `}
 
   ${media.md`
-    padding-right: 30px;
-    padding-top: 44px;
-    padding-left: 30px;
+    padding: 44px 30px 0 30px;
   `}
 
   ${media.lg`
-    padding-right: 31px;
-    padding-top: 70px;
-    padding-left: 32px;
+    padding: 70px 31px 0 32px;
   `}
 
   ${media.xl`
-    padding-right: 43px;
-    padding-top: 38px;
-    padding-left: 43px;
+    padding: 38px 43px 0 43px;
   `}
 
   ${media.xxl`
-    padding-top: 43px;
-    padding-left: 61px;
-    padding-right: 60px;
+    padding: 43px 60px 0 61px;
   `}
 `;
 
@@ -55,10 +43,6 @@ export const HeaderButtonContainer = styled.div`
     gap: 12px;
   `}
 
-  ${media.lg`
-    gap: 12px;
-  `}
-
   ${media.xl`
     gap: 16px;
     align-items: flex-end;
@@ -66,7 +50,7 @@ export const HeaderButtonContainer = styled.div`
 
   ${media.xxl`
     gap: 26px;
-    padding-top: 4px;
+    padding: 4px 0 0 0;
   `}
 `;
 
@@ -97,11 +81,6 @@ export const LogoContainer = styled.div`
 
   ${media.sm`
     width: 132px;
-    gap: 14px;
-  `}
-
-  ${media.md`
-    width: 155px;
     gap: 14px;
   `}
 
@@ -146,28 +125,25 @@ export const LogoSubText = styled.div`
   line-height: 14px;
   letter-spacing: 1.35px;
   font-size: 10px;
-  padding-left: 20px;
+  padding: 0 0 0 20px;
 
   ${media.sm`
-    padding-left: 32px;
+    padding: 0 0 0 32px;
   `}
 
   ${media.md`
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 1.2px;
-    padding-left: 35px;
-    padding-right: 7px;
+    padding: 0 7px 0 35px;
   `}
 
   ${media.lg`
-    padding-left: 34px;
-    padding-right: 6px;
+    padding: 0 6px 0 34px;
   `}
 
   ${media.xxl`
-    padding-left: 40px;
-    padding-right: 7px;
+    padding: 0 7px 0 40px;
   `}
 `;
 
@@ -241,7 +217,7 @@ export const CurrencyBlock = styled.div`
     flex-direction: row;
     align-items: flex-end;
     justify-content: center;
-    padding-top: 4px;
+    padding: 4px 0 0 0;
     gap: 4px;
   `}
 `;

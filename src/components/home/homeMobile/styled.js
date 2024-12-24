@@ -1,39 +1,39 @@
 import styled from 'styled-components';
-import { media } from 'src/components/bootstrap-grid';
+import { media } from '@components/bootstrap-grid';
 
 export const MenuContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 33px;
+  padding: 33px 0 0;
 
   ${media.sm`
-    padding-top: 110px;
+    padding: 110px 0 0;
   `}
 
   ${media.md`
-    padding-top: 58px;
+    padding: 58px 0 0;
   `}
 
   ${media.lg`
-    padding-top: 51px;
+    padding: 51px 0 0;
   `}
 `;
 
 export const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding-bottom: 18px;
+  padding: 0 0 18px;
 
   ${media.sm`
-    padding-bottom: 63px;
+    padding: 0 0 63px;
   `}
 
   ${media.md`
-    padding-bottom: 34px;
+    padding: 0 0 34px;
   `}
 
   ${media.lg`
-    padding-bottom: 40px;
+    padding: 0 0 40px;
   `}
 `;
 
@@ -43,24 +43,19 @@ export const OptionMenu = styled.div`
   justify-content: flex-end;
   align-items: flex-end;
   gap: 10px;
-  padding-right: 32px;
+  padding: 0 32px 0 0;
 
   ${media.sm`
-    padding-right: 37px;
-    padding-bottom: 6px;
+    padding: 0 37px 6px 0;
   `}
 
   ${media.md`
     gap: 14px;
-    padding-right: 95px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 5px 95px 5px 0;
   `}
 
   ${media.lg`
-    padding-right: 119px;
-    padding-top: 9px;
-    padding-bottom: 14px;
+    padding: 9px 119px 14px 0;
   `}
 `;
 
@@ -77,7 +72,6 @@ export const CollectionDef = styled.div`
   font-size: 13px;
   font-weight: 400;
   color: #364251;
-  line-height: 18px;
   letter-spacing: 1px;
 `;
 
@@ -86,53 +80,29 @@ export const CollectionName = styled.p`
   font-size: 13px;
   font-weight: 500;
   color: #364251;
+  margin: 0;
 `;
 
 export const CollectionContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-self: flex-start;
+  align-items: flex-end;
   letter-spacing: 1px;
   line-height: 18px;
-  padding-top: 21px;
-  padding-left: 40px;
+  padding: 21px 0 0 40px;
 
   ${media.sm`
-    padding-top: 36px;
-    padding-left: 44px;
+    padding: 36px 0 0 44px;
   `}
 
   ${media.md`
     align-self: flex-end;
-    padding-left: 16px;
+    padding: 36px 0 0 16px;
   `}
 
   ${media.lg`
-    padding-left: 17px;
-    padding-top: 36px;
-    padding-bottom: 30px;
-  `}
-`;
-
-export const GalleryContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-  gap: 15px;
-
-  ${media.sm`
-    gap: 17px;
-  `}
-
-  ${media.md`
-    gap: 46px;
-  `}
-
-  ${media.lg`
-    gap: 64px;
+    padding: 36px 0 30px 17px;
   `}
 `;
 
@@ -174,20 +144,20 @@ export const GallerySideImg = styled.div`
   }
 
   height: 204px;
-  margin-bottom: 18px;
+  margin: 0 0 18px;
 
   ${media.sm`
-    margin-bottom: 41px;
+    margin: 0 0 41px;
   `}
 
   ${media.md`
     height: 277px;
-    margin-bottom: 53px;
+    margin: 0 0 53px;
   `}
 
   ${media.lg`
     height: 385px;
-    margin-bottom: 74px;
+    margin: 0 0 74px;
   `}
 `;
 
@@ -197,28 +167,11 @@ export const OrderButton = styled.button`
   border: none;
 `;
 
-export const PaginationContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 28px;
-`;
-
-export const PaginationButtonNumbers = styled.button`
-  background-color: transparent;
-  border: none;
-  font-size: 14px;
-  color: black;
-  cursor: pointer;
-  background: none;
-  border: none;
-`;
-
 export const NotebookText = styled.div`
   font-family: 'Panel-Sans', sans-serif;
   font-size: 12px;
   color: #000000;
-  margin-right: 15px;
+  margin: 0 15px 0 0;
   letter-spacing: 1.2px;
   font-weight: 400;
 `;
@@ -229,8 +182,4 @@ export const OrderContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
   padding: 14px 29px;
-`;
-
-export const PaginationButtonImg = styled.div`
-  ${({ rotate }) => rotate && 'transform: rotate(180deg);'}
 `;

@@ -1,3 +1,5 @@
+import React from 'react';
+import Image from 'next/image';
 import {
   CollectionText,
   Wrapper,
@@ -11,16 +13,12 @@ import {
   TitleText,
 } from './styled';
 import { description } from '@images/index';
-import Image from 'next/image';
-import { TEXT_CONSTANTS } from './constants';
 import { logo } from '@svg/index';
+import PropTypes from 'prop-types';
 
-const { 
-  value, 
-  title
-} = TEXT_CONSTANTS;
+export default function CollectionComponent({ collectionText }) {
+  const { value, title } = collectionText;
 
-export default function CollectionComponent() {
   return (
     <Wrapper>
       <ImageContainer>
@@ -47,3 +45,12 @@ export default function CollectionComponent() {
     </Wrapper>
   );
 }
+
+CollectionComponent.propTypes = {
+  description: PropTypes.string.isRequired,
+  collectionText: PropTypes.shape({
+    value: PropTypes.arrayOf(PropTypes.string).isRequired,
+    title: PropTypes.string.isRequired,
+  }).isRequired,
+  logo: PropTypes.string.isRequired,
+};

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import {
   MenuContainer,
   FooterContainer,
@@ -7,24 +7,18 @@ import {
   CollectionDef,
   CollectionName,
   CollectionContainer,
-  GalleryContainer,
-  GalleryImg,
-  GallerySideImg,
   OrderButton,
-  PaginationContainer,
-  PaginationButtonImg,
   OrderContainer,
   NotebookText,
-  PaginationButtonNumbers,
 } from './styled';
 import Image from 'next/image';
 import { orderButton } from '@svg/index';
-import { gallery } from '@images/index';
-import { useScreen } from '@context/ScreenContext';
-import { PaginationButton } from '@svg/paginationButton';
+import SwiperSlider from '@components/home/swiper-slider';
+import SwiperPagination from '@components/home/swiper-pagination';
+import PropTypes from 'prop-types';
 
 export default function HomeMobile({ homeMenu }) {
-  const { isPhoneL } = useScreen();
+  const swiperRef = useRef(null);
 
   const {
     refineOption,
@@ -34,8 +28,6 @@ export default function HomeMobile({ homeMenu }) {
     notebookLabel,
   } = homeMenu;
 
-  const paginationButtonSrc = isPhoneL ? '#2B2726' : '#DFDDD8';
-
   return (
     <>
       <MenuContainer>
@@ -43,17 +35,7 @@ export default function HomeMobile({ homeMenu }) {
           <Option>{refineOption}</Option>
           <Option>{sortOption}</Option>
         </OptionMenu>
-        <GalleryContainer>
-          <GallerySideImg>
-            <Image src={gallery} alt="Gallery Image" />
-          </GallerySideImg>
-          <GalleryImg>
-            <Image src={gallery} alt="Gallery Image" />
-          </GalleryImg>
-          <GallerySideImg>
-            <Image src={gallery} alt="Gallery Image" />
-          </GallerySideImg>
-        </GalleryContainer>
+        <SwiperSlider swiperRef={swiperRef} />
       </MenuContainer>
       <FooterContainer>
         <CollectionContainer>
@@ -66,17 +48,18 @@ export default function HomeMobile({ homeMenu }) {
             <Image src={orderButton} alt="Order Button" />
           </OrderButton>
         </OrderContainer>
-        <PaginationContainer>
-          <PaginationButtonImg>
-            <PaginationButton fillcolor="#2B2726" />
-          </PaginationButtonImg>
-          <PaginationButtonNumbers>1</PaginationButtonNumbers>
-          <PaginationButtonNumbers>12</PaginationButtonNumbers>
-          <PaginationButtonImg rotate>
-            <PaginationButton fillcolor={paginationButtonSrc} />
-          </PaginationButtonImg>
-        </PaginationContainer>
+        <SwiperPagination swiperInstance={swiperRef.current} />
       </FooterContainer>
     </>
   );
 }
+
+HomeMobile.propTypes = {
+  homeMenu: PropTypes.shape({
+    refineOption: PropTypes.string.isRequired,
+    sortOption: PropTypes.string.isRequired,
+    collectionLabel: PropTypes.string.isRequired,
+    collectionName: PropTypes.string.isRequired,
+    notebookLabel: PropTypes.string.isRequired,
+  }).isRequired,
+};
