@@ -15,13 +15,13 @@ import { useScreen } from '@context/ScreenContext';
 import { productImage } from '@images/index';
 import { orderButton } from '@svg/index';
 
-export default function ProductCardShort({ productCard }) {
+export default function ProductCardShort({ productCard, isAtScreenTop }) {
   const { isPhoneM, isPhoneS } = useScreen();
   const { collection_prefix, collection_name, product_name } = productCard;
 
   return (
-    <Wrapper>
-      {isPhoneS || isPhoneM ? (
+    <Wrapper isAtScreenTop={isAtScreenTop}>
+      {isPhoneM || isPhoneS? (
         <>
           <CollectionText>
             <CollectionDef>{collection_prefix}</CollectionDef>
@@ -31,7 +31,7 @@ export default function ProductCardShort({ productCard }) {
               {product_name}
             </CollectionName>
           </CollectionText>
-          <ProductImageWrapper>
+          <ProductImageWrapper >
             <Image src={productImage} alt={product_name} />
           </ProductImageWrapper>
         </>
@@ -60,4 +60,5 @@ ProductCardShort.propTypes = {
     collection_name: PropTypes.string.isRequired,
     product_name: PropTypes.string.isRequired,
   }).isRequired,
+  isAtScreenTop: PropTypes.bool,
 };

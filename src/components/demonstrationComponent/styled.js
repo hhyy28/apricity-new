@@ -8,18 +8,9 @@ export const SwiperStyled = styled(Swiper)`
   justify-content: center;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
-  width: 100%;
   flex-direction: column;
   position: relative;
-
-  ${media.xl`
-    width:50%
-  `}
-
-  &.swiper-container {
-    scroll-behavior: smooth;
-  }
-
+  height: 100%;
   & .swiper-wrapper {
     display: flex;
   }
@@ -39,7 +30,7 @@ export const SwiperStyled = styled(Swiper)`
     `}
 
     ${media.xl`
-      height: 768px;
+      height: 100%;
       width: 50%;
     `}
 
@@ -101,4 +92,18 @@ export const FooterContainer = styled.div`
   ${media.lg`
     padding: 0  0 18px 0;
   `}
+  ${media.lg`
+    padding: 0  0 18px 0;
+    display: ${({ isAtScreenTop }) => (isAtScreenTop ? 'flex' : 'none')};
+  `}
 `;
+
+export const Wrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: #D7D7D1;
+  ${media.xl`
+    width: 50%;
+    padding: ${({ isAtScreenTop }) => (isAtScreenTop ? '0' : '252px 113px')};
+  `}
+`
