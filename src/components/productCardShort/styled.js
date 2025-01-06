@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 64px 0 152px 0;
+  transition: padding 0.3s ease-in-out;
 
   ${media.sm`
     padding: 153px 0 214px 0;
@@ -20,7 +21,7 @@ export const Wrapper = styled.div`
   `}
 
   ${media.xl`
-    padding: 251px 0 113px;
+    padding: ${({ isAtScreenTop }) => (isAtScreenTop ? '252px 113px' : '0')};
     width: 50%;
   `}
 
@@ -101,10 +102,32 @@ export const CollectionNameElement = styled.div`
 export const ProductImageWrapper = styled.div`
   padding: 0 26px;
   height: 265px;
+  transition: all 0.3s ease;
 
   ${media.sm`
     height: 298px;
     padding: 0 29px;
+  `}
+
+  ${media.md`
+    height: 317px;
+    margin: 0 88px;
+  `}
+
+  ${media.lg`
+    height: 424px;
+    margin: 0 119px;
+  `}
+
+  ${media.xl`
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  `}
+
+  ${media.xxl`
+    height: 300px;
+    margin: 0 285px;
   `}
 
   img {
