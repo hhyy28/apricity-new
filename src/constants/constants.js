@@ -50,6 +50,14 @@ const textConstants = {
         'Apricity invites you on a journey to rediscover the artistry of daily elegance, inspiring a life lived with deep intention and a connection to the exquisite.',
       ],
     },
+    bottomData: {
+      bottomSwiper: {
+
+      },
+      bottomInfo: {
+        
+      }
+    }
   },
   StudioPage: {},
   ShopByProdPage: {},
