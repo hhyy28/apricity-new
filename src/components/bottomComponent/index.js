@@ -7,7 +7,7 @@ import BottomInfo from './bottomInformation';
 export default function BottomComponen({ bottomData }) {
   const {
     bottomSwiper,
-    bottomInfo,
+    bottomInfo
   } = bottomData;
 
   return (

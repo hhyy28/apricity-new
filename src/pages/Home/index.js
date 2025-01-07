@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import BottomComponent from '@components/bottomComponent';
 
 export default function HomePage({ homePage }) {
-  const { home, demonstration, collectionText } = homePage;
+  const { home, demonstration, collectionText, bottomData } = homePage;
   return (
     <>
       <CSSGrid gridTheme={gridTheme}>
