@@ -1,22 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { 
-  AtmoContainer, 
-  AtmoCopy, 
-  AtmoTitle, 
-  DiscoverContainer, 
-  DiscoverCopy, 
-  DiscoverTitle, 
-  Wrapper 
+import {
+  AtmoContainer,
+  AtmoCopy,
+  AtmoTitle,
+  DiscoverContainer,
+  DiscoverCopy,
+  DiscoverTitle,
+  Wrapper,
 } from './styled';
 
 export default function BottomInfo({ bottomInfo }) {
-  const {
-    discoverTitle,
-    discoverCopy,
-    atmoTitle,
-    atmoCopy
-  } = bottomInfo;
+  const { discoverTitle, discoverCopy, atmoTitle, atmoCopy } = bottomInfo;
 
   return (
     <Wrapper>

@@ -5,10 +5,7 @@ import BottomSwiper from './bottomSwiper';
 import BottomInfo from './bottomInformation';
 
 export default function BottomComponen({ bottomData }) {
-  const {
-    bottomSwiper,
-    bottomInfo
-  } = bottomData;
+  const { bottomSwiper, bottomInfo } = bottomData;
 
   return (
     <Wrapper>

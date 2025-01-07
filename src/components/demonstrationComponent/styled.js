@@ -101,9 +101,9 @@ export const FooterContainer = styled.div`
 export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #D7D7D1;
+  background-color: #d7d7d1;
   ${media.xl`
     width: 50%;
     padding: ${({ isAtScreenTop }) => (isAtScreenTop ? '0' : '252px 113px')};
   `}
-`
+`;

@@ -11,7 +11,10 @@ export default function Demonstrations({ demonstration }) {
   return (
     <Wrapper ref={wrapperRef}>
       <DemonstrationComponent isAtScreenTop={isAtScreenTop} />
-      <ProductCardShort isAtScreenTop={isAtScreenTop} productCard={demonstration.productCard} />
+      <ProductCardShort
+        isAtScreenTop={isAtScreenTop}
+        productCard={demonstration.productCard}
+      />
     </Wrapper>
   );
 }

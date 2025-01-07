@@ -12,7 +12,7 @@ export const PaginationButtonNumbers = styled.button`
   border: none;
   font-size: 14px;
   font-family: 'Panel-Sans', sans-serif;
-  color: #DFDDD8;
+  color: #dfddd8;
   font-weight: 400;
   cursor: pointer;
   outline: none;

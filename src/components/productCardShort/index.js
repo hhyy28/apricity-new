@@ -21,7 +21,7 @@ export default function ProductCardShort({ productCard, isAtScreenTop }) {
 
   return (
     <Wrapper isAtScreenTop={isAtScreenTop}>
-      {isPhoneM || isPhoneS? (
+      {isPhoneM || isPhoneS ? (
         <>
           <CollectionText>
             <CollectionDef>{collection_prefix}</CollectionDef>
@@ -31,7 +31,7 @@ export default function ProductCardShort({ productCard, isAtScreenTop }) {
               {product_name}
             </CollectionName>
           </CollectionText>
-          <ProductImageWrapper >
+          <ProductImageWrapper>
             <Image src={productImage} alt={product_name} />
           </ProductImageWrapper>
         </>

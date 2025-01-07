@@ -27,6 +27,6 @@ HomePage.propTypes = {
     home: PropTypes.object.isRequired,
     demonstration: PropTypes.object.isRequired,
     collectionText: PropTypes.object.isRequired,
-    bottomData: PropTypes.object.isRequired
+    bottomData: PropTypes.object.isRequired,
   }).isRequired,
 };

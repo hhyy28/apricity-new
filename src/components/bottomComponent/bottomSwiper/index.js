@@ -15,7 +15,8 @@ export default function BottomSwiper({ bottomSwiper }) {
   const swiperRef = useRef(null);
   const [swiperInstance, setSwiperInstance] = useState(null);
 
-  const { refineOption, sortOption, collectionLabel, collectionName } = bottomSwiper;
+  const { refineOption, sortOption, collectionLabel, collectionName } =
+    bottomSwiper;
 
   useEffect(() => {
     if (swiperRef.current) {

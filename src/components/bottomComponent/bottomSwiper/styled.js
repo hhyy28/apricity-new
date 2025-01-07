@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 151px 0 0;
-  background-color: #333D4A;
+  background-color: #333d4a;
   ${media.sm`
     padding: 110px 0 0;
   `}
@@ -71,7 +71,7 @@ export const CollectionDef = styled.div`
   font-family: 'Panel-Sans';
   font-size: 13px;
   font-weight: 400;
-  color: #CECFCA;
+  color: #cecfca;
   letter-spacing: 1px;
 `;
 
@@ -79,7 +79,7 @@ export const CollectionName = styled.p`
   font-family: 'Panel-Sans', sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: #CECFCA;
+  color: #cecfca;
   margin: 0;
 `;
 
@@ -88,7 +88,7 @@ export const CollectionContainer = styled.div`
   flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
-  color: #CECFCA;
+  color: #cecfca;
   letter-spacing: 1px;
   line-height: 18px;
   padding: 16px 34px 9px;
