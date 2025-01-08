@@ -4,7 +4,7 @@ import { Wrapper } from './styled';
 import BottomSwiper from './bottomSwiper';
 import BottomInfo from './bottomInformation';
 
-export default function BottomComponen({ bottomData }) {
+export default function BottomComponent({ bottomData }) {
   const { bottomSwiper, bottomInfo } = bottomData;
 
   return (
@@ -15,7 +15,7 @@ export default function BottomComponen({ bottomData }) {
   );
 }
 
-BottomComponen.propTypes = {
+BottomComponent.propTypes = {
   bottomData: PropTypes.shape({
     bottomSwiper: PropTypes.object.isRequired,
     bottomInfo: PropTypes.object.isRequired,

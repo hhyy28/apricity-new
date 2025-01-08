@@ -4,7 +4,7 @@ import { media } from '@components/bootstrap-grid';
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #d7d7d1;
+  background: #d7d7d1;
   padding: 134px 0;
 
   ${media.sm`
@@ -40,7 +40,7 @@ export const TextWrapper = styled.div`
   color: #0e0d0c;
   font-size: 13px;
   line-height: 20px;
-  background-color: #d0d0ca;
+  background: #d0d0ca;
   padding: 23px 38px;
   letter-spacing: 0.65px;
   ${media.sm`

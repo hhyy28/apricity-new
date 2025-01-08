@@ -84,7 +84,7 @@ export const OrderContainer = styled.div`
 `;
 
 export const OrderButton = styled.button`
-  background-color: transparent;
+  background: transparent;
   flex-shrink: 0;
   height: 16px;
   width: 55px;

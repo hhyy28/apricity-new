@@ -46,7 +46,7 @@ export const SwiperStyled = styled(Swiper)`
 `;
 
 export const OrderButton = styled.button`
-  background-color: transparent;
+  background: transparent;
   width: 55px;
   height: 16px;
   background: none;
@@ -101,7 +101,7 @@ export const FooterContainer = styled.div`
 export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #d7d7d1;
+  background: #d7d7d1;
   ${media.xl`
     width: 50%;
     padding: ${({ isAtScreenTop }) => (isAtScreenTop ? '0' : '252px 113px')};

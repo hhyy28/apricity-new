@@ -162,7 +162,7 @@ export const GallerySideImg = styled.div`
 `;
 
 export const OrderButton = styled.button`
-  background-color: transparent;
+  background: transparent;
   background: none;
   border: none;
 `;

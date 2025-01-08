@@ -5,35 +5,15 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 151px 0 0;
-  background-color: #333d4a;
+  background: #333d4a;
   ${media.sm`
-    padding: 110px 0 0;
+    padding: 192px 0 0;
+    background: #182B38;
   `}
 
   ${media.md`
-    padding: 58px 0 0;
-  `}
-
-  ${media.lg`
-    padding: 51px 0 0;
-  `}
-`;
-
-export const FooterContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 0 0 18px;
-
-  ${media.sm`
-    padding: 0 0 63px;
-  `}
-
-  ${media.md`
-    padding: 0 0 34px;
-  `}
-
-  ${media.lg`
-    padding: 0 0 40px;
+    padding: 168px 0 0;
+    background: #333d4a;
   `}
 `;
 
@@ -46,16 +26,17 @@ export const OptionMenu = styled.div`
   padding: 14px 0 0 37px;
 
   ${media.sm`
-    padding: 0 37px 6px 0;
+    padding: 7px 187px 78px 45px;
   `}
 
   ${media.md`
+    justify-content: flex-end;
     gap: 14px;
     padding: 5px 95px 5px 0;
   `}
 
   ${media.lg`
-    padding: 9px 119px 14px 0;
+    padding: 0px 182px 52px 0;
   `}
 `;
 
@@ -65,6 +46,68 @@ export const Option = styled.div`
   font-weight: 500;
   color: #cfd0cc;
   letter-spacing: 0.55px;
+`;
+
+export const FooterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  ${media.md`
+    flex-direction: row;
+    gap: 112px;
+    padding: 0 0 11px;
+    justify-content: center;
+  `}
+  ${media.lg`
+    align-items: flex-end;
+    padding: 0 0 35px;
+  `}
+`
+export const FooterSubContainer = styled.div`
+  display: none;
+  ${media.md`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  `}
+`
+
+export const OrderButton = styled.div`
+   ${media.lg`
+    display: none;
+  `}
+`
+
+export const NotebookInfo = styled.div`
+  font-family: 'Panel-Sans';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 1.2px;
+  color: #F2F3EF;
+`
+
+export const CollectionContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: #cecfca;
+  letter-spacing: 1px;
+  line-height: 18px;
+  padding: 16px 34px 9px;
+  ${media.sm`
+    flex-direction: column;
+    padding: 0 36px 53px 184px;
+  `}
+
+  ${media.md`
+    padding: 37px 0 0 0;
+  `}
+
+  ${media.lg`
+    padding: 16px 0 17px 0;
+  `}
 `;
 
 export const CollectionDef = styled.div`
@@ -81,106 +124,4 @@ export const CollectionName = styled.p`
   font-weight: 500;
   color: #cecfca;
   margin: 0;
-`;
-
-export const CollectionContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
-  color: #cecfca;
-  letter-spacing: 1px;
-  line-height: 18px;
-  padding: 16px 34px 9px;
-  gap: 10px;
-  ${media.sm`
-    padding: 36px 0 0 44px;
-  `}
-
-  ${media.md`
-    align-self: flex-end;
-    padding: 36px 0 0 16px;
-  `}
-
-  ${media.lg`
-    padding: 36px 0 30px 17px;
-  `}
-`;
-
-export const GalleryImg = styled.div`
-  flex-shrink: 0;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  height: 285px;
-  width: 253px;
-
-  ${media.sm`
-    height: 315px;
-    width: 280px;
-  `}
-
-  ${media.md`
-    height: 427px;
-    width: 379px;
-  `}
-
-  ${media.lg`
-    height: 593px;
-    width: 527px;
-  `}
-`;
-
-export const GallerySideImg = styled.div`
-  flex-shrink: 0;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  height: 204px;
-  margin: 0 0 18px;
-
-  ${media.sm`
-    margin: 0 0 41px;
-  `}
-
-  ${media.md`
-    height: 277px;
-    margin: 0 0 53px;
-  `}
-
-  ${media.lg`
-    height: 385px;
-    margin: 0 0 74px;
-  `}
-`;
-
-export const OrderButton = styled.button`
-  background-color: transparent;
-  background: none;
-  border: none;
-`;
-
-export const NotebookText = styled.div`
-  font-family: 'Panel-Sans', sans-serif;
-  font-size: 12px;
-  color: #000000;
-  margin: 0 15px 0 0;
-  letter-spacing: 1.2px;
-  font-weight: 400;
-`;
-
-export const OrderContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 14px 29px;
 `;

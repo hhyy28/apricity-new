@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { media } from '@components/bootstrap-grid';
 
 export const Wrapper = styled.div`
-  background-color: #d7d7d1;
+  background: #d7d7d1;
   display: flex;
   flex-direction: column;
   padding: 64px 0 152px 0;
@@ -241,7 +241,7 @@ export const QuantityValue = styled.span`
 `;
 
 export const OrderButton = styled.button`
-  background-color: transparent;
+  background: transparent;
   flex-shrink: 0;
   display: none;
   background: none;

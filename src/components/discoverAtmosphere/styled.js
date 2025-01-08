@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   width: 320px;
   padding: 55px 0;
-  background-color: #333d4a;
+  background: #333d4a;
   font-family: 'PAnel-Sans';
 `;
 

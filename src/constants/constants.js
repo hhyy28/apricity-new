@@ -54,8 +54,9 @@ const textConstants = {
       bottomSwiper: {
         refineOption: '+ REFINE',
         sortOption: '+ SORT',
-        collectionLabel: 'collection : ',
+        collectionLabel: 'COLLECTION : ',
         collectionName: 'éCLAT',
+        notebookInfo: 'NOTEBOOK NO.1'
       },
       bottomInfo: {
         discoverTitle: 'DISCOVER éCLAT.:',

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { media } from '@components/bootstrap-grid';
 
 export const Wrapper = styled.div`
-  background-color: #f2f3ef;
+  background: #f2f3ef;
   display: flex;
   flex-direction: column;
   padding: 64px 0 79px;
