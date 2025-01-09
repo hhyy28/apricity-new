@@ -22,12 +22,12 @@ export default function BottomSwiper({ bottomSwiper }) {
   const swiperRef = useRef(null);
   const [swiperInstance, setSwiperInstance] = useState(null);
 
-  const { 
-    refineOption, 
-    sortOption, 
-    collectionLabel, 
+  const {
+    refineOption,
+    sortOption,
+    collectionLabel,
     collectionName,
-    notebookInfo
+    notebookInfo,
   } = bottomSwiper;
 
   const { isPhoneL } = useScreen(null);
@@ -60,7 +60,7 @@ export default function BottomSwiper({ bottomSwiper }) {
         </CollectionContainer>
         <FooterSubContainer>
           <OrderButton>
-            <Image src={orderButton}/>
+            <Image src={orderButton} />
           </OrderButton>
           <NotebookInfo>{notebookInfo}</NotebookInfo>
         </FooterSubContainer>
@@ -76,6 +76,6 @@ BottomSwiper.propTypes = {
     sortOption: PropTypes.string.isRequired,
     collectionLabel: PropTypes.string.isRequired,
     collectionName: PropTypes.string.isRequired,
-    notebookInfo: PropTypes.string.isRequired
+    notebookInfo: PropTypes.string.isRequired,
   }).isRequired,
 };

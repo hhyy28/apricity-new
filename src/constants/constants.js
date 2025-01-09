@@ -56,7 +56,7 @@ const textConstants = {
         sortOption: '+ SORT',
         collectionLabel: 'COLLECTION : ',
         collectionName: 'éCLAT',
-        notebookInfo: 'NOTEBOOK NO.1'
+        notebookInfo: 'NOTEBOOK NO.1',
       },
       bottomInfo: {
         discoverTitle: 'DISCOVER éCLAT.:',

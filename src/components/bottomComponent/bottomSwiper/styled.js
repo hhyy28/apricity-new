@@ -61,7 +61,7 @@ export const FooterContainer = styled.div`
     align-items: flex-end;
     padding: 0 0 35px;
   `}
-`
+`;
 export const FooterSubContainer = styled.div`
   display: none;
   ${media.md`
@@ -70,13 +70,13 @@ export const FooterSubContainer = styled.div`
     justify-content: space-between;
     align-items: flex-end;
   `}
-`
+`;
 
 export const OrderButton = styled.div`
-   ${media.lg`
+  ${media.lg`
     display: none;
   `}
-`
+`;
 
 export const NotebookInfo = styled.div`
   font-family: 'Panel-Sans';
@@ -84,8 +84,8 @@ export const NotebookInfo = styled.div`
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 1.2px;
-  color: #F2F3EF;
-`
+  color: #f2f3ef;
+`;
 
 export const CollectionContainer = styled.div`
   display: flex;

@@ -51,7 +51,7 @@ export const DiscoverCopy = styled.div`
   line-height: 16px;
   letter-spacing: 0.6px;
   color: #f2f3ef;
-  
+
   ${media.sm`
     padding: 27px 64px 98px;
   `}
