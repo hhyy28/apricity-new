@@ -9,6 +9,14 @@ export const Wrapper = styled.div`
   ${media.sm`
     background: #182B38;
   `}
+
+  ${media.md`
+    background: #41433D;
+  `}
+
+  ${media.lg`
+    background: #333d4a;
+  `}
 `;
 
 export const DiscoverContainer = styled.div`
@@ -27,6 +35,14 @@ export const DiscoverTitle = styled.div`
   ${media.sm`
     padding: 141px 162px 0 31px;
   `}
+
+  ${media.md`
+    padding: 88px 233px 0 106px;
+  `}
+
+  ${media.lg`
+    padding: 99px 338px 0 201px;
+  `}
 `;
 export const DiscoverCopy = styled.div`
   padding: 27px 42px 25px 60px;
@@ -39,21 +55,51 @@ export const DiscoverCopy = styled.div`
   ${media.sm`
     padding: 27px 64px 98px;
   `}
+
+  ${media.md`
+    padding: 41px 108px 172px 144px;
+  `}
+
+  ${media.lg`
+    padding: 41px 213px 218px 239px;
+  `}
 `;
 
 export const AtmoContainer = styled.div`
+  display: flex;
 
+  ${media.md`
+    flex-direction: row;
+  `}
+
+  ${media.lg`
+    flex-direction: column;
+  `}
 `;
 
 export const AtmoTitle = styled.div`
   background: #625d4d;
   color: #dbd9d6;
+  font-size: 12px;
   font-weight: 400;
   padding: 2px 197px 4px 26px;
   line-height: 16px;
 
   ${media.sm`
     padding: 8px 235px 8px 27px;
+  `}
+
+  ${media.md`
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 26.019px;
+    padding: 47px 0 275px 18px;
+    background: #A1977D;
+  `}
+  
+  ${media.lg`
+    background: #625d4d;
+    padding: 10px 0 20px 135px;
   `}
 `;
 
@@ -63,8 +109,18 @@ export const AtmoCopy = styled.div`
   padding: 35px 31px 9px 46px;
   letter-spacing: 0.6px;
   line-height: 16px;
+
   ${media.sm`
     padding: 29px 64px 65px;
     font-size: 12px;
+  `}
+
+  ${media.md`
+    padding: 60px 70px 112px;
+    font-size: 13px;
+  `}
+  
+  ${media.lg`
+    padding: 162px 186px 145px 210px;
   `}
 `;

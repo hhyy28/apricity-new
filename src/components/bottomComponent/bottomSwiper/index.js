@@ -76,5 +76,6 @@ BottomSwiper.propTypes = {
     sortOption: PropTypes.string.isRequired,
     collectionLabel: PropTypes.string.isRequired,
     collectionName: PropTypes.string.isRequired,
+    notebookInfo: PropTypes.string.isRequired
   }).isRequired,
 };
