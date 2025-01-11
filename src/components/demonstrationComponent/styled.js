@@ -11,6 +11,7 @@ export const SwiperStyled = styled(Swiper)`
   flex-direction: column;
   position: relative;
   height: 100%;
+  
   & .swiper-wrapper {
     display: flex;
   }

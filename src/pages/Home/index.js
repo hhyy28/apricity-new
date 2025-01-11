@@ -6,6 +6,7 @@ import Home from '@components/home';
 import CSSGrid, { gridTheme } from '@components/bootstrap-grid';
 import PropTypes from 'prop-types';
 import BottomComponent from '@components/bottomComponent';
+import AlternativeBottomComponent from '@components/AlternativeBottomComponent';
 
 export default function HomePage({ homePage }) {
   const { home, demonstration, collectionText, bottomData } = homePage;
@@ -15,8 +16,9 @@ export default function HomePage({ homePage }) {
         {/* <Home home={home} />
         <Demonstrations demonstration={demonstration} />
         <CollectionComponent collectionText={collectionText} />
-        <DemonstrationExpanded demonstration={demonstration} /> */}
-        <BottomComponent bottomData={bottomData} />
+        <DemonstrationExpanded demonstration={demonstration} />
+        <BottomComponent bottomData={bottomData} /> */}
+        <AlternativeBottomComponent bottomData={bottomData}/>
       </CSSGrid>
     </>
   );

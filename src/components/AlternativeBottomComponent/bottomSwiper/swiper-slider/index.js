@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { SwiperSlide } from 'swiper/react';
- 
 import { SwiperWrapper, SwiperStyled } from './styled';
 import { gallery1, gallery2 } from '@images/index';
 import Image from 'next/image';
-import { useScreen } from '@context/ScreenContext';
 
 const images = [
   gallery1,
@@ -20,14 +18,6 @@ const images = [
 ];
 
 export default function SwiperSlider({ swiperRef }) {
-  const { isPhoneM, isPhoneL, isTabletVertical } = useScreen();
-
-  const gapValue = () => {
-    if (isTabletVertical) return 64;
-    if (isPhoneL) return 46;
-    if (isPhoneM) return 17;
-    return 15;
-  };
 
   useEffect(() => {
     if (swiperRef.current) {
@@ -38,14 +28,10 @@ export default function SwiperSlider({ swiperRef }) {
   return (
     <SwiperWrapper>
       <SwiperStyled
-        slidesPerView="auto"
-        spaceBetween={gapValue()}
-        centeredSlides={true}
+        slidesPerView={1}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
-        cssMode={true}
-        loop={true}
       >
         {images.map((image, index) => (
           <SwiperSlide key={`slide-${index}`}>
