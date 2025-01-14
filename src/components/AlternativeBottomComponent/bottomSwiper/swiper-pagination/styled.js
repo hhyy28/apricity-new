@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { media } from '@components/bootstrap-grid';
 import { Swiper } from 'swiper/react';
+import { media } from '@components/bootstrap-grid';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -106,7 +106,6 @@ export const SwiperStyled = styled(Swiper)`
   }
 
   .swiper-slide {
-
     img {
       height: 100%;
       width: 100%;
@@ -124,7 +123,7 @@ export const SideContainer = styled.div`
     padding: 0 0 24px 36px;
     gap: 66px;
   `}
-  
+
   ${media.md`
     padding: 44px 0 0px 36px;
     gap: 66px;

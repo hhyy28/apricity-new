@@ -1,4 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import Image from 'next/image';
+import { useScreen } from '@context/ScreenContext';
+import { orderButton } from '@svg/index';
 import {
   OptionMenu,
   Option,
@@ -11,12 +15,8 @@ import {
   NotebookInfo,
   OrderButton,
 } from './styled';
-import PropTypes from 'prop-types';
 import SwiperPagination from './swiper-pagination';
 import SwiperSlider from './swiper-slider';
-import { useScreen } from '@context/ScreenContext';
-import { orderButton } from '@svg/index';
-import Image from 'next/image';
 
 export default function BottomSwiper({ bottomSwiper }) {
   const swiperRef = useRef(null);

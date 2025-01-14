@@ -7,11 +7,11 @@ export const Wrapper = styled.div`
   background: #333d4a;
   font-family: 'Panel-Sans';
   ${media.sm`
-    background: #182B38;
+    background: #182b38;
   `}
 
   ${media.md`
-    background: #41433D;
+    background: #41433d;
   `}
 
   ${media.lg`
@@ -44,6 +44,7 @@ export const DiscoverTitle = styled.div`
     padding: 99px 338px 0 201px;
   `}
 `;
+
 export const DiscoverCopy = styled.div`
   padding: 27px 42px 25px 60px;
   font-size: 12px;
@@ -94,7 +95,7 @@ export const AtmoTitle = styled.div`
     font-weight: 700;
     line-height: 26.019px;
     padding: 47px 0 275px 18px;
-    background: #A1977D;
+    background: #a1977d;
   `}
   
   ${media.lg`

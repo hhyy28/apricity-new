@@ -31,7 +31,7 @@ export const SwiperStyled = styled(Swiper)`
     ${media.sm`
       height: 388px;
     `}
-    
+
     ${media.lg`
       height: 526px;
     `}

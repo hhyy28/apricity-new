@@ -6,12 +6,13 @@ export const Wrapper = styled.div`
   flex-direction: column;
   background: #333d4a;
   font-family: 'Panel-Sans';
+
   ${media.sm`
-    background: #182B38;
+    background: #182b38;
   `}
 
   ${media.md`
-    background: #41433D;
+    background: #41433d;
   `}
 
   ${media.lg`
@@ -44,6 +45,7 @@ export const DiscoverTitle = styled.div`
     padding: 99px 338px 0 201px;
   `}
 `;
+
 export const DiscoverCopy = styled.div`
   padding: 27px 42px 25px 60px;
   font-size: 12px;
@@ -78,8 +80,8 @@ export const AtmoContainer = styled.div`
 `;
 
 export const AtmoTitle = styled.div`
-  background: #625d4d;
-  color: #dbd9d6;
+  background: #a1977d;
+  color: #000000;
   font-size: 12px;
   font-weight: 400;
   padding: 2px 197px 4px 26px;
@@ -94,17 +96,17 @@ export const AtmoTitle = styled.div`
     font-weight: 700;
     line-height: 26.019px;
     padding: 47px 0 275px 18px;
-    background: #A1977D;
   `}
   
   ${media.lg`
+    color: #dbd9d6;
     background: #625d4d;
     padding: 10px 0 20px 135px;
   `}
 `;
 
 export const AtmoCopy = styled.div`
-  background: #343a30;
+  background: #5e594d;
   color: #dbd9d6;
   padding: 35px 31px 9px 46px;
   letter-spacing: 0.6px;
@@ -121,6 +123,7 @@ export const AtmoCopy = styled.div`
   `}
   
   ${media.lg`
+    background: #343a30;
     padding: 162px 186px 145px 210px;
   `}
 `;

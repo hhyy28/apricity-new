@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
+import { useScreen } from '@context/ScreenContext';
+import { productImage } from '@images/index';
+import { orderButton } from '@svg/index';
 import {
   Wrapper,
   CollectionText,
@@ -11,9 +14,6 @@ import {
   ImageBackground,
   OrderButton,
 } from './styled';
-import { useScreen } from '@context/ScreenContext';
-import { productImage } from '@images/index';
-import { orderButton } from '@svg/index';
 
 export default function ProductCardShort({ productCard, isAtScreenTop }) {
   const { isPhoneM, isPhoneS } = useScreen();

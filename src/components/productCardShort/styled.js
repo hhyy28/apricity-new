@@ -241,7 +241,6 @@ export const QuantityValue = styled.span`
 `;
 
 export const OrderButton = styled.button`
-  background: transparent;
   flex-shrink: 0;
   display: none;
   background: none;
@@ -271,7 +270,7 @@ export const OrderButton = styled.button`
   `}
 
   ${media.xxl`
-    margin: 24px 32px
+    margin: 24px 32px;
   `}
 
   img {

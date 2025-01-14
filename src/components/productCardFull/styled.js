@@ -20,12 +20,12 @@ export const Wrapper = styled.div`
   `}
 
   ${media.xl`
-    padding: 141px 0 221px
+    padding: 141px 0 221px;
     width: 50%;
   `}
 
   ${media.xxl`
-    padding: 214px 0 143px
+    padding: 214px 0 143px;
   `}
 `;
 
@@ -218,7 +218,6 @@ export const QuantityValue = styled.span`
 `;
 
 export const OrderButton = styled.button`
-  background: transparent;
   flex-shrink: 0;
   display: none;
   background: none;
@@ -248,7 +247,7 @@ export const OrderButton = styled.button`
   `}
 
   ${media.xxl`
-    margin: 16px 32px
+    margin: 16px 32px;
   `}
 
   img {

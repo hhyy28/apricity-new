@@ -6,16 +6,17 @@ export const Wrapper = styled.div`
   flex-direction: column;
   padding: 151px 0 0;
   background: #333d4a;
+
   ${media.sm`
     padding: 224px 0 0;
   `}
 
   ${media.md`
     padding: 211px 0 0;
-    background: #1E2A3B;
+    background: #1e2a3b;
   `}
 
-  ${media.sm`
+  ${media.lg`
     padding: 282px 0 0;
   `}
 `;

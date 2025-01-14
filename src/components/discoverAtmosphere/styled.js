@@ -12,6 +12,7 @@ export const TopBar = styled.div`
   flex-direction: column;
   letter-spacing: 0.65px;
 `;
+
 export const TopBarTitle = styled.div`
   padding: 0 0 0 30px;
   color: #888f6a;
@@ -19,6 +20,7 @@ export const TopBarTitle = styled.div`
   font-weight: 700;
   line-height: 26.019px;
 `;
+
 export const TopBarText = styled.div`
   padding: 25px 42px;
   font-size: 12px;
@@ -28,6 +30,7 @@ export const TopBarText = styled.div`
   letter-spacing: 0.6px;
   text-align: justify;
 `;
+
 export const BottomBar = styled.div`
   font-family: 'Panel-Sans';
   line-height: 16px;
@@ -35,10 +38,12 @@ export const BottomBar = styled.div`
   color: #dbd9d6;
   text-align: justify;
 `;
+
 export const BottomBarTitle = styled.div`
   background: #625d4d;
   padding: 3px 197px 3px 25px;
 `;
+
 export const BottomBarText = styled.div`
   background: #343a30;
   padding: 35px 31px 9px 45px;

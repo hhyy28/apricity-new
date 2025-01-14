@@ -1,6 +1,6 @@
 import React from 'react';
-import { TextTitle, Text, TextWrapper, Wrapper } from './styled';
 import PropTypes from 'prop-types';
+import { TextTitle, Text, TextWrapper, Wrapper } from './styled';
 
 export default function AtmosphereDesc({ atmosphereText }) {
   const { title, description } = atmosphereText;

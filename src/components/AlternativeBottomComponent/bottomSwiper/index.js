@@ -1,37 +1,24 @@
-import React, { useRef, useState, useEffect } from 'react';
-import {
-  OptionMenu,
-  Option,
-  CollectionDef,
-  CollectionName,
-  CollectionContainer,
-  Wrapper,
-  FooterContainer,
-  FooterSubContainer,
-  NotebookInfo,
-  OrderButton,
-} from './styled';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
+import { Wrapper } from './styled';
 import SwiperPagination from './swiper-pagination';
 import SwiperSlider from './swiper-slider';
-import { useScreen } from '@context/ScreenContext';
-import { orderButton } from '@svg/index';
-import Image from 'next/image';
 
 export default function BottomSwiper({ bottomSwiper }) {
-  const swiperRef = useRef(null);
-  const [swiperInstance, setSwiperInstance] = useState(null);
+  const swiperRef1 = useRef(null);
+  const swiperRef2 = useRef(null);
 
-  useEffect(() => {
-    if (swiperRef.current) {
-      setSwiperInstance(swiperRef.current);
+  const syncSwipers = (activeIndex) => {
+    if (swiperRef1.current && swiperRef2.current) {
+      swiperRef1.current.slideTo(activeIndex);
+      swiperRef2.current.slideTo(activeIndex);
     }
-  }, [swiperRef.current]);
+  };
 
   return (
     <Wrapper>
-      <SwiperSlider swiperRef={swiperRef} />
-      {swiperInstance && <SwiperPagination swiperInstance={swiperInstance} />}
+      <SwiperSlider swiperRef={swiperRef1} onSlideChange={syncSwipers} />
+      <SwiperPagination swiperRef={swiperRef2} onSlideChange={syncSwipers} bottomSwiper={bottomSwiper} />
     </Wrapper>
   );
 }

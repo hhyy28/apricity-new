@@ -6,9 +6,10 @@ export const Wrapper = styled.div`
   flex-direction: column;
   padding: 151px 0 0;
   background: #333d4a;
+
   ${media.sm`
     padding: 192px 0 0;
-    background: #182B38;
+    background: #182b38;
   `}
 
   ${media.md`
@@ -57,11 +58,13 @@ export const FooterContainer = styled.div`
     padding: 0 0 11px;
     justify-content: center;
   `}
+  
   ${media.lg`
     align-items: flex-end;
     padding: 0 0 35px;
   `}
 `;
+
 export const FooterSubContainer = styled.div`
   display: none;
   ${media.md`

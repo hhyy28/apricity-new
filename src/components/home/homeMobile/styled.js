@@ -136,13 +136,6 @@ export const GalleryImg = styled.div`
 
 export const GallerySideImg = styled.div`
   flex-shrink: 0;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
   height: 204px;
   margin: 0 0 18px;
 
@@ -159,10 +152,16 @@ export const GallerySideImg = styled.div`
     height: 385px;
     margin: 0 0 74px;
   `}
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
 `;
 
 export const OrderButton = styled.button`
-  background: transparent;
   background: none;
   border: none;
 `;
