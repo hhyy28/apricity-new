@@ -1,5 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Image from 'next/image';
+import { description } from '@images/index';
+import { logo } from '@svg/index';
 import {
   CollectionText,
   Wrapper,
@@ -12,9 +15,7 @@ import {
   TitleContainer,
   TitleText,
 } from './styled';
-import { description } from '@images/index';
-import { logo } from '@svg/index';
-import PropTypes from 'prop-types';
+
 
 export default function CollectionComponent({ collectionText }) {
   const { value, title } = collectionText;

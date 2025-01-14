@@ -11,8 +11,6 @@ export default function useScrollBreakpoint() {
       const { top } = wrapperRef.current.getBoundingClientRect();
       if (top <= 0) {
         setIsAtScreenTop(true);
-        console.log(isAtScreenTop);
-        
       }
     }
 

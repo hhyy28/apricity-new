@@ -43,7 +43,7 @@ export const ProductName = styled.h2`
 `;
 
 export const OrderButton = styled.button`
-  background-color: transparent;
+  background: transparent;
   width: 55px;
   height: 55px;
   background: none;

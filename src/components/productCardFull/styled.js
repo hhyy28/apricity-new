@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { media } from '@components/bootstrap-grid';
 
 export const Wrapper = styled.div`
-  background-color: #d7d7d1;
+  background: #d7d7d1;
   display: flex;
   flex-direction: column;
   padding: 64px 0 68px 0;
@@ -20,12 +20,12 @@ export const Wrapper = styled.div`
   `}
 
   ${media.xl`
-    padding: 141px 0 221px
+    padding: 141px 0 221px;
     width: 50%;
   `}
 
   ${media.xxl`
-    padding: 214px 0 143px
+    padding: 214px 0 143px;
   `}
 `;
 
@@ -218,7 +218,6 @@ export const QuantityValue = styled.span`
 `;
 
 export const OrderButton = styled.button`
-  background-color: transparent;
   flex-shrink: 0;
   display: none;
   background: none;
@@ -248,7 +247,7 @@ export const OrderButton = styled.button`
   `}
 
   ${media.xxl`
-    margin: 16px 32px
+    margin: 16px 32px;
   `}
 
   img {

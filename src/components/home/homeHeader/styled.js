@@ -201,7 +201,7 @@ export const Cart = styled.div`
 export const SearchInput = styled.input`
   width: 63px;
   border: 1px solid #292929;
-  background-color: transparent;
+  background: transparent;
   display: none;
 
   ${media.xl`

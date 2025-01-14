@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { media } from '@components/bootstrap-grid';
 import { Swiper } from 'swiper/react';
+import { media } from '@components/bootstrap-grid';
 
 export const SwiperStyled = styled(Swiper)`
   display: flex;
@@ -11,6 +11,7 @@ export const SwiperStyled = styled(Swiper)`
   flex-direction: column;
   position: relative;
   height: 100%;
+
   & .swiper-wrapper {
     display: flex;
   }
@@ -46,10 +47,9 @@ export const SwiperStyled = styled(Swiper)`
 `;
 
 export const OrderButton = styled.button`
-  background-color: transparent;
+  background: transparent;
   width: 55px;
   height: 16px;
-  background: none;
   border: none;
 `;
 
@@ -92,6 +92,7 @@ export const FooterContainer = styled.div`
   ${media.lg`
     padding: 0  0 18px 0;
   `}
+
   ${media.lg`
     padding: 0  0 18px 0;
     display: ${({ isAtScreenTop }) => (isAtScreenTop ? 'flex' : 'none')};
@@ -101,9 +102,10 @@ export const FooterContainer = styled.div`
 export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #D7D7D1;
+  background: #d7d7d1;
+
   ${media.xl`
     width: 50%;
     padding: ${({ isAtScreenTop }) => (isAtScreenTop ? '0' : '252px 113px')};
   `}
-`
+`;

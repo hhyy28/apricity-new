@@ -1,21 +1,22 @@
 import React, { useRef } from 'react';
-import {
-  MenuContainer,
-  FooterContainer,
-  OptionMenu,
-  Option,
-  CollectionDef,
-  CollectionName,
-  CollectionContainer,
-  OrderButton,
-  OrderContainer,
-  NotebookText,
-} from './styled';
+import PropTypes from 'prop-types';
 import Image from 'next/image';
 import { orderButton } from '@svg/index';
-import SwiperSlider from '@components/home/swiper-slider';
 import SwiperPagination from '@components/home/swiper-pagination';
-import PropTypes from 'prop-types';
+import SwiperSlider from '@components/home/swiper-slider';
+import {
+  CollectionContainer,
+  CollectionDef,
+  CollectionName,
+  FooterContainer,
+  MenuContainer,
+  NotebookText,
+  Option,
+  OptionMenu,
+  OrderButton,
+  OrderContainer,
+} from './styled';
+
 
 export default function HomeMobile({ homeMenu }) {
   const swiperRef = useRef(null);

@@ -8,7 +8,7 @@ export const PaginationContainer = styled.div`
 `;
 
 export const PaginationButtonNumbers = styled.button`
-  background-color: transparent;
+  background: transparent;
   border: none;
   font-size: 14px;
   color: black;
