@@ -17,7 +17,6 @@ import {
   OrderContainer,
 } from './styled';
 
-
 export default function HomeMobile({ homeMenu }) {
   const swiperRef = useRef(null);
 

@@ -15,7 +15,6 @@ import {
   Wrapper,
 } from './styled';
 
-
 const images = [
   gallery1,
   gallery2,
@@ -28,7 +27,11 @@ const images = [
   gallery1,
 ];
 
-export default function SwiperPagination({ onSlideChange, swiperRef, bottomSwiper }) {
+export default function SwiperPagination({
+  onSlideChange,
+  swiperRef,
+  bottomSwiper,
+}) {
   const { collectionLabel, collectionName } = bottomSwiper;
 
   return (

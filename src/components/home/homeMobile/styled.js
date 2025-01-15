@@ -158,7 +158,6 @@ export const GallerySideImg = styled.div`
     height: 100%;
     object-fit: cover;
   }
-  
 `;
 
 export const OrderButton = styled.button`

@@ -68,6 +68,7 @@ export const DiscoverCopy = styled.div`
 
 export const AtmoContainer = styled.div`
   display: flex;
+  flex-direction: column;
 
   ${media.md`
     flex-direction: row;

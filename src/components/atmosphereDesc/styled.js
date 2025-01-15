@@ -43,7 +43,7 @@ export const TextWrapper = styled.div`
   background: #d0d0ca;
   padding: 23px 38px;
   letter-spacing: 0.65px;
-  
+
   ${media.sm`
     padding: 64px 64px 25px;
   `}

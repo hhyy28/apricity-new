@@ -7,7 +7,7 @@ import DemonstrationExpanded from '@components/demonstrationExpandedComponent';
 import CollectionComponent from '@components/studio';
 import BottomComponent from '@components/bottomComponent';
 
-export default function HomePage({ textConstants }) {
+export default function ByCollectionPage({ textConstants }) {
   const { home, demonstration, collectionText, bottomData } = textConstants;
   return (
     <CSSGrid gridTheme={gridTheme}>
@@ -20,7 +20,7 @@ export default function HomePage({ textConstants }) {
   );
 }
 
-HomePage.propTypes = {
+ByCollectionPage.propTypes = {
   textConstants: PropTypes.shape({
     home: PropTypes.object.isRequired,
     demonstration: PropTypes.object.isRequired,

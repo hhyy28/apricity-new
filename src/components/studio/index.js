@@ -16,7 +16,6 @@ import {
   TitleText,
 } from './styled';
 
-
 export default function CollectionComponent({ collectionText }) {
   const { value, title } = collectionText;
 
