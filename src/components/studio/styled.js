@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   ${media.sm`
     padding: 196px 0 317px;
   `}
-  
+
   ${media.md`
     padding: 155px 0 258px;
   `}
@@ -36,7 +36,7 @@ export const ImageContainer = styled.div`
   ${media.sm`
     padding: 0 60px;
   `}
-  
+
   ${media.md`
     padding: 0 149px 0 142px;
   `}
@@ -79,7 +79,7 @@ export const TitleContainer = styled.div`
   ${media.sm`
     padding: 75px 54px 0 53px;
   `}
-  
+
   ${media.md`
     padding: 88px 84px 0;
   `}
@@ -107,7 +107,7 @@ export const TextContainer = styled.div`
     padding: 33px 60px 0;
     gap: 18px;
   `}
-  
+
   ${media.md`
     padding: 211px 96px 0 84px;
     gap: 20px;
@@ -153,7 +153,7 @@ export const LogoWrapperImg = styled.div`
     width: 142px;
     height: 20px;
   `}
-  
+
   ${media.md`
     width: 223px;
     height: 32px;
@@ -169,7 +169,6 @@ export const LogoWrapperImg = styled.div`
     width: 100%;
     object-fit: cover;
   }
-
 `;
 
 export const TitleText = styled.span`
@@ -181,7 +180,7 @@ export const TitleText = styled.span`
   ${media.sm`
     padding: 0 0 0 12px;
   `}
-  
+
   ${media.md`
     font-size: 23px;
     padding: 0 0 0 20px;
@@ -209,7 +208,7 @@ export const FavouriteImage = styled.div`
   ${media.sm`
     height: 18px;
   `}
-  
+
   ${media.md`
     height: 24px;
   `}
@@ -219,7 +218,6 @@ export const FavouriteImage = styled.div`
     height: 100%;
     object-fit: cover;
   }
-
 `;
 
 export const Favourite = styled.div`
@@ -238,7 +236,7 @@ export const Cart = styled.div`
   ${media.sm`
     height: 18px;
   `}
-  
+
   ${media.md`
     height: 24px;
   `}
@@ -252,5 +250,4 @@ export const Cart = styled.div`
     height: 100%;
     object-fit: cover;
   }
-
 `;

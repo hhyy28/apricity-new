@@ -5,7 +5,6 @@ import { SwiperSlide } from 'swiper/react';
 import { gallery1, gallery2 } from '@images/index';
 import { SwiperWrapper, SwiperStyled } from './styled';
 
-
 const images = [
   gallery1,
   gallery2,

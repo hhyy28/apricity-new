@@ -58,7 +58,7 @@ export const FooterContainer = styled.div`
     padding: 0 0 11px;
     justify-content: center;
   `}
-  
+
   ${media.lg`
     align-items: flex-end;
     padding: 0 0 35px;

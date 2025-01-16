@@ -18,7 +18,11 @@ export default function BottomSwiper({ bottomSwiper }) {
   return (
     <Wrapper>
       <SwiperSlider swiperRef={swiperRef1} onSlideChange={syncSwipers} />
-      <SwiperPagination swiperRef={swiperRef2} onSlideChange={syncSwipers} bottomSwiper={bottomSwiper} />
+      <SwiperPagination
+        swiperRef={swiperRef2}
+        onSlideChange={syncSwipers}
+        bottomSwiper={bottomSwiper}
+      />
     </Wrapper>
   );
 }
