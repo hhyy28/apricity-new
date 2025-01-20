@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Image from 'next/image';
 import {
   MenuContainer,
@@ -47,3 +48,10 @@ export default function Home1920({ homeMenu }) {
     </MenuContainer>
   );
 }
+
+Home1920.propTypes = {
+  homeMenu: PropTypes.shape({
+    refineOption: PropTypes.string,
+    sortOption: PropTypes.string,
+  }).isRequired,
+};

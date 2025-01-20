@@ -47,10 +47,10 @@ export default function CollectionComponent({ collectionText }) {
 }
 
 CollectionComponent.propTypes = {
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
   collectionText: PropTypes.shape({
-    value: PropTypes.arrayOf(PropTypes.string).isRequired,
-    title: PropTypes.string.isRequired,
+    value: PropTypes.arrayOf(PropTypes.string),
+    title: PropTypes.string,
   }).isRequired,
-  logo: PropTypes.string.isRequired,
+  logo: PropTypes.string,
 };

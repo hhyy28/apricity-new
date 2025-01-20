@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CSSGrid, { gridTheme } from '@components/bootstrap-grid';
-import Home from '@components/home';
-import Demonstration from '@components/demonstration/demonstrationShort';
-import DemonstrationExpanded from '@components/demonstration/demonstrationExpanded';
-import CollectionComponent from '@components/collectionComponent';
-import BottomComponent from '@components/footer/bottom';
+import { 
+  BottomComponent, 
+  CollectionComponent, 
+  Demonstration, 
+  DemonstrationExpanded, 
+  Home 
+ } from '@components/index';
 
-export default function HomePage({ textConstants }) {
+export default function ByCollectionTemplate({ textConstants }) {
   const { home, demonstration, collectionText, bottomData } = textConstants;
   return (
     <CSSGrid gridTheme={gridTheme}>
@@ -20,7 +22,7 @@ export default function HomePage({ textConstants }) {
   );
 }
 
-HomePage.propTypes = {
+ByCollectionTemplate.propTypes = {
   textConstants: PropTypes.shape({
     home: PropTypes.object.isRequired,
     demonstration: PropTypes.object.isRequired,

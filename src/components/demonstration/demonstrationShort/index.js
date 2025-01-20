@@ -1,11 +1,11 @@
 import React from 'react';
-import DemonstrationComponent from '@components/demonstrationComponent';
-import ProductCardShort from '@components/productCardShort';
-import { Wrapper } from './styled';
-import useScrollBreakpoint from '@context/UseScroll';
 import PropTypes from 'prop-types';
+import useScrollBreakpoint from '@context/UseScroll';
+import { Wrapper } from './styled';
+import DemonstrationComponent from '../demonstrationComponent';
+import ProductCardShort from './productCardShort';
 
-export default function Demonstrations({ demonstration }) {
+export default function Demonstration({ demonstration }) {
   const { isAtScreenTop, wrapperRef } = useScrollBreakpoint();
 
   return (
@@ -19,7 +19,7 @@ export default function Demonstrations({ demonstration }) {
   );
 }
 
-Demonstrations.propTypes = {
+Demonstration.propTypes = {
   demonstration: PropTypes.shape({
     productCard: PropTypes.object.isRequired,
   }).isRequired,
