@@ -7,7 +7,7 @@ import Demonstrations from '@components/demonstration/demonstrationShort';
 import DemonstrationExpanded from '@components/demonstration/demonstrationExpanded';
 import AlternativeBottomComponent from '@components/footer/alternative';
 
-export default function StudioPage({ textConstants }) {
+export default function StudioTemplate({ textConstants }) {
   const { home, demonstration, collectionText, bottomData } = textConstants;
 
   return (
