@@ -69,7 +69,7 @@ export default function ProductCardFull({ productCard }) {
               <CollectionName>{collection_name}</CollectionName>
             </CollectionText>
             <AtmoDescContainer>
-              <ImageBackground background={productImage}>
+              <ImageBackground $background={productImage}>
                 <OrderButton>
                   <Image src={orderButton} alt="Order Button" />
                 </OrderButton>
@@ -83,7 +83,7 @@ export default function ProductCardFull({ productCard }) {
             <PaginationButtonImg>
               <PaginationButton fillcolor="#2B2726" />
             </PaginationButtonImg>
-            <PaginationButtonImg rotate>
+            <PaginationButtonImg $rotate>
               <PaginationButton fillcolor="#2B2726" />
             </PaginationButtonImg>
           </PaginationContainer>

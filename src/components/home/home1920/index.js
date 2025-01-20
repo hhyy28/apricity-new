@@ -14,7 +14,7 @@ import {
   GallerySideImg,
 } from './styled';
 import { orderButton } from '@svg/index';
-import { gallery } from '@images/index';
+import { gallery1 } from '@images/index';
 import { PaginationButton } from '@svg/paginationButton';
 
 export default function Home1920({ homeMenu }) {
@@ -25,7 +25,7 @@ export default function Home1920({ homeMenu }) {
       <PaginationButtonImg>
         <PaginationButton fillcolor="#2B2726" />
       </PaginationButtonImg>
-      <GalleryBackground background={gallery}>
+      <GalleryBackground $background={gallery1}>
         <OrderContainer>
           <ProductName>COLLECTION : éCLAT. THE VASE</ProductName>
           <OrderButton>
@@ -33,7 +33,7 @@ export default function Home1920({ homeMenu }) {
           </OrderButton>
         </OrderContainer>
       </GalleryBackground>
-      <PaginationButtonImg rotate="true">
+      <PaginationButtonImg $rotate="true">
         <PaginationButton fillcolor="#2B2726" />
       </PaginationButtonImg>
       <SideMenu>
@@ -42,7 +42,7 @@ export default function Home1920({ homeMenu }) {
           <Option>{sortOption}</Option>
         </OptionMenu>
         <GallerySideImg>
-          <Image src={gallery} alt="gallery img" />
+          <Image src={gallery1} alt="gallery img" />
         </GallerySideImg>
       </SideMenu>
     </MenuContainer>

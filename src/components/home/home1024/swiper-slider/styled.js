@@ -71,7 +71,7 @@ export const SlideContent = styled.div`
 `;
 
 export const OrderContainer = styled.div`
-  display: ${(props) => (props.isActive ? 'flex' : 'none')};
+  display: ${(props) => (props.$isActive ? 'flex' : 'none')};
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
@@ -80,7 +80,7 @@ export const OrderContainer = styled.div`
   width: 248px;
   height: 38px;
   transition: opacity 0.3s ease;
-  opacity: ${(props) => (props.isActive ? 1 : 0)};
+  opacity: ${(props) => (props.$isActive ? 1 : 0)};
 `;
 
 export const OrderButton = styled.button`

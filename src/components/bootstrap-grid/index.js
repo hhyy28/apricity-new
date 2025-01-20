@@ -5,7 +5,7 @@ import gridTheme, { breakpointUpperBounds } from './grid-theme';
 
 export { gridTheme, breakpointUpperBounds, media };
 
-function CSSGrid({ children, override }) {
+function CSSGrid({ children, override = null }) {
   return (
     <>
       <BaseCSS />
@@ -24,10 +24,6 @@ CSSGrid.propTypes = {
   override: PropTypes.shape({
     gridTheme: PropTypes.object,
   }),
-};
-
-CSSGrid.defaultProps = {
-  override: null,
 };
 
 export default CSSGrid;

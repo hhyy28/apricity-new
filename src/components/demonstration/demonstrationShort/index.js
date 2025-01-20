@@ -6,13 +6,13 @@ import DemonstrationComponent from '../demonstrationComponent';
 import ProductCardShort from './productCardShort';
 
 export default function Demonstration({ demonstration }) {
-  const { isAtScreenTop, wrapperRef } = useScrollBreakpoint();
+  const { $isAtScreenTop, wrapperRef } = useScrollBreakpoint();
 
   return (
     <Wrapper ref={wrapperRef}>
-      <DemonstrationComponent isAtScreenTop={isAtScreenTop} />
+      <DemonstrationComponent $isAtScreenTop={$isAtScreenTop} />
       <ProductCardShort
-        isAtScreenTop={isAtScreenTop}
+        $isAtScreenTop={$isAtScreenTop}
         productCard={demonstration.productCard}
       />
     </Wrapper>

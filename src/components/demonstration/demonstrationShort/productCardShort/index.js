@@ -15,12 +15,12 @@ import {
   OrderButton,
 } from './styled';
 
-export default function ProductCardShort({ productCard, isAtScreenTop }) {
+export default function ProductCardShort({ productCard, $isAtScreenTop }) {
   const { isPhoneM, isPhoneS } = useScreen();
   const { collection_prefix, collection_name, product_name } = productCard;
 
   return (
-    <Wrapper isAtScreenTop={isAtScreenTop}>
+    <Wrapper $isAtScreenTop={$isAtScreenTop}>
       {isPhoneM || isPhoneS ? (
         <>
           <CollectionText>
@@ -37,12 +37,12 @@ export default function ProductCardShort({ productCard, isAtScreenTop }) {
         </>
       ) : (
         <>
-          <CollectionText visiblefooter={false}>
+          <CollectionText $visibleFooter={false}>
             <CollectionDef>{collection_prefix}</CollectionDef>
             <CollectionName>{collection_name}</CollectionName>
           </CollectionText>
           <AtmoDescContainer>
-            <ImageBackground background={productImage}>
+            <ImageBackground $background={productImage}>
               <OrderButton>
                 <Image src={orderButton} alt="Order Button" />
               </OrderButton>
@@ -60,5 +60,5 @@ ProductCardShort.propTypes = {
     collection_name: PropTypes.string.isRequired,
     product_name: PropTypes.string.isRequired,
   }).isRequired,
-  isAtScreenTop: PropTypes.bool,
+  $isAtScreenTop: PropTypes.bool,
 };

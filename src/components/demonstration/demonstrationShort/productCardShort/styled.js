@@ -281,7 +281,7 @@ export const OrderButton = styled.button`
 `;
 
 export const ImageBackground = styled.div`
-  background-image: url(${({ background }) => background.src});
+  background-image: url(${({ $background }) => $background.src});
   background-size: cover;
   background-position: center;
   display: flex;
@@ -320,5 +320,5 @@ export const AtmoDescContainer = styled.div`
 `;
 
 export const PaginationButtonImg = styled.div`
-  ${({ rotate }) => rotate && 'transform: rotate(180deg);'}
+  ${({ $rotate }) => $rotate && 'transform: $rotate(180deg);'}
 `;

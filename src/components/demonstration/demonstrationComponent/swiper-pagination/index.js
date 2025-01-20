@@ -23,7 +23,7 @@ export default function SwiperPagination({ swiperInstance }) {
       <PaginationButtonNumbers onClick={slideToLast}>
         12
       </PaginationButtonNumbers>
-      <PaginationButtonImg rotate onClick={slideNext}>
+      <PaginationButtonImg $rotate onClick={slideNext}>
         <PaginationButton fillcolor="#DFDDD8" />
       </PaginationButtonImg>
     </PaginationContainer>

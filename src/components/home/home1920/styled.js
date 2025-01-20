@@ -12,11 +12,11 @@ export const PaginationButtonImg = styled.div`
   flex-shrink: 0;
   width: 55px;
   height: 20px;
-  ${({ rotate }) => rotate && 'transform: rotate(180deg);'}
+  ${({ $rotate }) => $rotate && 'transform: $rotate(180deg);'}
 `;
 
 export const GalleryBackground = styled.div`
-  background-image: url(${(props) => props.background});
+  background-image: url(${(props) => props.$background});
   background-size: cover;
   background-position: center;
   width: 100%;
