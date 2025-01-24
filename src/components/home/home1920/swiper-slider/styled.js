@@ -9,7 +9,7 @@ export const SwiperWrapper = styled.div`
   overflow: hidden;
   width: 100%;
   position: relative;
-  padding: 0 0 40px;
+  padding: 0 0 0 134px;
 
   &.last-slide-active {
     margin-right: 233px;
@@ -27,7 +27,6 @@ export const SwiperStyled = styled(Swiper)`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smoother animation */
   overflow: hidden;
   width: 100%;
 
@@ -40,20 +39,21 @@ export const SwiperStyled = styled(Swiper)`
   }
 
   .swiper-slide {
-    height: 266px;
-    padding: 121px 0 18px 0;
+    height: 415px;
+    padding: 241px 0 56px 0;
     flex-shrink: 0;
     scroll-snap-align: start;
 
     &.swiper-slide-active {
-      width: 601px;
-      height: 428px;
+      width: 1074px;
+      height: 712px;
       padding: 0;
     }
 
     img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
 `;
@@ -71,7 +71,7 @@ export const SlideContent = styled.div`
 `;
 
 export const OrderContainer = styled.div`
-  display: ${(props) => (props.$isActive ? 'flex' : 'none')};
+  display: ${(props) => (props.isActive ? 'flex' : 'none')};
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
@@ -80,7 +80,7 @@ export const OrderContainer = styled.div`
   width: 248px;
   height: 38px;
   transition: opacity 0.3s ease;
-  opacity: ${(props) => (props.$isActive ? 1 : 0)};
+  opacity: ${(props) => (props.isActive ? 1 : 0)};
 `;
 
 export const OrderButton = styled.button`

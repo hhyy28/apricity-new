@@ -2,25 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CSSGrid, { gridTheme } from '@components/bootstrap-grid';
 import Home from '@components/home';
+import CollectionComponent from '@components/collectionComponent';
 import Demonstrations from '@components/demonstration/demonstrationShort';
 import DemonstrationExpanded from '@components/demonstration/demonstrationExpanded';
-import CollectionComponent from '@components/collectionComponent';
-import BottomComponent from '@components/footer/bottom';
+import AlternativeBottomComponent from '@components/footer/alternative';
 
-export default function ByProductPage({ textConstants }) {
+export default function StudioTemplate({ textConstants }) {
   const { home, demonstration, collectionText, bottomData } = textConstants;
+
   return (
     <CSSGrid gridTheme={gridTheme}>
       <Home home={home} />
-      <Demonstrations demonstration={demonstration} />
       <CollectionComponent collectionText={collectionText} />
+      <Demonstrations demonstration={demonstration} />
       <DemonstrationExpanded demonstration={demonstration} />
-      <BottomComponent bottomData={bottomData} />
+      <AlternativeBottomComponent bottomData={bottomData} />
     </CSSGrid>
   );
 }
 
-ByProductPage.propTypes = {
+StudioTemplate.propTypes = {
   textConstants: PropTypes.shape({
     home: PropTypes.object.isRequired,
     demonstration: PropTypes.object.isRequired,

@@ -15,25 +15,21 @@ export default function SwiperPagination({ swiperInstance }) {
   return (
     <PaginationContainer>
       <PaginationButtonImg onClick={slidePrev}>
-        <PaginationButton fillcolor="#2B2726" />
+        <PaginationButton fillcolor="#DFDDD8" />
       </PaginationButtonImg>
-      <PaginationButtonNumbers onClick={slideToFirst}>
+      <PaginationButtonNumbers onClick={() => slideToFirst()}>
         1
       </PaginationButtonNumbers>
-      <PaginationButtonNumbers onClick={slideToLast}>
-        12
+      <PaginationButtonNumbers onClick={() => slideToLast()}>
+        {swiperInstance?.slides?.length || 0}
       </PaginationButtonNumbers>
       <PaginationButtonImg $rotate onClick={slideNext}>
-        <PaginationButton fillcolor="#2B2726" />
+        <PaginationButton fillcolor="#DFDDD8" />
       </PaginationButtonImg>
     </PaginationContainer>
   );
 }
+
 SwiperPagination.propTypes = {
-  swiperInstance: PropTypes.shape({
-    slidePrev: PropTypes.func,
-    slideNext: PropTypes.func,
-    slideTo: PropTypes.func,
-    slides: PropTypes.array,
-  }),
+  swiperInstance: PropTypes.object.isRequired,
 };

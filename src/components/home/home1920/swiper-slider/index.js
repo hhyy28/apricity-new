@@ -32,7 +32,7 @@ export default function SwiperSlider({ swiperRef }) {
     <SwiperWrapper className={isLastSlide ? 'last-slide-active' : ''}>
       <SwiperStyled
         slidesPerView="auto"
-        spaceBetween={53}
+        spaceBetween={179}
         centeredSlides={false}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
@@ -44,7 +44,7 @@ export default function SwiperSlider({ swiperRef }) {
         {images.map((image, index) => (
           <SwiperSlide key={`slide-${index}`}>
             <SlideContent style={{ backgroundImage: `url(${image.src})` }}>
-              <OrderContainer $isActive={activeIndex === index}>
+              <OrderContainer isActive={activeIndex === index}>
                 <ProductName>COLLECTION : éCLAT. THE VASE</ProductName>
                 <OrderButton>
                   <Image src={orderButton} alt="order img" />

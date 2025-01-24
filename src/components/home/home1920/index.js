@@ -1,49 +1,26 @@
-import React from 'react';
-import Image from 'next/image';
+import React, { useRef } from 'react';
 import {
   MenuContainer,
   PaginationButtonImg,
-  GalleryBackground,
-  OrderContainer,
-  ProductName,
-  OrderButton,
-  SideMenu,
-  OptionMenu,
-  Option,
-  GallerySideImg,
+  PaginationButtonImgRotated,
 } from './styled';
-import { orderButton } from '@svg/index';
-import { gallery } from '@images/index';
 import { PaginationButton } from '@svg/paginationButton';
+import SwiperSlider from './swiper-slider';
 
-export default function Home1920({ homeMenu }) {
-  const { refineOption, sortOption } = homeMenu;
+export default function Home1920() {
+  const swiperRef = useRef(null);
+  const slidePrev = () => swiperRef.current?.slidePrev();
+  const slideNext = () => swiperRef.current?.slideNext();
 
   return (
     <MenuContainer>
-      <PaginationButtonImg>
+      <PaginationButtonImg onClick={slidePrev}>
         <PaginationButton fillcolor="#2B2726" />
       </PaginationButtonImg>
-      <GalleryBackground background={gallery}>
-        <OrderContainer>
-          <ProductName>COLLECTION : éCLAT. THE VASE</ProductName>
-          <OrderButton>
-            <Image src={orderButton} alt="order img" />
-          </OrderButton>
-        </OrderContainer>
-      </GalleryBackground>
-      <PaginationButtonImg rotate="true">
+      <SwiperSlider swiperRef={swiperRef} />
+      <PaginationButtonImgRotated $rotate onClick={slideNext}>
         <PaginationButton fillcolor="#2B2726" />
-      </PaginationButtonImg>
-      <SideMenu>
-        <OptionMenu>
-          <Option>{refineOption}</Option>
-          <Option>{sortOption}</Option>
-        </OptionMenu>
-        <GallerySideImg>
-          <Image src={gallery} alt="gallery img" />
-        </GallerySideImg>
-      </SideMenu>
+      </PaginationButtonImgRotated>
     </MenuContainer>
   );
 }

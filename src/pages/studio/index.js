@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CSSGrid, { gridTheme } from '@components/bootstrap-grid';
 import Home from '@components/home';
-import CollectionComponent from '@components/studio';
-import Demonstrations from '@components/demonstration';
-import DemonstrationExpanded from '@components/demonstrationExpandedComponent';
-import AlternativeBottomComponent from '@components/AlternativeBottomComponent';
+import CollectionComponent from '@components/collectionComponent';
+import Demonstrations from '@components/demonstration/demonstrationShort';
+import DemonstrationExpanded from '@components/demonstration/demonstrationExpanded';
+import AlternativeBottomComponent from '@components/footer/alternative';
 
 export default function StudioPage({ textConstants }) {
   const { home, demonstration, collectionText, bottomData } = textConstants;

@@ -6,18 +6,16 @@ import {
   PaginationButtonNumbers,
   PaginationContainer,
 } from './styled';
+import { useSwiperControls } from '@context/SwiperFunctions';
 
 export default function SwiperPagination({ swiperInstance }) {
-  const slidePrev = () => swiperInstance?.slidePrev();
-  const slideNext = () => swiperInstance?.slideNext();
-  const slideToFirst = () => swiperInstance?.slideTo(0);
-  const slideToLast = () =>
-    swiperInstance?.slideTo(swiperInstance.slides.length - 1);
+  const { slidePrev, slideNext, slideToFirst, slideToLast } =
+    useSwiperControls(swiperInstance);
 
   return (
     <PaginationContainer>
       <PaginationButtonImg onClick={slidePrev}>
-        <PaginationButton fillcolor="#2B2726" />
+        <PaginationButton fillcolor="#DFDDD8" />
       </PaginationButtonImg>
       <PaginationButtonNumbers onClick={slideToFirst}>
         1
@@ -26,12 +24,11 @@ export default function SwiperPagination({ swiperInstance }) {
         12
       </PaginationButtonNumbers>
       <PaginationButtonImg $rotate onClick={slideNext}>
-        <PaginationButton fillcolor="#2B2726" />
+        <PaginationButton fillcolor="#DFDDD8" />
       </PaginationButtonImg>
     </PaginationContainer>
   );
 }
-
 SwiperPagination.propTypes = {
   swiperInstance: PropTypes.shape({
     slidePrev: PropTypes.func,

@@ -11,7 +11,7 @@ export const PaginationButtonNumbers = styled.button`
   background: transparent;
   border: none;
   font-size: 14px;
-  color: black;
+  color: #dfddd8;
   cursor: pointer;
   outline: none;
   &:focus {
