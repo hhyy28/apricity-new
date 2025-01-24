@@ -51,6 +51,5 @@ export default function DemonstrationComponent({ $isAtScreenTop }) {
 }
 
 DemonstrationComponent.propTypes = {
-  $isAtScreenTop: PropTypes.bool
-  ,
+  $isAtScreenTop: PropTypes.bool,
 };

@@ -3,7 +3,7 @@ import HomeTemplate from './homeTemplate';
 // import ByCollectionTemplate from './byCollectionTemplate';
 // import ByProductTemplate from './byProductTemplate';
 
-export { 
+export {
   HomeTemplate,
   // StudioTemplate,
   // ByCollectionTemplate,

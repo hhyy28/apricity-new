@@ -5,18 +5,38 @@ export const MenuContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 133px 0 120px 248px;
 `;
 
 export const PaginationButtonImg = styled.div`
-  flex-shrink: 0;
-  width: 55px;
-  height: 20px;
-  ${({ $rotate }) => $rotate && 'transform: $rotate(180deg);'}
+  position: absolute;
+  z-index: 10;
+  width: 115px;
+  height: 31px;
+  ${({ rotate }) => rotate && 'transform: rotate(180deg);'}
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
+export const PaginationButtonImgRotated = styled.div`
+  position: absolute;
+  z-index: 10;
+  width: 115px;
+  height: 31px;
+  padding: 0 1300px 0 0;
+  ${({ $rotate }) => $rotate && 'transform: rotate(180deg);'}
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
 
 export const GalleryBackground = styled.div`
-  background-image: url(${(props) => props.$background});
+  background-image: url(${(props) => props.background});
   background-size: cover;
   background-position: center;
   width: 100%;

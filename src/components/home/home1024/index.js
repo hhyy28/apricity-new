@@ -24,7 +24,6 @@ export default function Home1024({ homeMenu }) {
   );
 }
 
-// Prop validation
 Home1024.propTypes = {
   homeMenu: PropTypes.shape({
     refineOption: PropTypes.string.isRequired,

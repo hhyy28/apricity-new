@@ -81,6 +81,8 @@ export const FooterContainer = styled.div`
   position: absolute;
   bottom: 0;
   width: 100%;
+  transition: all 0.3s ease-in-out;
+
   ${media.sm`
     padding: 0  0 54px 0;
   `}
@@ -93,9 +95,9 @@ export const FooterContainer = styled.div`
     padding: 0  0 18px 0;
   `}
 
-  ${media.lg`
+  ${media.xl`
     padding: 0  0 18px 0;
-    display: ${({ isAtScreenTop }) => (isAtScreenTop ? 'flex' : 'none')};
+    display: ${({ $isAtScreenTop }) => ($isAtScreenTop ? 'flex' : 'none')};
   `}
 `;
 
@@ -103,9 +105,10 @@ export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   background: #d7d7d1;
+  transition: all 0.3s ease-in-out;
 
   ${media.xl`
     width: 50%;
-    padding: ${({ isAtScreenTop }) => (isAtScreenTop ? '0' : '252px 113px')};
+    padding: ${({ $isAtScreenTop }) => ($isAtScreenTop ? '0' : '252px 113px')};
   `}
 `;

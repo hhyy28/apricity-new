@@ -6,10 +6,10 @@ import BottomComponent from '@components/footer/bottom';
 import AlternativeBottomComponent from '@components/footer/alternative';
 
 export {
-  Home, 
-  Demonstration, 
-  DemonstrationExpanded, 
-  CollectionComponent, 
-  BottomComponent, 
-  AlternativeBottomComponent 
+  Home,
+  Demonstration,
+  DemonstrationExpanded,
+  CollectionComponent,
+  BottomComponent,
+  AlternativeBottomComponent,
 };

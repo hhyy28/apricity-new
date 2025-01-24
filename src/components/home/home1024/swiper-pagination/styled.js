@@ -23,7 +23,7 @@ export const PaginationButtonImg = styled.button`
   background: none;
   border: none;
   cursor: pointer;
-  ${({ $rotate }) => $rotate && 'transform: $rotate(180deg);'}
+  ${({ $rotate }) => $rotate && 'transform: rotate(180deg);'}
   outline: none;
   &:focus {
     outline: none;

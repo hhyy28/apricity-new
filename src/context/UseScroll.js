@@ -5,14 +5,14 @@ export default function useScrollBreakpoint() {
   const wrapperRef = useRef(null);
 
   useEffect(() => {
-    function onScroll() {
+    const onScroll = () => {
       if (!wrapperRef.current || $isAtScreenTop) return;
 
       const { top } = wrapperRef.current.getBoundingClientRect();
       if (top <= 0) {
         setIsAtScreenTop(true);
       }
-    }
+    };
 
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);

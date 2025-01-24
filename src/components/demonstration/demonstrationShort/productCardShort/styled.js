@@ -21,7 +21,7 @@ export const Wrapper = styled.div`
   `}
 
   ${media.xl`
-    padding: ${({ isAtScreenTop }) => (isAtScreenTop ? '252px 113px' : '0')};
+    padding: ${({ $isAtScreenTop }) => ($isAtScreenTop ? '252px 113px' : '0')};
     width: 50%;
   `}
 
@@ -320,5 +320,5 @@ export const AtmoDescContainer = styled.div`
 `;
 
 export const PaginationButtonImg = styled.div`
-  ${({ $rotate }) => $rotate && 'transform: $rotate(180deg);'}
+  ${({ $rotate }) => $rotate && 'transform: rotate(180deg);'}
 `;

@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CSSGrid, { gridTheme } from '@components/bootstrap-grid';
-import { 
-  BottomComponent, 
-  CollectionComponent, 
-  Demonstration, 
-  DemonstrationExpanded, 
-  Home 
- } from '@components/index';
+import {
+  BottomComponent,
+  CollectionComponent,
+  Demonstration,
+  DemonstrationExpanded,
+  Home,
+} from '@components/index';
 
 export default function ByCollectionTemplate({ textConstants }) {
   const { home, demonstration, collectionText, bottomData } = textConstants;

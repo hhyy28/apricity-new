@@ -8,6 +8,9 @@ export const Wrapper = styled.div`
   ${media.xl`
     flex-direction: row;
     width: 100%;
-    height: 768px
+    height: 768px;
+  `}
+  ${media.xxl`
+    height: 1080px;
   `}
 `;

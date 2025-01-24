@@ -5,16 +5,14 @@ import gridTheme, { breakpointUpperBounds } from './grid-theme';
 
 export { gridTheme, breakpointUpperBounds, media };
 
-function CSSGrid({ children, override = null }) {
-  return (
-    <>
-      <BaseCSS />
-      <GridThemeProvider gridTheme={override?.gridTheme || gridTheme}>
-        {children}
-      </GridThemeProvider>
-    </>
-  );
-}
+const CSSGrid = ({ children, override = null }) => (
+  <>
+    <BaseCSS />
+    <GridThemeProvider gridTheme={override?.gridTheme || gridTheme}>
+      {children}
+    </GridThemeProvider>
+  </>
+);
 
 CSSGrid.propTypes = {
   children: PropTypes.oneOfType([

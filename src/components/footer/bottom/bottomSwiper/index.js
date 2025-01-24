@@ -60,7 +60,7 @@ export default function BottomSwiper({ bottomSwiper }) {
         </CollectionContainer>
         <FooterSubContainer>
           <OrderButton>
-            <Image src={orderButton} />
+            <Image src={orderButton} alt="imgSlide" />
           </OrderButton>
           <NotebookInfo>{notebookInfo}</NotebookInfo>
         </FooterSubContainer>

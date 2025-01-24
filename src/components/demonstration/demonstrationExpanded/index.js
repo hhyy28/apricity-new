@@ -8,12 +8,11 @@ import DemonstrationComponent from '../demonstrationComponent';
 
 export default function DemonstrationExpanded({ demonstration }) {
   const { isTabletHorizontal } = useScreen();
-
   const { atmosphereText, productCard } = demonstration;
 
   return (
     <Wrapper>
-      {isTabletHorizontal && <DemonstrationComponent />}
+      {isTabletHorizontal && <DemonstrationComponent $isAtScreenTop={true} />}
       <ProductCardFull productCard={productCard} />
       {!isTabletHorizontal && (
         <AtmosphereDesc atmosphereText={atmosphereText} />

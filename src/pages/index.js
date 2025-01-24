@@ -4,7 +4,7 @@ import { HomeTemplate } from '@templates/index';
 
 export default function HomePage({ textConstants }) {
   return <HomeTemplate textConstants={textConstants} />;
-};
+}
 
 HomePage.propTypes = {
   textConstants: PropTypes.shape({

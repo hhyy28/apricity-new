@@ -21,7 +21,7 @@ export default function StudioTemplate({ textConstants }) {
   );
 }
 
-StudioPage.propTypes = {
+StudioTemplate.propTypes = {
   textConstants: PropTypes.shape({
     home: PropTypes.object.isRequired,
     demonstration: PropTypes.object.isRequired,

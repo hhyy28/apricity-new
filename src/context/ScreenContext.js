@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import { breakpointUpperBounds } from 'src/components/bootstrap-grid';
 
 const { smHandset, mdHandset, lgHandset, mdTablet, lgTablet, desktop } =

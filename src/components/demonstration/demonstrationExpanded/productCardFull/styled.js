@@ -130,7 +130,7 @@ export const Footer = styled.div`
   `}
 
   ${media.xl`
-    paddingp: 14px 0 0;
+    padding: 14px 0 0;
   `}
 
   ${media.xxl`
@@ -225,9 +225,9 @@ export const OrderButton = styled.button`
 
   ${media.sm`
     display: flex;
-    margin: 10px 28px 0;
     width: 62px;
     height: 18px;
+    margin: 10px 0 0;
     align-self: flex-end;
   `}
 
@@ -266,36 +266,86 @@ export const ImageBackground = styled.div`
   justify-content: flex-end;
   align-items: flex-end;
   width: 100%;
+  height: 265px;
+
+  ${media.sm`
+    height: 298px;
+  `}
 
   ${media.md`
     height: 317px;
-    margin: 0 88px;
   `}
 
   ${media.lg`
     height: 424px;
-    margin: 0 119px;
   `}
 
   ${media.xl`
-    height: ${({ visibleFooter }) => (visibleFooter ? '265px' : '295px')};
+    height: 295px;
+    width: 207px;
   `}
 
   ${media.xxl`
     height: 300px;
-    margin: 0 285px;
   `}
 `;
 
 export const AtmoDescContainer = styled.div`
   display: flex;
+  padding: 0 26px;
+
+  ${media.sm`
+    flex-direction: column;
+    padding: 0 29px;
+  `}
+
+  ${media.md`
+    padding: 0 88px;
+  `}
+  
+  ${media.lg`
+    padding: 0 119px;
+  `}
 
   ${media.xl`
     flex-direction: row;
-    padding: 0 113px;
+    padding: 0 0 0 75px;
   `}
 `;
 
 export const PaginationButtonImg = styled.div`
-  ${({ $rotate }) => $rotate && 'transform: $rotate(180deg);'}
+  ${({ $rotate }) => $rotate && 'transform: rotate(180deg);'}
+`;
+
+export const AtmoText = styled.div`
+  display: none;
+  font-family: 'Panel-Sans';
+
+  ${media.xl`
+    display: flex;
+    flex-direction: column;
+    width: 231px;
+    background: #D0D0CA;
+    height: 100%;
+    gap: 10px;
+    padding: 34px 17px 23px;
+  `}
+`;
+
+export const AtmoTextTitle = styled.div`
+  color: #0e0d0c;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 1.8px;
+`;
+
+export const AtmoTextCopy = styled.div`
+  color: #0e0d0c;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 360;
+  line-height: 16px;
+  letter-spacing: 0.6px;
 `;
