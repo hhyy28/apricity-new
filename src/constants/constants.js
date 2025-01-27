@@ -1,14 +1,7 @@
-import React from 'react';
-
 const textConstants = {
   home: {
     homeHeader: {
-      logoSubText: (
-        <>
-          WRITE, SKETCH &{' '}
-          <span style={{ letterSpacing: '0.5px' }}>ATMOSPHERIZE</span>
-        </>
-      ),
+      logoSubText: 'WRITE,SKETCH & ATMOSPHERIZE',
       favouriteText: 'MY AREA',
       currency: {
         button: '+',

@@ -16,14 +16,14 @@ import {
 } from './styled';
 
 export default function ProductCardShort({ productCard, $isAtScreenTop }) {
-  const { isPhoneM, isPhoneS } = useScreen();
+  const { isPhoneL } = useScreen();
   const { collection_prefix, collection_name, product_name } = productCard;
 
   return (
     <Wrapper $isAtScreenTop={$isAtScreenTop}>
-      {isPhoneM || isPhoneS ? (
+      {!isPhoneL ? (
         <>
-          <CollectionText>
+          <CollectionText $isAtScreenTop={$isAtScreenTop}>
             <CollectionDef>{collection_prefix}</CollectionDef>
             <CollectionName>
               {collection_name}
@@ -34,10 +34,13 @@ export default function ProductCardShort({ productCard, $isAtScreenTop }) {
           <ProductImageWrapper>
             <Image src={productImage} alt={product_name} />
           </ProductImageWrapper>
+          <OrderButton>
+            <Image src={orderButton} alt="Order Button" />
+          </OrderButton>
         </>
       ) : (
         <>
-          <CollectionText $visibleFooter={false}>
+          <CollectionText $isAtScreenTop={$isAtScreenTop}>
             <CollectionDef>{collection_prefix}</CollectionDef>
             <CollectionName>{collection_name}</CollectionName>
           </CollectionText>

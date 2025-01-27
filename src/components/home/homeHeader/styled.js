@@ -135,15 +135,15 @@ export const LogoSubText = styled.div`
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 1.2px;
-    padding: 0 7px 0 35px;
+    padding: 0 7px 0 0px;
   `}
 
   ${media.lg`
-    padding: 0 6px 0 34px;
+    padding: 0 6px 0 0px;
   `}
 
   ${media.xxl`
-    padding: 0 7px 0 40px;
+    padding: 0 7px 0 0px;
   `}
 `;
 
