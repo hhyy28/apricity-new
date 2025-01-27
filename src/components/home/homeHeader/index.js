@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   HeaderBar,
   Icon,
@@ -51,3 +52,17 @@ export default function HomeHeader({ homeHeader }) {
     </HeaderBar>
   );
 }
+
+HomeHeader.propTypes = {
+  homeHeader: PropTypes.shape({
+    logoSubText: PropTypes.string.isRequired,
+    favouriteText: PropTypes.string.isRequired,
+    currency: PropTypes.shape({
+      button: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+    }).isRequired,
+    buttons: PropTypes.shape({
+      bag: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+};

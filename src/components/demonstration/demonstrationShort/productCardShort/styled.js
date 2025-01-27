@@ -26,7 +26,7 @@ export const Wrapper = styled.div`
   `}
 
   ${media.xxl`
-    padding: 270px 0 390px 0;
+    padding: ${({ $isAtScreenTop }) => ($isAtScreenTop ? '270px 284px 390px ' : '0')};
   `}
 `;
 
@@ -41,7 +41,7 @@ export const CollectionText = styled.div`
   display: flex;
   font-size: 12px;
   padding: 0 25px 33px 31px;
-
+  transition: 0.3s ease-in-out;
   ${media.sm`
     padding: 0 26px 27px 37px;
   `}
@@ -60,12 +60,12 @@ export const CollectionText = styled.div`
   `}
 
   ${media.xl`
-    display: ${({ visibleFooter }) => (visibleFooter ? 'flex' : 'none')};
+    display: none;
     padding: 0 0 30px 50px;
   `}
 
   ${media.xxl`
-    padding: 0 317px 0 220px;
+    display: ${({ $isAtScreenTop }) => ($isAtScreenTop ? 'flex' : 'none')};
     gap: 10px;
     font-size: 14px;
     font-weight: 700;
@@ -107,27 +107,6 @@ export const ProductImageWrapper = styled.div`
   ${media.sm`
     height: 298px;
     padding: 0 29px;
-  `}
-
-  ${media.md`
-    height: 317px;
-    margin: 0 88px;
-  `}
-
-  ${media.lg`
-    height: 424px;
-    margin: 0 119px;
-  `}
-
-  ${media.xl`
-    height: 100%;
-    padding: 0;
-    margin: 0;
-  `}
-
-  ${media.xxl`
-    height: 300px;
-    margin: 0 285px;
   `}
 
   img {
@@ -292,33 +271,32 @@ export const ImageBackground = styled.div`
 
   ${media.md`
     height: 317px;
-    margin: 0 88px;
   `}
 
   ${media.lg`
     height: 424px;
-    margin: 0 119px;
   `}
 
   ${media.xl`
-    height: 295px
-  `}
-
-  ${media.xxl`
-    height: 300px;
-    margin: 0 285px;
-  `}
-`;
-
-export const AtmoDescContainer = styled.div`
-  display: flex;
-
-  ${media.xl`
-    flex-direction: row;
-    padding: 0 113px;
+    height: 100%;
   `}
 `;
 
 export const PaginationButtonImg = styled.div`
   ${({ $rotate }) => $rotate && 'transform: rotate(180deg);'}
+`;
+
+export const AtmoDescContainer = styled.div`
+  ${media.md`
+    padding: 0 88px;
+  `}
+
+  ${media.lg`
+    padding: 0 119px;
+  `}
+
+  ${media.xl`
+    padding: 0;
+    margin: 0;
+  `}
 `;
