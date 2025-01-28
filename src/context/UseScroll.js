@@ -1,22 +1,23 @@
 import { useEffect, useState, useRef } from 'react';
 
 export default function useScrollBreakpoint() {
-  const [$isAtScreenTop, setIsAtScreenTop] = useState(false);
+  const [$isTriggered, setIsTriggered] = useState(false);
   const wrapperRef = useRef(null);
 
   useEffect(() => {
     const onScroll = () => {
-      if (!wrapperRef.current || $isAtScreenTop) return;
+      if (!wrapperRef.current) return;
 
-      const { top } = wrapperRef.current.getBoundingClientRect();
-      if (top <= 0) {
-        setIsAtScreenTop(true);
-      }
+      const { top, height, bottom } =
+        wrapperRef.current.getBoundingClientRect();
+      const isTriggered = top <= 50 && bottom >= height / 2;
+
+      setIsTriggered(isTriggered);
     };
 
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
-  }, [$isAtScreenTop]);
+  }, []);
 
-  return { $isAtScreenTop, wrapperRef };
+  return { $isTriggered, wrapperRef };
 }
