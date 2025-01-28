@@ -8,9 +8,9 @@ export default function useScrollBreakpoint() {
     const onScroll = () => {
       if (!wrapperRef.current) return;
 
-      const { top, height, bottom } =
+      const { top } =
         wrapperRef.current.getBoundingClientRect();
-      const isTriggered = top <= 50 && bottom >= height / 2;
+      const isTriggered = top <= 50;
 
       setIsTriggered(isTriggered);
     };
