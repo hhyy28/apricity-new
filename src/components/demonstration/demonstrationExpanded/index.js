@@ -12,7 +12,7 @@ export default function DemonstrationExpanded({ demonstration }) {
 
   return (
     <Wrapper>
-      {isTabletHorizontal && <DemonstrationComponent $isAtScreenTop={true} />}
+      {isTabletHorizontal && <DemonstrationComponent $isTriggered={true} />}
       <ProductCardFull productCard={productCard} />
       {!isTabletHorizontal && (
         <AtmosphereDesc atmosphereText={atmosphereText} />

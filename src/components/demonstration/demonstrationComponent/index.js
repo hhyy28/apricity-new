@@ -15,7 +15,7 @@ import { background1 } from '@images/index';
 
 const images = [background1, background1];
 
-export default function DemonstrationComponent({ $isAtScreenTop }) {
+export default function DemonstrationComponent({ $isTriggered }) {
   const swiperRef = useRef(null);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function DemonstrationComponent({ $isAtScreenTop }) {
   }, []);
 
   return (
-    <Wrapper $isAtScreenTop={$isAtScreenTop}>
+    <Wrapper $isTriggered={$isTriggered}>
       <SwiperStyled
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
@@ -37,7 +37,7 @@ export default function DemonstrationComponent({ $isAtScreenTop }) {
             <Image src={image} alt={`Slide ${index}`} />
           </SwiperSlide>
         ))}
-        <FooterContainer $isAtScreenTop={$isAtScreenTop}>
+        <FooterContainer $isTriggered={$isTriggered}>
           <OrderContainer>
             <OrderButton>
               <Image src={orderButton} alt="Order Now" />
@@ -51,5 +51,5 @@ export default function DemonstrationComponent({ $isAtScreenTop }) {
 }
 
 DemonstrationComponent.propTypes = {
-  $isAtScreenTop: PropTypes.bool,
+  $isTriggered: PropTypes.bool,
 };

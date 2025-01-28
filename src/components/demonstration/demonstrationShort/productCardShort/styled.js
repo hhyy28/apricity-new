@@ -21,12 +21,12 @@ export const Wrapper = styled.div`
   `}
 
   ${media.xl`
-    padding: ${({ $isAtScreenTop }) => ($isAtScreenTop ? '252px 113px' : '0')};
+    padding: ${({ $isTriggered }) => ($isTriggered ? '252px 113px' : '0')};
     width: 50%;
   `}
 
   ${media.xxl`
-    padding: ${({ $isAtScreenTop }) => ($isAtScreenTop ? '270px 284px 390px ' : '0')};
+    padding: ${({ $isTriggered }) => ($isTriggered ? '270px 284px 390px ' : '0')};
   `}
 `;
 
@@ -65,7 +65,7 @@ export const CollectionText = styled.div`
   `}
 
   ${media.xxl`
-    display: ${({ $isAtScreenTop }) => ($isAtScreenTop ? 'flex' : 'none')};
+    display: ${({ $isTriggered }) => ($isTriggered ? 'flex' : 'none')};
     gap: 10px;
     font-size: 14px;
     font-weight: 700;
@@ -298,5 +298,6 @@ export const AtmoDescContainer = styled.div`
   ${media.xl`
     padding: 0;
     margin: 0;
+    height: 100%;
   `}
 `;
