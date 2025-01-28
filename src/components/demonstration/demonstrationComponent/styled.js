@@ -111,4 +111,7 @@ export const Wrapper = styled.div`
     width: 50%;
     padding: ${({ $isTriggered }) => ($isTriggered ? '0' : '252px 113px')};
   `}
+  ${media.xxl`
+    padding: ${({ $isTriggered }) => ($isTriggered ? '0' : '390px 284px')};
+  `}
 `;
