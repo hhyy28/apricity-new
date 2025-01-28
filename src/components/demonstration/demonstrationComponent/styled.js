@@ -97,7 +97,7 @@ export const FooterContainer = styled.div`
 
   ${media.xl`
     padding: 0  0 18px 0;
-    display: ${({ $isAtScreenTop }) => ($isAtScreenTop ? 'flex' : 'none')};
+    display: ${({ $isTriggered }) => ($isTriggered ? 'flex' : 'none')};
   `}
 `;
 
@@ -109,6 +109,9 @@ export const Wrapper = styled.div`
 
   ${media.xl`
     width: 50%;
-    padding: ${({ $isAtScreenTop }) => ($isAtScreenTop ? '0' : '252px 113px')};
+    padding: ${({ $isTriggered }) => ($isTriggered ? '0' : '252px 113px')};
+  `}
+  ${media.xxl`
+    padding: ${({ $isTriggered }) => ($isTriggered ? '0' : '390px 284px')};
   `}
 `;
