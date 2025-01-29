@@ -1,11 +1,11 @@
 import HomeTemplate from './homeTemplate';
-// import StudioTemplate from './studioTemplate';
-// import ByCollectionTemplate from './byCollectionTemplate';
-// import ByProductTemplate from './byProductTemplate';
+import ByCollectionTemplate from './byCollectionTemplate';
+import StudioTemplate from './studioTemlpate';
+import ByProductPage from 'src/pages/byProduct';
 
 export {
   HomeTemplate,
-  // StudioTemplate,
-  // ByCollectionTemplate,
-  // ByProductTemplate
+  ByCollectionTemplate,
+  StudioTemplate,
+  ByProductPage
 };

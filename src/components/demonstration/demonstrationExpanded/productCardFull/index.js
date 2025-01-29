@@ -21,7 +21,7 @@ import {
   AtmoTextTitle,
   AtmoTextCopy,
 } from './styled';
-import { useScreen } from '@context/ScreenContext';
+import { useScreen } from '@context/screenContext';
 import { productImage } from '@images/index';
 import { orderButton } from '@svg/index';
 import { PaginationButton } from '@svg/paginationButton';

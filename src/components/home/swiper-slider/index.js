@@ -5,7 +5,7 @@ import { SwiperSlide } from 'swiper/react';
 import { SwiperWrapper, SwiperStyled } from './styled';
 import { gallery1, gallery2 } from '@images/index';
 import Image from 'next/image';
-import { useScreen } from '@context/ScreenContext';
+import { useScreen } from '@context/screenContext';
 
 const images = [
   gallery1,

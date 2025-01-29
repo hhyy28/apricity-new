@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import { useScreen } from '@context/ScreenContext';
+import { useScreen } from '@context/screenContext';
 import { orderButton } from '@svg/index';
 import {
   OptionMenu,

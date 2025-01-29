@@ -1,6 +1,6 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
-import ScreenProvider from '@context/ScreenContext';
+import ScreenProvider from '@context/screenContext';
 import textConstants from '@constants/constants';
 import PropTypes from 'prop-types';
 

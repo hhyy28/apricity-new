@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Wrapper } from './styled';
 import React from 'react';
-import { useScreen } from '@context/ScreenContext';
+import { useScreen } from '@context/screenContext';
 import ProductCardFull from '@components/demonstration/demonstrationExpanded/productCardFull';
 import AtmosphereDesc from './atmosphereDesc';
 import DemonstrationComponent from '../demonstrationComponent';

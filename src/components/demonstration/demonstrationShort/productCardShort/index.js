@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import { useScreen } from '@context/ScreenContext';
+import { useScreen } from '@context/screenContext';
 import { productImage } from '@images/index';
 import { orderButton } from '@svg/index';
 import {

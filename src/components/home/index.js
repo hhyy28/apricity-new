@@ -1,5 +1,5 @@
 import React from 'react';
-import { useScreen } from '@context/ScreenContext';
+import { useScreen } from '@context/screenContext';
 import { Wrapper } from './styled';
 import HomeHeader from './homeHeader/index';
 import HomeMobile from './homeMobile/index';

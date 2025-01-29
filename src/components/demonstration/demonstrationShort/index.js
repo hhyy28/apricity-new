@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import useScrollBreakpoint from '@context/UseScroll';
+import useScrollBreakpoint from '@context/useScroll';
 import { Wrapper } from './styled';
 import DemonstrationComponent from '../demonstrationComponent';
 import ProductCardShort from './productCardShort';
