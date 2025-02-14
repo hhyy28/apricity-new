@@ -5,7 +5,7 @@ import SwiperPagination from './swiper-pagination';
 import SwiperSlider from './swiper-slider';
 
 export default function Home1024({ homeMenu }) {
-  const swiperRef = useRef(null);
+  const swiperRef = useRef();
   const { refineOption, sortOption } = homeMenu;
 
   return (

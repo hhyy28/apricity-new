@@ -17,6 +17,16 @@ const textConstants = {
       collectionLabel: 'COLLECTION:',
       collectionName: 'DREAMT SEAS BLUE',
       notebookLabel: 'NOTEBOOK NO.1',
+      images: [
+        { src: 'https://images.loseitblog.com/images/11bb0479af32aa9af1b6/2020/03/Untitled-design-207.png', link: '/' },
+        { src: 'https://images.loseitblog.com/images/11bb0479af32aa9af1b6/2020/03/Untitled-design-207.png', link: '/' },
+        { src: 'https://images.loseitblog.com/images/11bb0479af32aa9af1b6/2020/03/Untitled-design-207.png', link: '/' },
+        { src: 'https://images.loseitblog.com/images/11bb0479af32aa9af1b6/2020/03/Untitled-design-207.png', link: '/' },
+        { src: 'https://images.loseitblog.com/images/11bb0479af32aa9af1b6/2020/03/Untitled-design-207.png', link: '/' },
+        { src: 'https://images.loseitblog.com/images/11bb0479af32aa9af1b6/2020/03/Untitled-design-207.png', link: '/' },
+        { src: 'https://images.loseitblog.com/images/11bb0479af32aa9af1b6/2020/03/Untitled-design-207.png', link: '/' },
+        { src: 'https://images.loseitblog.com/images/11bb0479af32aa9af1b6/2020/03/Untitled-design-207.png', link: '/' }
+      ],
     },
   },
   demonstration: {

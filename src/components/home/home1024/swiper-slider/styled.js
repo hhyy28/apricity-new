@@ -27,7 +27,7 @@ export const SwiperStyled = styled(Swiper)`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smoother animation */
+  transition: transform 2.5s cubic-bezier(0.25, 1, 0.5, 1);
   overflow: hidden;
   width: 100%;
 
@@ -59,18 +59,23 @@ export const SwiperStyled = styled(Swiper)`
 `;
 
 export const SlideContent = styled.div`
+  position: relative;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  padding: 0 9px 55px;
-  scroll-behavior: unset;
+`;
+
+export const SlideImage = styled.img`
+position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 `;
 
 export const OrderContainer = styled.div`
+  position: absolute;
+  bottom: 55px;
+  right: 9px;
   display: ${(props) => (props.$isActive ? 'flex' : 'none')};
   flex-direction: column;
   align-items: flex-end;
@@ -102,4 +107,5 @@ export const ProductName = styled.div`
   font-family: 'Panel-Sans';
   font-size: 13px;
   letter-spacing: 0.387px;
+  text-decoration: none;
 `;

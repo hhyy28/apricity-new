@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { SwiperSlide } from 'swiper/react';
+import Link from 'next/link';
 import {
   SwiperWrapper,
   SwiperStyled,
@@ -8,15 +9,15 @@ import {
   OrderContainer,
   OrderButton,
   ProductName,
+  SlideImage,
 } from './styled';
 import { gallery1, gallery2 } from '@images/index';
 import { orderButton } from '@svg/index';
-import Image from 'next/image';
 
 const images = [
-  { src: gallery1.src },
-  { src: gallery2.src },
-  { src: gallery2.src },
+  { src: gallery1.src, link: '/', name: 'COLLECTION : éCLAT. THE VASE' },
+  { src: gallery2.src, link: '/', name: 'COLLECTION : éCLAT. THE VASE' },
+  { src: gallery2.src, link: '/', name: 'COLLECTION : éCLAT. THE VASE' },
 ];
 
 export default function SwiperSlider({ swiperRef }) {
@@ -43,14 +44,17 @@ export default function SwiperSlider({ swiperRef }) {
       >
         {images.map((image, index) => (
           <SwiperSlide key={`slide-${index}`}>
-            <SlideContent style={{ backgroundImage: `url(${image.src})` }}>
-              <OrderContainer $isActive={activeIndex === index}>
-                <ProductName>COLLECTION : éCLAT. THE VASE</ProductName>
-                <OrderButton>
-                  <Image src={orderButton} alt="order img" />
-                </OrderButton>
-              </OrderContainer>
-            </SlideContent>
+            <Link href={image.link} passHref legacyBehavior>
+              <SlideContent>
+                <SlideImage src={image.src} alt={image.name} />
+                <OrderContainer $isActive={activeIndex === index}>
+                  <ProductName>{image.name}</ProductName>
+                  <OrderButton>
+                    <img src={orderButton.src} alt="Order button" />
+                  </OrderButton>
+                </OrderContainer>
+              </SlideContent>
+            </Link>
           </SwiperSlide>
         ))}
       </SwiperStyled>

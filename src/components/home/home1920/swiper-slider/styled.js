@@ -102,4 +102,5 @@ export const ProductName = styled.div`
   font-family: 'Panel-Sans';
   font-size: 13px;
   letter-spacing: 0.387px;
+  text-decoration: none;
 `;

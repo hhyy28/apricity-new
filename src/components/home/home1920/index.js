@@ -8,7 +8,7 @@ import { PaginationButton } from '@svg/paginationButton';
 import SwiperSlider from './swiper-slider';
 
 export default function Home1920() {
-  const swiperRef = useRef(null);
+  const swiperRef = useRef();
   const slidePrev = () => swiperRef.current?.slidePrev();
   const slideNext = () => swiperRef.current?.slideNext();
 

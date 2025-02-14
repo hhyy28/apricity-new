@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { breakpointUpperBounds } from 'src/components/bootstrap-grid';
 
 const { smHandset, mdHandset, lgHandset, mdTablet, lgTablet, desktop } =
@@ -43,6 +44,10 @@ const ScreenProvider = ({ children }) => {
       {children}
     </ScreenContext.Provider>
   );
+};
+
+ScreenProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default ScreenProvider;

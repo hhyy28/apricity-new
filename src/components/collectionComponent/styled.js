@@ -31,6 +31,7 @@ export const Wrapper = styled.div`
 `;
 
 export const ImageContainer = styled.div`
+  position: relative;
   padding: 0 53px;
 
   ${media.sm`
