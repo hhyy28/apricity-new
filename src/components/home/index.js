@@ -12,14 +12,14 @@ export default function Home({ home }) {
   const { homeMenu, homeHeader } = home;
 
   const renderContent = () => {
-    if (isPc) {
-      return <Home1920 homeMenu={homeMenu} />;
-    }
-    if (isTabletHorizontal) {
-      return <Home1024 homeMenu={homeMenu} />;
-    } else {
+    // if (isPc) {
+    //   return <Home1920 homeMenu={homeMenu} />;
+    // }
+    // if (isTabletHorizontal) {
+    //   return <Home1024 homeMenu={homeMenu} />;
+    // } else {
       return <HomeMobile homeMenu={homeMenu} />;
-    }
+    // }
   };
 
   return (

@@ -3,130 +3,93 @@ import { Swiper } from 'swiper/react';
 import { media } from '@components/bootstrap-grid';
 
 export const SwiperWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  width: 100%;
   position: relative;
+  height: calc(100vh - 133px); //// ATTENTION! NEEDS TO BE CHANGED
+  padding: 80px 0 100px;
 `;
 
 export const ImageWrapper = styled.div`
   position: relative;
   height: 100%;
-  width: 100%;
-  padding: 30px;
-  
-  height: 204px;
-  padding: 63px 0 18px 0;
-    
-  ${media.sm`
-    padding: 70px 0 41px 0;
-  `}
-  ${media.md`
-    height: 277px; 
-    padding: 97px 0 53px 0;
-  `}
-  ${media.lg`
-    height: 384px;
-    padding: 135px 0 74px 0;
-  `}
+  aspect-ratio: ${(props) => props.ratio};
+
+  img {
+    object-fit: cover;
+  }
 `;
 
-export const SwiperStyled = styled(Swiper)`
+export const OrderContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  transition: all 5.3s ease-in-out;
+  justify-content: flex-end;
+`;
+
+export const FooterContainer = styled.div`
+  position: ${(props) => props.absolute ? 'absolute' : 'static'};
+  bottom: 60px;
+  right: 10px;
+  width: 240px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.3);
+`;
+
+export const SwiperStyled = styled(Swiper)`
   overflow: hidden;
   width: 100%;
-
-  & .swiper-wrapper {
-    display: flex;
-  }
+  height: 100%;
 
   .swiper-slide {
-    
+    overflow: hidden;
 
     &.swiper-slide-active {
-      height: 285px;
-      height: 285px;
-      width: 253px;
-      padding: 0;
+    }
 
-      ${media.sm`
-        height: 315px; 
-        width: 280px; 
-      `}
-      ${media.md`
-        height: 427px; 
-        width: 379px;
-      `}
-      ${media.lg`
-        width: 527px;
-        height: 593px;
-      `}
+    &:not(.swiper-slide-active) {
+      padding: 90px 0 0;
+      height: 60%;
+
+      ${FooterContainer} {
+        display: none;
+      }
     }
   }
 `;
 
-export const MenuContainer = styled.div`
+export const SlideContainer = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
-  padding: 33px 0 0;
-
-  ${media.sm`
-    padding: 110px 0 0;
-  `}
-
-  ${media.md`
-    padding: 58px 0 0;
-  `}
-
-  ${media.lg`
-    padding: 51px 0 0;
-  `}
-`;
-
-export const FooterContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 0 0 18px;
-
-  ${media.sm`
-    padding: 0 0 63px;
-  `}
-
-  ${media.md`
-    padding: 0 0 34px;
-  `}
-
-  ${media.lg`
-    padding: 0 0 40px;
-  `}
+  align-items: center;
+  width: 100%;
+  height: 100%;
 `;
 
 export const OptionMenu = styled.div`
+  position: absolute;
+  top: 66px;
+  right: 16%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
+  z-index: 2;
   gap: 10px;
-  padding: 0 32px 0 0;
-
-  ${media.sm`
-    padding: 0 37px 6px 0;
-  `}
 
   ${media.md`
-    gap: 14px;
-    padding: 5px 95px 5px 0;
+    right: 110px;
   `}
 
   ${media.lg`
-    padding: 9px 119px 14px 0;
+    top: 100px;
+    right: 40px;
+  `}
+
+  ${media.xl`
+    top: 20%;
+    right: 8%;
   `}
 `;
 
@@ -136,6 +99,10 @@ export const Option = styled.div`
   font-weight: 500;
   color: #cfd0cc;
   letter-spacing: 0.55px;
+
+  ${media.lg`
+    color: #000000;
+  `}
 `;
 
 export const CollectionDef = styled.div`
@@ -161,74 +128,6 @@ export const CollectionContainer = styled.div`
   align-items: flex-end;
   letter-spacing: 1px;
   line-height: 18px;
-  padding: 21px 0 0 40px;
-
-  ${media.sm`
-    padding: 36px 0 0 44px;
-  `}
-
-  ${media.md`
-    align-self: flex-end;
-    padding: 36px 0 0 16px;
-  `}
-
-  ${media.lg`
-    padding: 36px 0 30px 17px;
-  `}
-`;
-
-export const GalleryImg = styled.div`
-  flex-shrink: 0;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  height: 285px;
-  width: 253px;
-
-  ${media.sm`
-    height: 315px;
-    width: 280px;
-  `}
-
-  ${media.md`
-    height: 427px;
-    width: 379px;
-  `}
-
-  ${media.lg`
-    height: 593px;
-    width: 527px;
-  `}
-`;
-
-export const GallerySideImg = styled.div`
-  flex-shrink: 0;
-  height: 204px;
-  margin: 0 0 18px;
-
-  ${media.sm`
-    margin: 0 0 41px;
-  `}
-
-  ${media.md`
-    height: 277px;
-    margin: 0 0 53px;
-  `}
-
-  ${media.lg`
-    height: 385px;
-    margin: 0 0 74px;
-  `}
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 `;
 
 export const OrderButton = styled.button`
@@ -243,12 +142,4 @@ export const NotebookText = styled.div`
   margin: 0 15px 0 0;
   letter-spacing: 1.2px;
   font-weight: 400;
-`;
-
-export const OrderContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 14px 29px;
 `;

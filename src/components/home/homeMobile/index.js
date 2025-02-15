@@ -13,11 +13,7 @@ export default function HomeMobile({ homeMenu }) {
     notebookLabel,
   } = homeMenu;
 
-  return (
-    <>
-      <SwiperSlider homeMenu={homeMenu} />
-    </>
-  );
+  return <SwiperSlider homeMenu={homeMenu} />;
 }
 
 HomeMobile.propTypes = {

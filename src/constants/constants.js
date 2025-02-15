@@ -19,13 +19,14 @@ const textConstants = {
       notebookLabel: 'NOTEBOOK NO.1',
       images: [
         { src: 'https://images.loseitblog.com/images/11bb0479af32aa9af1b6/2020/03/Untitled-design-207.png', link: '/' },
+        { src: 'https://images.loseitblog.com/images/Marup', link: '/' },
+        { src: 'https://images.loseitblog.com/images/How%20I%20Kept%20Myself%20Honest%20and%20Lost%20140%20Pounds%20in%20a%20Year%20and%20a%20Half.png', link: '/' },
         { src: 'https://images.loseitblog.com/images/11bb0479af32aa9af1b6/2020/03/Untitled-design-207.png', link: '/' },
+        { src: 'https://images.loseitblog.com/images/Marup', link: '/' },
+        { src: 'https://images.loseitblog.com/images/How%20I%20Kept%20Myself%20Honest%20and%20Lost%20140%20Pounds%20in%20a%20Year%20and%20a%20Half.png', link: '/' },
         { src: 'https://images.loseitblog.com/images/11bb0479af32aa9af1b6/2020/03/Untitled-design-207.png', link: '/' },
-        { src: 'https://images.loseitblog.com/images/11bb0479af32aa9af1b6/2020/03/Untitled-design-207.png', link: '/' },
-        { src: 'https://images.loseitblog.com/images/11bb0479af32aa9af1b6/2020/03/Untitled-design-207.png', link: '/' },
-        { src: 'https://images.loseitblog.com/images/11bb0479af32aa9af1b6/2020/03/Untitled-design-207.png', link: '/' },
-        { src: 'https://images.loseitblog.com/images/11bb0479af32aa9af1b6/2020/03/Untitled-design-207.png', link: '/' },
-        { src: 'https://images.loseitblog.com/images/11bb0479af32aa9af1b6/2020/03/Untitled-design-207.png', link: '/' }
+        { src: 'https://images.loseitblog.com/images/Marup', link: '/' },
+        { src: 'https://images.loseitblog.com/images/How%20I%20Kept%20Myself%20Honest%20and%20Lost%20140%20Pounds%20in%20a%20Year%20and%20a%20Half.png', link: '/' }
       ],
     },
   },

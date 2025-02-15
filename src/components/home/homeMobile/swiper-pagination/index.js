@@ -6,7 +6,7 @@ import {
   PaginationButtonNumbers,
   PaginationContainer,
 } from './styled';
-import { useSwiperControls } from '@context/swiperFunctions';
+import { useSwiperControls } from '@context/SwiperFunctions';
 
 export default function SwiperPagination({ swiperInstance }) {
   const { slidePrev, slideNext, slideToFirst, slideToLast } =
