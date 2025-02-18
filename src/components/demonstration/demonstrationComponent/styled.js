@@ -105,7 +105,7 @@ export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   background: #d7d7d1;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.7s ease-in-out;
 
   ${media.xl`
     width: 50%;

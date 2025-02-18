@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 64px 0 152px 0;
-  transition: padding 0.3s ease-in-out;
+  transition: padding 0.7s ease-in-out;
 
   ${media.sm`
     padding: 153px 0 214px 0;

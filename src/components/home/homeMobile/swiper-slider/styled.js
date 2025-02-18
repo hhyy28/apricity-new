@@ -4,8 +4,7 @@ import { media } from '@components/bootstrap-grid';
 
 export const SwiperWrapper = styled.div`
   position: relative;
-  height: calc(100vh - 133px); //// ATTENTION! NEEDS TO BE CHANGED
-  padding: 80px 0 100px;
+  height: calc((365/568) *100vh); 
 `;
 
 export const ImageWrapper = styled.div`
@@ -33,22 +32,22 @@ export const FooterContainer = styled.div`
   height: 80px;
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.3);
+  padding: 21px;
+  ${media.xl`
+    background-color: rgba(255, 255, 255, 0.3);
+  `}
 `;
 
 export const SwiperStyled = styled(Swiper)`
   overflow: hidden;
   width: 100%;
   height: 100%;
-
+  
   .swiper-slide {
     overflow: hidden;
-
-    &.swiper-slide-active {
-    }
-
+    height: 100%;
     &:not(.swiper-slide-active) {
-      padding: 90px 0 0;
+      padding: 5vh  0 20vh 0 ;
       height: 60%;
 
       ${FooterContainer} {
@@ -67,43 +66,7 @@ export const SlideContainer = styled.div`
   height: 100%;
 `;
 
-export const OptionMenu = styled.div`
-  position: absolute;
-  top: 66px;
-  right: 16%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
-  z-index: 2;
-  gap: 10px;
 
-  ${media.md`
-    right: 110px;
-  `}
-
-  ${media.lg`
-    top: 100px;
-    right: 40px;
-  `}
-
-  ${media.xl`
-    top: 20%;
-    right: 8%;
-  `}
-`;
-
-export const Option = styled.div`
-  font-family: 'Panel-Sans', sans-serif;
-  font-size: 11px;
-  font-weight: 500;
-  color: #cfd0cc;
-  letter-spacing: 0.55px;
-
-  ${media.lg`
-    color: #000000;
-  `}
-`;
 
 export const CollectionDef = styled.div`
   font-family: 'Panel-Sans', sans-serif;
