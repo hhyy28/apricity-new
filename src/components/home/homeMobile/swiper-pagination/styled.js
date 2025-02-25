@@ -4,11 +4,13 @@ import { media } from '@components/bootstrap-grid';
 export const PaginationContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
   padding: 0 28px;
 
   ${media.xl`
+    padding: 40px 194px 0 151px;
+  `}
+
+  ${media.xxl`
     position: absolute;
     bottom: 50%;
     width: 84%;
@@ -27,7 +29,7 @@ export const PaginationButtonNumbers = styled.button`
     outline: none;
   }
 
-  ${media.xl`
+  ${media.xxl`
     display: none;
   `}
 `;

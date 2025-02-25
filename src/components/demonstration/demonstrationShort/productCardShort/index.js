@@ -14,6 +14,7 @@ import {
   ImageBackground,
   OrderButton,
 } from './styled';
+import NextImage from '@components/images/next-image';
 
 export default function ProductCardShort({ productCard, $isTriggered }) {
   const { isPhoneL } = useScreen();
@@ -32,7 +33,7 @@ export default function ProductCardShort({ productCard, $isTriggered }) {
             </CollectionName>
           </CollectionText>
           <ProductImageWrapper>
-            <Image src={productImage} alt={product_name} />
+            <NextImage/>
           </ProductImageWrapper>
           <OrderButton>
             <Image src={orderButton} alt="Order Button" />

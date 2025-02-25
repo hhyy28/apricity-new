@@ -115,3 +115,28 @@ export const Wrapper = styled.div`
     padding: ${({ $isTriggered }) => ($isTriggered ? '0' : '390px 284px')};
   `}
 `;
+
+export const SwiperContainer = styled.div`
+  height: 568px;
+
+  ${media.sm`
+    height: 780px;
+  `}
+
+  ${media.md`
+    height: 767px;
+  `}
+
+  ${media.lg`
+    height: 1024px;
+  `}
+
+  ${media.xl`
+    height: 100%;
+    width: 50%;
+  `}
+
+  ${media.xxl`
+    height: 1080px;
+  `}
+`

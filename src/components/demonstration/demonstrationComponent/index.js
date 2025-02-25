@@ -4,6 +4,7 @@ import {
   FooterContainer,
   OrderButton,
   OrderContainer,
+  SwiperContainer,
   SwiperStyled,
   Wrapper,
 } from './styled';
@@ -12,8 +13,9 @@ import { orderButton } from '@svg/index';
 import SwiperPagination from './swiper-pagination';
 import { SwiperSlide } from 'swiper/react';
 import { background1 } from '@images/index';
+import NextImage from '@components/images/next-image';
 
-const images = [background1, background1];
+const images = ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYzF5mP7DXvI9X2ZX2YG60GXpS-xVt510c9A&s', 'https://m.media-amazon.com/images/I/81BmxjMuvZL.__AC_SX300_SY300_QL70_FMwebp_.jpg'];
 
 export default function DemonstrationComponent({ $isTriggered }) {
   const swiperRef = useRef(null);
@@ -34,7 +36,9 @@ export default function DemonstrationComponent({ $isTriggered }) {
       >
         {images.map((image, index) => (
           <SwiperSlide key={`slide-${index}`}>
-            <Image src={image} alt={`Slide ${index}`} />
+            <SwiperContainer>
+              <NextImage src={image} fill/>
+            </SwiperContainer>
           </SwiperSlide>
         ))}
         <FooterContainer $isTriggered={$isTriggered}>

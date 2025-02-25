@@ -14,7 +14,9 @@ import {
   TextContainer,
   TitleContainer,
   TitleText,
+  ImageSubContainer,
 } from './styled';
+import NextImage from '@components/images/next-image';
 
 export default function CollectionComponent({ collectionText }) {
   const { value, title } = collectionText;
@@ -22,7 +24,9 @@ export default function CollectionComponent({ collectionText }) {
   return (
     <Wrapper>
       <ImageContainer>
-        <Image src={description} alt="Gallery Image" />
+        <ImageSubContainer>
+          <NextImage src={"https://m.media-amazon.com/images/I/81BmxjMuvZL.__AC_SX300_SY300_QL70_FMwebp_.jpg"} fill/>
+        </ImageSubContainer>
       </ImageContainer>
       <InfoWrapper>
         <TitleContainer>
