@@ -4,7 +4,7 @@ import { media } from '@components/bootstrap-grid';
 
 export const SwiperWrapper = styled.div`
   position: relative;
-  height: calc((365/568) * 100vh);
+  height: calc((377/568) * 100vh);
 
   ${media.sm`
     height: calc((437/780) * 100vh);
@@ -20,12 +20,12 @@ export const SwiperWrapper = styled.div`
 
   ${media.xl`
     height: calc((428/768) * 100vh);
+    padding: 0 0 0 137px 
   `}
 
-  ${media.xl`
+  ${media.xxl`
     height: calc((712/1080) * 100vh);
   `}
-
 `;
 
 export const ImageWrapper = styled.div`
@@ -33,10 +33,7 @@ export const ImageWrapper = styled.div`
   height: 100%;
   width: 100%;
   aspect-ratio: ${(props) => props.ratio};
-
-  img {
-    object-fit: cover;
-  }
+  transition: height 1s ease, transform 1s ease;
 `;
 
 export const OrderContainer = styled.div`
@@ -44,16 +41,20 @@ export const OrderContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+  align-self: flex-end;
 `;
 
 export const FooterContainer = styled.div`
-  position: ${(props) => props.absolute ? 'absolute' : 'static'};
-  bottom: 10.56vh;
-  right: 1.76vh;
+  position: ${(props) => (props.absolute ? 'absolute' : 'static')};
   display: flex;
   flex-direction: column;
-  padding: 3.70vh 0 0 0;
-  height: 12.7vh;
+  align-self: flex-start;
+  padding: 3.70vh 0 0;
+  width: 100%;
+  gap: 14px;
+  opacity: 0;
+  transition: opacity 1s ease;
+
   ${media.sm`
     padding: 4.62vh 0 3.85vh 0;
   `}
@@ -62,11 +63,14 @@ export const FooterContainer = styled.div`
   `}
   ${media.lg`
     padding: 4px 3px 3px 8px;
-    bottom: 55px;
-    right: 9px;
   `}
   ${media.xl`
     background-color: rgba(255, 255, 255, 0.3);
+    width: 248px;
+    height: 38px;
+    gap: 0;
+    bottom: 55px;
+    right: 9px;
   `}
 `;
 
@@ -74,22 +78,44 @@ export const SwiperStyled = styled(Swiper)`
   overflow: hidden;
   width: 100%;
   height: 100%;
-  
-  .swiper-wrapper {
-    padding: 0 0 0 382px;
-  }
   .swiper-slide {
     overflow: hidden;
-    height: 100%;
+    transition: height 1s ease, padding 1s ease;
+
     &:not(.swiper-slide-active) {
+      height: 36vh;
       padding: 9vh 0 0 0;
-      height: 30vh;
+
+      ${media.xl`
+        padding: 15.7vh 0 0 0;
+      `}
+
+      ${ImageWrapper} {
+        transform: scale(1);
+        transition: transform 1s ease;
+      }
+
       ${FooterContainer} {
-        display: none;
+        opacity: 0;
+        transition: opacity 1s ease;
+      }
+    }
+
+    &.swiper-slide-active {
+      height: 100%;
+
+      ${ImageWrapper} {
+        height: 100%;
+        transform: scale(1.1);
+      }
+
+      ${FooterContainer} {
+        opacity: 1;
       }
     }
   }
 `;
+
 
 export const SlideContainer = styled.div`
   position: relative;
@@ -98,6 +124,7 @@ export const SlideContainer = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
+
   ${media.xl`
     align-items: flex-start;
   `}
@@ -126,12 +153,14 @@ export const CollectionContainer = styled.div`
   align-items: flex-end;
   letter-spacing: 1px;
   line-height: 18px;
+
   ${media.lg`
     flex-direction: row;
   `}
 `;
 
 export const OrderButton = styled.button`
+position: relative;
   background: none;
   border: none;
 `;
@@ -143,6 +172,7 @@ export const NotebookText = styled.div`
   margin: 0 15px 0 0;
   letter-spacing: 1.2px;
   font-weight: 400;
+
   ${media.xl`
     display: none;
   `}

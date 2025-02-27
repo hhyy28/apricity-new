@@ -25,10 +25,11 @@ export default function SwiperSlider({ homeMenu, swiperRef }) {
   const { collectionLabel, collectionName, notebookLabel, images } = homeMenu;
 
   const swiperOptions = {
-    phoneM: { slidesPerView: 1.4, centeredSlides: true, spaceBetween: 17, ratio: 1 / 1.1 },
+    phoneM: { slidesPerView: 1.25, centeredSlides: true, spaceBetween: 15, ratio: 253 / 285 },
+    // phoneM: { slidesPerView: 1.4, centeredSlides: true, spaceBetween: 17, ratio: 1 / 1.1 },
     phoneL: { slidesPerView: 1.5, centeredSlides: true, spaceBetween: 46, ratio: 1 / 1.1 },
-    tabletHorizontal: { slidesPerView: 1.3, centeredSlides: false, spaceBetween: 64, ratio: 1.4 / 1 },
-    Pc: { slidesPerView: 2, centeredSlides: true, spaceBetween: 180, ratio: 1074 / 712 }
+    tabletHorizontal: { slidesPerView: 1.3, centeredSlides: false, spaceBetween: 53, ratio: 1.4 / 1 },
+    Pc: { slidesPerView: 2, centeredSlides: false, spaceBetween: 180, ratio: 1074 / 712 }
   };
 
   const getSwiperOptions = () => {
@@ -67,7 +68,6 @@ export default function SwiperSlider({ homeMenu, swiperRef }) {
         slidesPerView={slidesPerView}
         centeredSlides={centeredSlides}
         spaceBetween={spaceBetween}
-        initialSlide={0}
         cssMode
         loop
       >
