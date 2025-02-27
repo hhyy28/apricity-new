@@ -4,7 +4,7 @@ import { media } from '@components/bootstrap-grid';
 
 export const SwiperWrapper = styled.div`
   position: relative;
-  height: calc((377/568) * 100vh);
+  height: calc((377 / 568) * 100vh);
 
   ${media.sm`
     height: calc((437/780) * 100vh);
@@ -20,7 +20,7 @@ export const SwiperWrapper = styled.div`
 
   ${media.xl`
     height: calc((428/768) * 100vh);
-    padding: 0 0 0 137px 
+    padding: 0 0 0 137px;
   `}
 
   ${media.xxl`
@@ -33,7 +33,10 @@ export const ImageWrapper = styled.div`
   height: 100%;
   width: 100%;
   aspect-ratio: ${(props) => props.ratio};
-  transition: height 1s ease, transform 1s ease;
+  transition:
+    height 1s ease,
+    transform 1s ease;
+  object-fit: cover;
 `;
 
 export const OrderContainer = styled.div`
@@ -45,11 +48,11 @@ export const OrderContainer = styled.div`
 `;
 
 export const FooterContainer = styled.div`
-  position: ${(props) => (props.absolute ? 'absolute' : 'static')};
+  position: ${(props) => (props.$absolute ? 'absolute' : 'static')};
   display: flex;
   flex-direction: column;
   align-self: flex-start;
-  padding: 3.70vh 0 0;
+  padding: 3.7vh 0 0;
   width: 100%;
   gap: 14px;
   opacity: 0;
@@ -80,7 +83,9 @@ export const SwiperStyled = styled(Swiper)`
   height: 100%;
   .swiper-slide {
     overflow: hidden;
-    transition: height 1s ease, padding 1s ease;
+    transition:
+      height 1s ease,
+      padding 1s ease;
 
     &:not(.swiper-slide-active) {
       height: 36vh;
@@ -106,7 +111,7 @@ export const SwiperStyled = styled(Swiper)`
 
       ${ImageWrapper} {
         height: 100%;
-        transform: scale(1.1);
+        transform: scale(1);
       }
 
       ${FooterContainer} {
@@ -115,7 +120,6 @@ export const SwiperStyled = styled(Swiper)`
     }
   }
 `;
-
 
 export const SlideContainer = styled.div`
   position: relative;
@@ -160,7 +164,7 @@ export const CollectionContainer = styled.div`
 `;
 
 export const OrderButton = styled.button`
-position: relative;
+  position: relative;
   background: none;
   border: none;
 `;

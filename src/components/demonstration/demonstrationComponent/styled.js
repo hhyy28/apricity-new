@@ -139,4 +139,4 @@ export const SwiperContainer = styled.div`
   ${media.xxl`
     height: 1080px;
   `}
-`
+`;

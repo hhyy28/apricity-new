@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import { useScreen } from '@context/screenContext';
-import { productImage } from '@images/index';
 import { orderButton } from '@svg/index';
 import {
   Wrapper,
@@ -13,6 +12,7 @@ import {
   AtmoDescContainer,
   ImageBackground,
   OrderButton,
+  ProductImageSubWrapper,
 } from './styled';
 import NextImage from '@components/images/next-image';
 
@@ -33,7 +33,9 @@ export default function ProductCardShort({ productCard, $isTriggered }) {
             </CollectionName>
           </CollectionText>
           <ProductImageWrapper>
-            <NextImage/>
+            <ProductImageSubWrapper>
+              <NextImage src={'https://i.imgur.com/jMyEpUH.jpeg'} fill />
+            </ProductImageSubWrapper>
           </ProductImageWrapper>
           <OrderButton>
             <Image src={orderButton} alt="Order Button" />
@@ -46,7 +48,8 @@ export default function ProductCardShort({ productCard, $isTriggered }) {
             <CollectionName>{collection_name}</CollectionName>
           </CollectionText>
           <AtmoDescContainer>
-            <ImageBackground $background={productImage}>
+            <ImageBackground>
+              <NextImage src={'https://i.imgur.com/jMyEpUH.jpeg'} fill />
               <OrderButton>
                 <Image src={orderButton} alt="Order Button" />
               </OrderButton>

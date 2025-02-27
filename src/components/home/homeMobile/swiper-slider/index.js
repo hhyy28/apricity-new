@@ -13,7 +13,7 @@ import {
   CollectionName,
   OrderContainer,
   NotebookText,
-  OrderButton
+  OrderButton,
 } from './styled';
 import NextImage from '@components/images/next-image';
 import { useScreen } from '@context/screenContext';
@@ -21,21 +21,56 @@ import Image from 'next/image';
 import { orderButton } from '@svg/index';
 
 export default function SwiperSlider({ homeMenu, swiperRef }) {
-  const { isPhoneM, isPhoneL, isTabletHorizontal, isPc } = useScreen();
+  const { isPhoneM, isPhoneL, isTabletHorizontal, isTabletVertical, isPc } =
+    useScreen();
   const { collectionLabel, collectionName, notebookLabel, images } = homeMenu;
 
   const swiperOptions = {
-    phoneM: { slidesPerView: 1.25, centeredSlides: true, spaceBetween: 15, ratio: 253 / 285 },
-    // phoneM: { slidesPerView: 1.4, centeredSlides: true, spaceBetween: 17, ratio: 1 / 1.1 },
-    phoneL: { slidesPerView: 1.5, centeredSlides: true, spaceBetween: 46, ratio: 1 / 1.1 },
-    tabletHorizontal: { slidesPerView: 1.3, centeredSlides: false, spaceBetween: 53, ratio: 1.4 / 1 },
-    Pc: { slidesPerView: 2, centeredSlides: false, spaceBetween: 180, ratio: 1074 / 712 }
+    phoneS: {
+      slidesPerView: 1.25,
+      centeredSlides: true,
+      spaceBetween: 15,
+      ratio: 253 / 285,
+    },
+    phoneM: {
+      slidesPerView: 1.25,
+      centeredSlides: true,
+      spaceBetween: 17,
+      ratio: 280 / 315,
+    },
+    phoneL: {
+      slidesPerView: 1.4,
+      centeredSlides: true,
+      spaceBetween: 46,
+      ratio: 379 / 427,
+    },
+    tabletVertical: {
+      slidesPerView: 1.4,
+      centeredSlides: true,
+      spaceBetween: 64,
+      ratio: 527 / 593,
+    },
+    tabletHorizontal: {
+      slidesPerView: 1.3,
+      centeredSlides: false,
+      spaceBetween: 53,
+      ratio: 1.4 / 1,
+    },
+    Pc: {
+      slidesPerView: 2,
+      centeredSlides: false,
+      spaceBetween: 180,
+      ratio: 1074 / 712,
+    },
   };
 
   const getSwiperOptions = () => {
+    if (isPc) return swiperOptions.Pc;
     if (isTabletHorizontal) return swiperOptions.tabletHorizontal;
+    if (isTabletVertical) return swiperOptions.tabletVertical;
     if (isPhoneL) return swiperOptions.phoneL;
-    return swiperOptions.phoneM;
+    if (isPhoneM) return swiperOptions.phoneM;
+    return swiperOptions.phoneS;
   };
 
   useEffect(() => {
@@ -44,10 +79,11 @@ export default function SwiperSlider({ homeMenu, swiperRef }) {
     }
   }, [isPhoneM, isPhoneL, isTabletHorizontal]);
 
-  const { slidesPerView, centeredSlides, spaceBetween, ratio } = getSwiperOptions();
-  
-  const InfoBlock = ({ absolute = false }) => (
-    <FooterContainer absolute={absolute}>
+  const { slidesPerView, centeredSlides, spaceBetween, ratio } =
+    getSwiperOptions();
+
+  const InfoBlock = ({ $absolute = false }) => (
+    <FooterContainer $absolute={$absolute}>
       <CollectionContainer>
         <CollectionDef>{collectionLabel}</CollectionDef>
         <CollectionName>{collectionName}</CollectionName>
@@ -60,7 +96,11 @@ export default function SwiperSlider({ homeMenu, swiperRef }) {
       </OrderContainer>
     </FooterContainer>
   );
-  
+
+  InfoBlock.propTypes = {
+    $absolute: PropTypes.bool,
+  };
+
   return (
     <SwiperWrapper>
       <SwiperStyled
@@ -79,10 +119,15 @@ export default function SwiperSlider({ homeMenu, swiperRef }) {
                   <NextImage
                     src={image.src}
                     alt={`Slide ${index}`}
-                    sizes={{ mobile: 320, tabletPortrait: 768, tabletLandscape: 1024, desktop: 1920 }}
+                    sizes={{
+                      mobile: 320,
+                      tabletPortrait: 768,
+                      tabletLandscape: 1024,
+                      desktop: 1920,
+                    }}
                     fill
                   />
-                  {isTabletHorizontal && <InfoBlock absolute />}
+                  {isTabletHorizontal && <InfoBlock $absolute />}
                 </ImageWrapper>
               </Link>
               {!isTabletHorizontal && <InfoBlock />}
@@ -102,9 +147,9 @@ SwiperSlider.propTypes = {
     images: PropTypes.arrayOf(
       PropTypes.shape({
         src: PropTypes.string.isRequired,
-        link: PropTypes.string
+        link: PropTypes.string,
       })
-    ).isRequired
+    ).isRequired,
   }).isRequired,
-  swiperRef: PropTypes.shape({ current: PropTypes.object }).isRequired
+  swiperRef: PropTypes.shape({ current: PropTypes.object }).isRequired,
 };

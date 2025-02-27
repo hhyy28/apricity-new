@@ -56,7 +56,6 @@ export const OptionMenu = styled.div`
   `}
 `;
 
-
 export const Option = styled.div`
   font-family: 'Panel-Sans', sans-serif;
   font-size: 11px;
@@ -64,4 +63,3 @@ export const Option = styled.div`
   color: #cfd0cc;
   letter-spacing: 0.55px;
 `;
-

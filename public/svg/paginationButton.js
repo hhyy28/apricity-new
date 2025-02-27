@@ -1,5 +1,6 @@
 import React from 'react';
 import { useScreen } from '@context/screenContext';
+import PropTypes from 'prop-types';
 
 export const PaginationButton = ({ fillcolor }) => {
   const { isPhoneL } = useScreen();
@@ -37,4 +38,8 @@ export const PaginationButton = ({ fillcolor }) => {
       />
     </svg>
   );
+};
+
+PaginationButton.propTypes = {
+  fillcolor: PropTypes.string.isRequired,
 };

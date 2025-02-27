@@ -9,7 +9,8 @@ import {
 import { useSwiperControls } from '@context/swiperFunctions';
 
 export default function SwiperPagination({ swiperInstance }) {
-  const { slidePrev, slideNext, slideToFirst, slideToLast } = useSwiperControls(swiperInstance);
+  const { slidePrev, slideNext, slideToFirst, slideToLast } =
+    useSwiperControls(swiperInstance);
 
   return (
     <PaginationContainer>

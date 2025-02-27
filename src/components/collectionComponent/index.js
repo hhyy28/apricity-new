@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import { description } from '@images/index';
 import { logo } from '@svg/index';
 import {
   CollectionText,
@@ -25,7 +24,7 @@ export default function CollectionComponent({ collectionText }) {
     <Wrapper>
       <ImageContainer>
         <ImageSubContainer>
-          <NextImage src={"https://m.media-amazon.com/images/I/81BmxjMuvZL.__AC_SX300_SY300_QL70_FMwebp_.jpg"} fill/>
+          <NextImage src={'https://i.imgur.com/avga14y.jpeg'} fill />
         </ImageSubContainer>
       </ImageContainer>
       <InfoWrapper>

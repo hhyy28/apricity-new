@@ -12,10 +12,12 @@ import Image from 'next/image';
 import { orderButton } from '@svg/index';
 import SwiperPagination from './swiper-pagination';
 import { SwiperSlide } from 'swiper/react';
-import { background1 } from '@images/index';
 import NextImage from '@components/images/next-image';
 
-const images = ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYzF5mP7DXvI9X2ZX2YG60GXpS-xVt510c9A&s', 'https://m.media-amazon.com/images/I/81BmxjMuvZL.__AC_SX300_SY300_QL70_FMwebp_.jpg'];
+const images = [
+  'https://i.imgur.com/jMyEpUH.jpeg',
+  'https://i.imgur.com/avga14y.jpeg',
+];
 
 export default function DemonstrationComponent({ $isTriggered }) {
   const swiperRef = useRef(null);
@@ -37,7 +39,7 @@ export default function DemonstrationComponent({ $isTriggered }) {
         {images.map((image, index) => (
           <SwiperSlide key={`slide-${index}`}>
             <SwiperContainer>
-              <NextImage src={image} fill/>
+              <NextImage src={image} fill />
             </SwiperContainer>
           </SwiperSlide>
         ))}

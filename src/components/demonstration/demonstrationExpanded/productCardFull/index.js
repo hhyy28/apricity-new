@@ -95,11 +95,11 @@ export default function ProductCardFull({ productCard }) {
 
 ProductCardFull.propTypes = {
   productCard: PropTypes.shape({
-    collection_prefix: PropTypes.string.isRequired,
-    collection_name: PropTypes.string.isRequired,
-    price_label: PropTypes.string.isRequired,
-    atmo_title: PropTypes.string.isRequired,
-    atmo_info: PropTypes.string.isRequired,
-    initial_quantity: PropTypes.number.isRequired,
+    collection_prefix: PropTypes.string,
+    collection_name: PropTypes.string,
+    price_label: PropTypes.string,
+    atmo_title: PropTypes.string,
+    atmo_info: PropTypes.string,
+    initial_quantity: PropTypes.number,
   }).isRequired,
 };

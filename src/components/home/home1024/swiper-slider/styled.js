@@ -66,7 +66,7 @@ export const SlideContent = styled.div`
 `;
 
 export const SlideImage = styled.img`
-position: relative;
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: fill;

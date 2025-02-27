@@ -100,20 +100,25 @@ export const CollectionNameElement = styled.div`
 `;
 
 export const ProductImageWrapper = styled.div`
-  padding: 0 26px;
   height: 265px;
   transition: all 0.3s ease;
+  position: relative;
+  ${media.sm`
+    padding: 0 29px;
+  `}
+`;
+
+export const ProductImageSubWrapper = styled.div`
+  position: relative;
+  height: 265px;
 
   ${media.sm`
     height: 298px;
-    padding: 0 29px;
   `}
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  ${media.md`
+    height: 298px;
+  `}
 `;
 
 export const Footer = styled.div`
@@ -224,7 +229,7 @@ export const OrderButton = styled.button`
   display: none;
   background: none;
   border: none;
-
+  position: absolute;
   ${media.sm`
     display: flex;
     margin: 10px 28px 0;
@@ -251,20 +256,12 @@ export const OrderButton = styled.button`
   ${media.xxl`
     margin: 24px 32px;
   `}
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 `;
 
 export const ImageBackground = styled.div`
-  background-image: url(${({ $background }) => $background.src});
-  background-size: cover;
-  background-position: center;
   display: flex;
   flex-direction: column;
+  position: relative;
   justify-content: flex-end;
   align-items: flex-end;
   width: 100%;
