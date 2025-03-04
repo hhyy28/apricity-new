@@ -38,6 +38,6 @@ HomePage.propTypes = {
   textConstants: PropTypes.shape({
     home: PropTypes.object.isRequired,
   }).isRequired,
-  collection: PropTypes.object,
+  collection: PropTypes.array,
   error: PropTypes.string,
 };

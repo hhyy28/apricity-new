@@ -29,4 +29,5 @@ HomeTemplate.propTypes = {
     collectionText: PropTypes.object.isRequired,
     bottomData: PropTypes.object.isRequired,
   }).isRequired,
+  collection: PropTypes.array
 };

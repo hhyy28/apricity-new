@@ -19,5 +19,5 @@ Home.propTypes = {
     homeMenu: PropTypes.object.isRequired,
     homeHeader: PropTypes.object.isRequired,
   }).isRequired,
-  collection: PropTypes.object
+  collection: PropTypes.array
 };
