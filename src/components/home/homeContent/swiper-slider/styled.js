@@ -45,6 +45,11 @@ export const OrderContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
   align-self: flex-end;
+  
+  ${media.md`
+    flex-direction: column-reverse;
+    gap: 30px;
+  `}
 `;
 
 export const FooterContainer = styled.div`
@@ -63,6 +68,8 @@ export const FooterContainer = styled.div`
   `}
   ${media.md`
     padding: 1.30vh 0 1.96vh 0;
+    flex-direction: row;
+    align-self: flex-end;
   `}
   ${media.lg`
     padding: 4px 3px 3px 8px;
@@ -91,9 +98,30 @@ export const SwiperStyled = styled(Swiper)`
       height: 36vh;
       padding: 9vh 0 0 0;
 
+      ${media.sm`
+        height: 204px;
+        padding: 70px 0 0 0 
+      `}
+
+      ${media.md`
+        height: 277px;
+        padding: 97px 0 0 0 
+      `}
+
+      ${media.lg`
+        height: 384px;
+        padding: 135px 0 0 0 
+      `}
+
       ${media.xl`
+        height: 266px;
         padding: 15.7vh 0 0 0;
       `}
+
+      ${media.xxl`
+        height: 415px;
+        padding: 241px 0 0 0 
+      `}  
 
       ${ImageWrapper} {
         transform: scale(1);
@@ -158,6 +186,9 @@ export const CollectionContainer = styled.div`
   letter-spacing: 1px;
   line-height: 18px;
 
+  ${media.md`
+    align-self: flex-end;
+  `}
   ${media.lg`
     flex-direction: row;
   `}
