@@ -22,9 +22,9 @@ export default function SwiperPagination({
   collection,
 }) {
   const { collectionLabel } = bottomSwiper;
-  const firstCollection = collection?.[0];
+  const firstCollection = collection.length > 0 ? collection[0] : {};
   const { collectionName = '', collectionItems = [] } = firstCollection;
-  const { images } = collectionItems?.[0];
+  const images = collectionItems.length > 0 ? collectionItems[0].images : [];
   return (
     <Wrapper>
       <SwiperStyled
