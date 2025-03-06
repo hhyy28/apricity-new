@@ -6,16 +6,19 @@ import ProductCardFull from '@components/demonstration/demonstrationExpanded/pro
 import AtmosphereDesc from './atmosphereDesc';
 import DemonstrationComponent from '../demonstrationComponent';
 
-export default function DemonstrationExpanded({ demonstration }) {
+export default function DemonstrationExpanded({ demonstration, collection }) {
   const { isTabletHorizontal } = useScreen();
   const { atmosphereText, productCard } = demonstration;
 
   return (
     <Wrapper>
       {isTabletHorizontal && <DemonstrationComponent $isTriggered={true} />}
-      <ProductCardFull productCard={productCard} />
+      <ProductCardFull productCard={productCard} collection={collection} />
       {!isTabletHorizontal && (
-        <AtmosphereDesc atmosphereText={atmosphereText} />
+        <AtmosphereDesc
+          atmosphereText={atmosphereText}
+          collection={collection}
+        />
       )}
     </Wrapper>
   );
@@ -26,4 +29,5 @@ DemonstrationExpanded.propTypes = {
     productCard: PropTypes.object.isRequired,
     atmosphereText: PropTypes.object.isRequired,
   }).isRequired,
+  collection: PropTypes.array,
 };

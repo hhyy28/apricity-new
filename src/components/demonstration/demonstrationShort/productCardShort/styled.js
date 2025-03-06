@@ -110,15 +110,8 @@ export const ProductImageWrapper = styled.div`
 
 export const ProductImageSubWrapper = styled.div`
   position: relative;
-  height: 265px;
-
-  ${media.sm`
-    height: 298px;
-  `}
-
-  ${media.md`
-    height: 298px;
-  `}
+  width: 100%;
+  height: 100%;
 `;
 
 export const Footer = styled.div`

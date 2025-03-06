@@ -27,7 +27,7 @@ const NextImage = ({ src, sizes, alt, ...rest }) => {
       sizes={sizesValue}
       alt={alt || src}
       {...rest}
-      style={{ objectFit: 'cover' }} 
+      style={{ objectFit: 'cover' }}
     />
   );
 };

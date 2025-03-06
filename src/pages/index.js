@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { HomeTemplate } from "@templates/index";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { HomeTemplate } from '@templates/index';
 
 export default function HomePage({ textConstants, collection, error }) {
   if (error) {
@@ -10,12 +10,12 @@ export default function HomePage({ textConstants, collection, error }) {
   return <HomeTemplate textConstants={textConstants} collection={collection} />;
 }
 
-export async function getServerSideProps() {
+export const getServerSideProps = async () => {
   try {
-    const response = await fetch("http://localhost:3000/api/collections");
+    const response = await fetch('http://localhost:3000/api/collections');
 
     if (!response.ok) {
-      throw new Error("Failed to load data");
+      throw new Error('Failed to load data');
     }
 
     const collection = await response.json();
@@ -32,7 +32,7 @@ export async function getServerSideProps() {
       },
     };
   }
-}
+};
 
 HomePage.propTypes = {
   textConstants: PropTypes.shape({

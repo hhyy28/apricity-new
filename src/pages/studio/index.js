@@ -1,25 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CSSGrid, { gridTheme } from '@components/bootstrap-grid';
-import Home from '@components/home';
-import CollectionComponent from '@components/collectionComponent';
-import Demonstrations from '@components/demonstration/demonstrationShort';
-import DemonstrationExpanded from '@components/demonstration/demonstrationExpanded';
-import AlternativeBottomComponent from '@components/footer/alternative';
+import { StudioTemplate } from '@templates/index';
 
-export default function StudioPage({ textConstants }) {
-  const { home, demonstration, collectionText, bottomData } = textConstants;
+export default function StudioPage({ textConstants, collection, error }) {
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
-    <CSSGrid gridTheme={gridTheme}>
-      <Home home={home} />
-      <CollectionComponent collectionText={collectionText} />
-      <Demonstrations demonstration={demonstration} />
-      <DemonstrationExpanded demonstration={demonstration} />
-      <AlternativeBottomComponent bottomData={bottomData} />
-    </CSSGrid>
+    <StudioTemplate textConstants={textConstants} collection={collection} />
   );
 }
+
+export const getServerSideProps = async () => {
+  try {
+    const response = await fetch('http://localhost:3000/api/collections');
+
+    if (!response.ok) {
+      throw new Error('Failed to load data');
+    }
+
+    const collection = await response.json();
+
+    return {
+      props: {
+        collection,
+      },
+    };
+  } catch (error) {
+    return {
+      props: {
+        error: error.message,
+      },
+    };
+  }
+};
 
 StudioPage.propTypes = {
   textConstants: PropTypes.shape({
@@ -28,4 +43,6 @@ StudioPage.propTypes = {
     collectionText: PropTypes.object.isRequired,
     bottomData: PropTypes.object.isRequired,
   }).isRequired,
+  collection: PropTypes.array,
+  error: PropTypes.string,
 };

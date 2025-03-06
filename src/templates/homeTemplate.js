@@ -15,8 +15,14 @@ export default function HomeTemplate({ textConstants, collection }) {
     <CSSGrid gridTheme={gridTheme}>
       <Home home={home} collection={collection} />
       <Demonstration demonstration={demonstration} collection={collection} />
-      <CollectionComponent collectionText={collectionText} collection={collection} />
-      <DemonstrationExpanded demonstration={demonstration} collection={collection} />
+      <CollectionComponent
+        collectionText={collectionText}
+        collection={collection}
+      />
+      <DemonstrationExpanded
+        demonstration={demonstration}
+        collection={collection}
+      />
       <BottomComponent bottomData={bottomData} collection={collection} />
     </CSSGrid>
   );
@@ -29,5 +35,5 @@ HomeTemplate.propTypes = {
     collectionText: PropTypes.object.isRequired,
     bottomData: PropTypes.object.isRequired,
   }).isRequired,
-  collection: PropTypes.array
+  collection: PropTypes.array,
 };

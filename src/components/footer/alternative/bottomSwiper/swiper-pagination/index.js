@@ -1,39 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Image from 'next/image';
 import { SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { gallery1, gallery2 } from '@images/index';
 import {
   CollectionContainer,
   CollectionDef,
   CollectionName,
+  ImageContainer,
   PaginationButtonNumbers,
   PaginationContainer,
   SideContainer,
   SwiperStyled,
   Wrapper,
 } from './styled';
-
-const images = [
-  gallery1,
-  gallery2,
-  gallery2,
-  gallery2,
-  gallery2,
-  gallery2,
-  gallery2,
-  gallery2,
-  gallery1,
-];
+import NextImage from '@components/images/next-image';
 
 export default function SwiperPagination({
   onSlideChange,
   swiperRef,
   bottomSwiper,
+  collection,
 }) {
-  const { collectionLabel, collectionName } = bottomSwiper;
-
+  const { collectionLabel } = bottomSwiper;
+  const firstCollection = collection?.[0];
+  const { collectionName = '', collectionItems = [] } = firstCollection;
+  const { images } = collectionItems?.[0];
   return (
     <Wrapper>
       <SwiperStyled
@@ -44,7 +35,13 @@ export default function SwiperPagination({
       >
         {images.map((image, index) => (
           <SwiperSlide key={`slide-${index}`}>
-            <Image src={image} alt={`Slide ${index}`} />
+            <ImageContainer>
+              <NextImage
+                src={`${image.src}.jpeg`}
+                alt={`Slide ${index}`}
+                fill
+              />
+            </ImageContainer>
           </SwiperSlide>
         ))}
       </SwiperStyled>
@@ -77,4 +74,5 @@ SwiperPagination.propTypes = {
     collectionLabel: PropTypes.string.isRequired,
     collectionName: PropTypes.string.isRequired,
   }).isRequired,
+  collection: PropTypes.array,
 };

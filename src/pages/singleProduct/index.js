@@ -1,31 +1,45 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CSSGrid, { gridTheme } from '@components/bootstrap-grid';
-import Home from '@components/home';
-import CollectionComponent from '@components/collectionComponent';
-import Demonstrations from '@components/demonstration/demonstrationShort';
-import DemonstrationExpanded from '@components/demonstration/demonstrationExpanded';
-import AlternativeBottomComponent from '@components/footer/alternative';
+import { SingleProductTemplate } from '@templates/index';
 
-export default function SingleProduct({ textConstants }) {
-  const { home, demonstration, collectionText, bottomData } = textConstants;
+export default function SingleProductPage({ textConstants, error }) {
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
-  return (
-    <CSSGrid gridTheme={gridTheme}>
-      <Home home={home} />
-      <DemonstrationExpanded demonstration={demonstration} />
-      <CollectionComponent collectionText={collectionText} />
-      <Demonstrations demonstration={demonstration} />
-      <AlternativeBottomComponent bottomData={bottomData} />
-    </CSSGrid>
-  );
+  return <SingleProductTemplate textConstants={textConstants} />;
 }
 
-SingleProduct.propTypes = {
+export const getServerSideProps = async () => {
+  try {
+    const response = await fetch('http://localhost:3000/api/product');
+
+    if (!response.ok) {
+      throw new Error('Failed to load data');
+    }
+
+    const productData = await response.json();
+
+    return {
+      props: {
+        productData,
+      },
+    };
+  } catch (error) {
+    return {
+      props: {
+        error: error.message,
+      },
+    };
+  }
+};
+
+SingleProductPage.propTypes = {
   textConstants: PropTypes.shape({
     home: PropTypes.object.isRequired,
     demonstration: PropTypes.object.isRequired,
     collectionText: PropTypes.object.isRequired,
     bottomData: PropTypes.object.isRequired,
   }).isRequired,
+  error: PropTypes.string,
 };

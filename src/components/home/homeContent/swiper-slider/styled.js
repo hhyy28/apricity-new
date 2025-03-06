@@ -45,7 +45,7 @@ export const OrderContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
   align-self: flex-end;
-  
+
   ${media.md`
     flex-direction: column-reverse;
     gap: 30px;
