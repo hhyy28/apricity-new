@@ -12,9 +12,10 @@ export default function StudioPage({ textConstants, collection, error }) {
   );
 }
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async ({ req }) => {
   try {
-    const response = await fetch('http://localhost:3000/api/collections');
+    const baseUrl = `http://${req.headers.host}`;
+    const response = await fetch(`${baseUrl}/api/collections`);
 
     if (!response.ok) {
       throw new Error('Failed to load data');
