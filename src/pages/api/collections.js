@@ -1,7 +1,6 @@
 import mongoose from 'mongoose';
 
-const uri =
-  'mongodb+srv://admin:12345@cluster0.mxxbn.mongodb.net/AppricityNewDb?retryWrites=true&w=majority&appName=Cluster0';
+const uri = process.env.MONGODB_URI;
 
 const connectDB = async () => {
   if (mongoose.connection.readyState >= 1) {
