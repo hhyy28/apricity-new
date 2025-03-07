@@ -15,28 +15,25 @@ import {
   PaginationContainer,
   PaginationButtonImg,
   AtmoDescContainer,
-  ImageBackground,
   OrderButton,
   AtmoText,
   AtmoTextTitle,
   AtmoTextCopy,
+  ImageContainer,
+  ImageSubWrapper,
 } from './styled';
-import { useScreen } from '@context/ScreenContext';
-import { productImage } from '@images/index';
+import { useScreen } from '@context/screenContext';
 import { orderButton } from '@svg/index';
 import { PaginationButton } from '@svg/paginationButton';
+import NextImage from '@components/images/next-image';
 
-export default function ProductCardFull({ productCard }) {
+export default function ProductCardFull({ productCard, collection }) {
   const { isPhoneL } = useScreen();
-  const {
-    collection_prefix,
-    collection_name,
-    price_label,
-    initial_quantity,
-    atmo_title,
-    atmo_info,
-  } = productCard;
+  const { collection_prefix, price_label, initial_quantity, atmo_title } =
+    productCard;
 
+  const firstCollection = collection?.[0];
+  const { collectionName, atmosphere } = firstCollection;
   const [quantity, setQuantity] = useState(initial_quantity);
 
   const handleQuantityChange = (change) => {
@@ -47,16 +44,19 @@ export default function ProductCardFull({ productCard }) {
     <Wrapper>
       <CollectionText>
         <CollectionDef>{collection_prefix}</CollectionDef>
-        <CollectionName>{collection_name}</CollectionName>
+        <CollectionName>{collectionName}</CollectionName>
       </CollectionText>
       <AtmoDescContainer>
-        <ImageBackground $background={productImage}>
-          {isPhoneL && (
-            <OrderButton>
-              <Image src={orderButton} alt="Order Button" />
-            </OrderButton>
-          )}
-        </ImageBackground>
+        <ImageContainer>
+          <ImageSubWrapper>
+            <NextImage src="https://imgur.com/dp1wMeZ.jpeg" fill />
+          </ImageSubWrapper>
+        </ImageContainer>
+        {isPhoneL && (
+          <OrderButton>
+            <Image src={orderButton} alt="Order Button" />
+          </OrderButton>
+        )}
         {!isPhoneL && (
           <OrderButton>
             <Image src={orderButton} alt="Order Button" />
@@ -64,7 +64,7 @@ export default function ProductCardFull({ productCard }) {
         )}
         <AtmoText>
           <AtmoTextTitle>{atmo_title}</AtmoTextTitle>
-          <AtmoTextCopy>{atmo_info}</AtmoTextCopy>
+          <AtmoTextCopy>{atmosphere}</AtmoTextCopy>
         </AtmoText>
       </AtmoDescContainer>
       <Footer>
@@ -95,11 +95,10 @@ export default function ProductCardFull({ productCard }) {
 
 ProductCardFull.propTypes = {
   productCard: PropTypes.shape({
-    collection_prefix: PropTypes.string.isRequired,
-    collection_name: PropTypes.string.isRequired,
-    price_label: PropTypes.string.isRequired,
-    atmo_title: PropTypes.string.isRequired,
-    atmo_info: PropTypes.string.isRequired,
-    initial_quantity: PropTypes.number.isRequired,
+    collection_prefix: PropTypes.string,
+    price_label: PropTypes.string,
+    atmo_title: PropTypes.string,
+    initial_quantity: PropTypes.number,
   }).isRequired,
+  collection: PropTypes.array,
 };

@@ -7,16 +7,25 @@ import Demonstrations from '@components/demonstration/demonstrationShort';
 import DemonstrationExpanded from '@components/demonstration/demonstrationExpanded';
 import AlternativeBottomComponent from '@components/footer/alternative';
 
-export default function StudioTemplate({ textConstants }) {
+export default function StudioTemplate({ textConstants, collection }) {
   const { home, demonstration, collectionText, bottomData } = textConstants;
 
   return (
     <CSSGrid gridTheme={gridTheme}>
-      <Home home={home} />
-      <CollectionComponent collectionText={collectionText} />
-      <Demonstrations demonstration={demonstration} />
-      <DemonstrationExpanded demonstration={demonstration} />
-      <AlternativeBottomComponent bottomData={bottomData} />
+      <Home home={home} collection={collection} />
+      <CollectionComponent
+        collectionText={collectionText}
+        collection={collection}
+      />
+      <Demonstrations demonstration={demonstration} collection={collection} />
+      <DemonstrationExpanded
+        demonstration={demonstration}
+        collection={collection}
+      />
+      <AlternativeBottomComponent
+        bottomData={bottomData}
+        collection={collection}
+      />
     </CSSGrid>
   );
 }
@@ -28,4 +37,5 @@ StudioTemplate.propTypes = {
     collectionText: PropTypes.object.isRequired,
     bottomData: PropTypes.object.isRequired,
   }).isRequired,
+  collection: PropTypes.array,
 };

@@ -10,18 +10,20 @@ import {
   Wrapper,
 } from './styled';
 
-export default function BottomInfo({ bottomInfo }) {
-  const { discoverTitle, discoverCopy, atmoTitle, atmoCopy } = bottomInfo;
+export default function BottomInfo({ bottomInfo, collection }) {
+  const { discoverTitle, atmoTitle } = bottomInfo;
+  const firstCollection = collection?.[0];
+  const { discoverInfo, atmosphere } = firstCollection;
 
   return (
     <Wrapper>
       <DiscoverContainer>
         <DiscoverTitle>{discoverTitle}</DiscoverTitle>
-        <DiscoverCopy>{discoverCopy}</DiscoverCopy>
+        <DiscoverCopy>{discoverInfo}</DiscoverCopy>
       </DiscoverContainer>
       <AtmoContainer>
         <AtmoTitle>{atmoTitle}</AtmoTitle>
-        <AtmoCopy>{atmoCopy}</AtmoCopy>
+        <AtmoCopy>{atmosphere}</AtmoCopy>
       </AtmoContainer>
     </Wrapper>
   );
@@ -34,4 +36,5 @@ BottomInfo.propTypes = {
     atmoTitle: PropTypes.string.isRequired,
     atmoCopy: PropTypes.string.isRequired,
   }).isRequired,
+  collection: PropTypes.array,
 };

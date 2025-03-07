@@ -9,15 +9,21 @@ import {
   Home,
 } from '@components/index';
 
-export default function HomeTemplate({ textConstants }) {
+export default function HomeTemplate({ textConstants, collection }) {
   const { home, demonstration, collectionText, bottomData } = textConstants;
   return (
     <CSSGrid gridTheme={gridTheme}>
-      <Home home={home} />
-      <Demonstration demonstration={demonstration} />
-      <CollectionComponent collectionText={collectionText} />
-      <DemonstrationExpanded demonstration={demonstration} />
-      <BottomComponent bottomData={bottomData} />
+      <Home home={home} collection={collection} />
+      <Demonstration demonstration={demonstration} collection={collection} />
+      <CollectionComponent
+        collectionText={collectionText}
+        collection={collection}
+      />
+      <DemonstrationExpanded
+        demonstration={demonstration}
+        collection={collection}
+      />
+      <BottomComponent bottomData={bottomData} collection={collection} />
     </CSSGrid>
   );
 }
@@ -29,4 +35,5 @@ HomeTemplate.propTypes = {
     collectionText: PropTypes.object.isRequired,
     bottomData: PropTypes.object.isRequired,
   }).isRequired,
+  collection: PropTypes.array,
 };

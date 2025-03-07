@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import { description } from '@images/index';
 import { logo } from '@svg/index';
 import {
   CollectionText,
@@ -14,7 +13,9 @@ import {
   TextContainer,
   TitleContainer,
   TitleText,
+  ImageSubContainer,
 } from './styled';
+import NextImage from '@components/images/next-image';
 
 export default function CollectionComponent({ collectionText }) {
   const { value, title } = collectionText;
@@ -22,7 +23,9 @@ export default function CollectionComponent({ collectionText }) {
   return (
     <Wrapper>
       <ImageContainer>
-        <Image src={description} alt="Gallery Image" />
+        <ImageSubContainer>
+          <NextImage src={'https://i.imgur.com/avga14y.jpeg'} fill />
+        </ImageSubContainer>
       </ImageContainer>
       <InfoWrapper>
         <TitleContainer>

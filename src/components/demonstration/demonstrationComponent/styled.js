@@ -105,7 +105,7 @@ export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   background: #d7d7d1;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.7s ease-in-out;
 
   ${media.xl`
     width: 50%;
@@ -113,5 +113,30 @@ export const Wrapper = styled.div`
   `}
   ${media.xxl`
     padding: ${({ $isTriggered }) => ($isTriggered ? '0' : '390px 284px')};
+  `}
+`;
+
+export const SwiperContainer = styled.div`
+  height: 568px;
+
+  ${media.sm`
+    height: 780px;
+  `}
+
+  ${media.md`
+    height: 767px;
+  `}
+
+  ${media.lg`
+    height: 1024px;
+  `}
+
+  ${media.xl`
+    height: 100%;
+    width: 50%;
+  `}
+
+  ${media.xxl`
+    height: 1080px;
   `}
 `;

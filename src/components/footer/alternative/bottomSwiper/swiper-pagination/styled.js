@@ -39,19 +39,6 @@ export const PaginationButtonNumbers = styled.button`
   }
 `;
 
-export const PaginationButtonImg = styled.button`
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-
-  ${({ $rotate }) => $rotate && 'transform: rotate(180deg);'}
-
-  &:focus {
-    outline: none;
-  }
-`;
-
 export const CollectionContainer = styled.div`
   align-items: flex-end;
   color: #cecfca;
@@ -133,4 +120,10 @@ export const SideContainer = styled.div`
     padding: 59px 0 33px 155px;
     gap: 65px;
   `}
+`;
+
+export const ImageContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
 `;

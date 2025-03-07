@@ -257,10 +257,7 @@ export const OrderButton = styled.button`
   }
 `;
 
-export const ImageBackground = styled.div`
-  background-image: url(${({ $background }) => $background.src});
-  background-size: cover;
-  background-position: center;
+export const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -348,4 +345,10 @@ export const AtmoTextCopy = styled.div`
   font-weight: 360;
   line-height: 16px;
   letter-spacing: 0.6px;
+`;
+
+export const ImageSubWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
 `;
