@@ -8,7 +8,10 @@ export default function ByProductPage({ textConstants, collection, error }) {
   }
 
   return (
-    <ByProductPageTemplate textConstants={textConstants} collection={collection} />
+    <ByProductPageTemplate
+      textConstants={textConstants}
+      collection={collection}
+    />
   );
 }
 
