@@ -12,7 +12,8 @@ export default function ByCollectionPage({ textConstants, error }) {
 
 export const getServerSideProps = async () => {
   try {
-    const response = await fetch('http://localhost:3000/api/collections');
+    const baseUrl = `http://${req.headers.host}`;
+    const response = await fetch(`${baseUrl}/api/collections`);
 
     if (!response.ok) {
       throw new Error('Failed to load data');
