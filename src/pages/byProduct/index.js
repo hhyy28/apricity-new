@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ByProductTemplate } from '@templates/index';
+import { ByProductPageTemplate } from '@templates/index';
 
 export default function ByProductPage({ textConstants, collection, error }) {
   if (error) {
@@ -8,7 +8,7 @@ export default function ByProductPage({ textConstants, collection, error }) {
   }
 
   return (
-    <ByProductTemplate textConstants={textConstants} collection={collection} />
+    <ByProductPageTemplate textConstants={textConstants} collection={collection} />
   );
 }
 

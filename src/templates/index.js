@@ -1,6 +1,6 @@
 import HomeTemplate from './homeTemplate';
 import ByCollectionTemplate from './byCollectionTemplate';
 import StudioTemplate from './studioTemlpate';
-import ByProductPage from 'src/pages/byProduct';
+import ByProductPageTemplate from './byProductTemplate'
 
-export { HomeTemplate, ByCollectionTemplate, StudioTemplate, ByProductPage };
+export { HomeTemplate, ByCollectionTemplate, StudioTemplate, ByProductPageTemplate };
