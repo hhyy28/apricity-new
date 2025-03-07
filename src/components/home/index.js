@@ -1,31 +1,26 @@
 import React from 'react';
-import { useScreen } from '@context/ScreenContext';
+import PropTypes from 'prop-types';
+import { useTheme } from '@context/themeContext';
 import { Wrapper } from './styled';
 import HomeHeader from './homeHeader/index';
-import HomeMobile from './homeMobile/index';
-import Home1920 from './home1920/index';
-import Home1024 from './home1024/index';
+import HomeContent from './homeContent';
 
-export default function Home({ home }) {
-  const { isTabletHorizontal, isPc } = useScreen();
-
+export default function Home({ home, collection }) {
   const { homeMenu, homeHeader } = home;
-
-  const renderContent = () => {
-    if (isPc) {
-      return <Home1920 homeMenu={homeMenu} />;
-    }
-    if (isTabletHorizontal) {
-      return <Home1024 homeMenu={homeMenu} />;
-    } else {
-      return <HomeMobile homeMenu={homeMenu} />;
-    }
-  };
+  const { backgroundColor } = useTheme();
 
   return (
-    <Wrapper>
+    <Wrapper style={{ background: backgroundColor }}>
       <HomeHeader homeHeader={homeHeader} />
-      {renderContent(home)}
+      <HomeContent homeMenu={homeMenu} collection={collection} />
     </Wrapper>
   );
 }
+
+Home.propTypes = {
+  home: PropTypes.shape({
+    homeMenu: PropTypes.object.isRequired,
+    homeHeader: PropTypes.object.isRequired,
+  }).isRequired,
+  collection: PropTypes.array,
+};

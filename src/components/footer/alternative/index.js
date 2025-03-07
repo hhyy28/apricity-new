@@ -4,13 +4,13 @@ import { Wrapper } from './styled';
 import BottomSwiper from './bottomSwiper';
 import BottomInfo from './bottomInformation';
 
-export default function AlternativeBottomComponent({ bottomData }) {
+export default function AlternativeBottomComponent({ bottomData, collection }) {
   const { bottomSwiper, bottomInfo } = bottomData;
 
   return (
     <Wrapper>
-      <BottomSwiper bottomSwiper={bottomSwiper} />
-      <BottomInfo bottomInfo={bottomInfo} />
+      <BottomSwiper bottomSwiper={bottomSwiper} collection={collection} />
+      <BottomInfo bottomInfo={bottomInfo} collection={collection} />
     </Wrapper>
   );
 }
@@ -20,4 +20,5 @@ AlternativeBottomComponent.propTypes = {
     bottomSwiper: PropTypes.object.isRequired,
     bottomInfo: PropTypes.object.isRequired,
   }).isRequired,
+  collection: PropTypes.array,
 };
