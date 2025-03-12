@@ -21,7 +21,11 @@ import NextImage from '@components/images/next-image';
 import Image from 'next/image';
 import { orderButton } from '@svg/index';
 
-export default function SwiperSlider({ collection, swiperRef }) {
+export default function SwiperSlider({
+  collection,
+  swiperRef,
+  collectionLabel,
+}) {
   const { setBackgroundColor } = useTheme();
   const { isPhoneM, isPhoneL, isTabletHorizontal, isTabletVertical, isPc } =
     useScreen();
@@ -109,7 +113,7 @@ export default function SwiperSlider({ collection, swiperRef }) {
   const InfoBlock = ({ $absolute = false }) => (
     <FooterContainer $absolute={$absolute}>
       <CollectionContainer>
-        <CollectionDef>{'test'}</CollectionDef>
+        <CollectionDef>{collectionLabel}</CollectionDef>
         <CollectionName>{collectionName}</CollectionName>
       </CollectionContainer>
       <OrderContainer>
@@ -184,4 +188,5 @@ SwiperSlider.propTypes = {
     })
   ).isRequired,
   swiperRef: PropTypes.shape({ current: PropTypes.object }).isRequired,
+  collectionLabel: PropTypes.string.isRequired,
 };

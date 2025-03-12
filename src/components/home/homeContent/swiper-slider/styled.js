@@ -70,6 +70,7 @@ export const FooterContainer = styled.div`
     padding: 1.30vh 0 1.96vh 0;
     flex-direction: row;
     align-self: flex-end;
+    justify-content: space-between;
   `}
   ${media.lg`
     padding: 4px 3px 3px 8px;
@@ -100,17 +101,17 @@ export const SwiperStyled = styled(Swiper)`
 
       ${media.sm`
         height: 204px;
-        padding: 70px 0 0 0 
+        padding: 70px 0 0 0; 
       `}
 
       ${media.md`
         height: 277px;
-        padding: 97px 0 0 0 
+        padding: 97px 0 0 0;
       `}
 
       ${media.lg`
         height: 384px;
-        padding: 135px 0 0 0 
+        padding: 135px 0 0 0; 
       `}
 
       ${media.xl`
@@ -120,7 +121,7 @@ export const SwiperStyled = styled(Swiper)`
 
       ${media.xxl`
         height: 415px;
-        padding: 241px 0 0 0 
+        padding: 241px 0 0 0; 
       `}  
 
       ${ImageWrapper} {
@@ -189,7 +190,7 @@ export const CollectionContainer = styled.div`
   ${media.md`
     align-self: flex-end;
   `}
-  ${media.lg`
+  ${media.xl`
     flex-direction: row;
   `}
 `;
