@@ -20,7 +20,6 @@ export const SwiperWrapper = styled.div`
 
   ${media.xl`
     height: calc((428/768) * 100vh);
-    padding: 0 0 0 137px;
   `}
 
   ${media.xxl`
