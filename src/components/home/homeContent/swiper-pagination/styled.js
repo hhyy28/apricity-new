@@ -11,9 +11,11 @@ export const PaginationContainer = styled.div`
   `}
 
   ${media.xxl`
+    padding: 0;
     position: absolute;
-    bottom: 50%;
-    width: 84%;
+    bottom: 40%;
+    left: 10%;
+    width: 80%;
     z-index: 3;
   `}
 `;

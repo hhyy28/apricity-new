@@ -56,13 +56,13 @@ export default function SwiperSlider({ homeMenu, collection, swiperRef }) {
     },
     tabletHorizontal: {
       slidesPerView: 1.3,
-      centeredSlides: false,
+      centeredSlides: true,
       spaceBetween: 53,
       ratio: 1.4 / 1,
     },
     Pc: {
-      slidesPerView: 2,
-      centeredSlides: false,
+      slidesPerView: 1.5,
+      centeredSlides: true,
       spaceBetween: 180,
       ratio: 1074 / 712,
     },
